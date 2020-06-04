@@ -358,6 +358,7 @@
       <li><a href="#mini-nfv-use">mini-nfv use</a></li>
       <li><a href="#mini-nfv-debugging">mini-nfv debugging</a></li>
       <li><a href="#vnf-manager-use">VNF Manager Use</a></li>
+      <li><a href="#nfv-orchestrator-use">NFV Orchestrator Use</a></li>
     </ul>
   </li>
 </ul>
@@ -623,260 +624,273 @@ NXST_FLOW reply (xid=0x4):
 
 <ul>
   <li>
-<strong>VNFD creation/listing/removal/template</strong>
-```
-$ sudo ./mininfv.py
-<em>** Configuring hosts
-**</em> Starting controller
-<em>** Starting 0 switches
-**</em> Starting CLI:</li>
+    <p><strong>VNFD creation/listing/removal/template</strong></p>
+
+    <div class="highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> $ sudo ./mininfv.py
+ *** Configuring hosts
+ *** Starting controller
+ *** Starting 0 switches
+ *** Starting CLI:
+
+ mininfv&gt; vnfd_&lt;TAB&gt;
+ vnfd_create         vnfd_delete         vnfd_list           vnfd_template_show  
+
+ mininfv&gt; vnfd_create
+ Use: vnfd_create --vnfd-file &lt;yaml file path&gt; &lt;VNFD-NAME&gt;
+
+ mininfv&gt; vnfd_create --vnfd-file samples/vnfd/tosca-vnfd-userdata.yaml vnfd-userdata
+
+ mininfv&gt; vnfd_create --vnfd-file samples/vnfd/tosca-vnfd-hello-world.yaml vnfd-helloworld
+
+ mininfv&gt; vnfd_list
+ vnfd-helloworld: Demo example
+ vnfd-userdata: Demo with user-data
+
+ mininfv&gt; vnfd_template_show vnfd-userdata
+ {'VDU1': {'type': 'tosca.nodes.nfv.VDU.Tacker', 'properties': {'image': 'cirros-0.3.5-x86_64-disk', 'user_data_format': 'RAW', 'config': 'param0: key1\nparam1: key2\n', 'user_data': '#!/bin/sh\necho "my hostname is `hostname`" &gt; /tmp/hostname\ndf -h &gt; /tmp/diskinfo\n', 'mgmt_driver': 'noop'}, 'capabilities': {'nfv_compute': {'properties': {'mem_size': '512 MB', 'num_cpus': 1, 'disk_size': '1 GB'}}}}, 'CP1': {'type': 'tosca.nodes.nfv.CP.Tacker', 'requirements': [{'virtualLink': {'node': 'VL1'}}, {'virtualBinding': {'node': 'VDU1'}}], 'properties': {'anti_spoofing_protection': False, 'management': True, 'order': 0}}, 'VL1': {'type': 'tosca.nodes.nfv.VL', 'properties': {'network_name': 'net_mgmt', 'vendor': 'ACME'}}}
+
+ mininfv&gt; vnfd_delete vnfd-userdata
+
+ mininfv&gt; vnfd_list
+ vnfd-helloworld: Demo example
+</code></pre></div>    </div>
+    <p>Or just source  <a href="/samples/topology/vnfd_test"><code class="highlighter-rouge">vnfd_test</code></a> from mininfv:</p>
+    <div class="highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> mininfv&gt; source samples/topology/vnfd_test
+ *** Creating vnfds userdata and hello-world ...
+ *** Listing vnfds ...
+ vnfd-helloworld: Demo example
+ vnfd-userdata: Demo with user-data
+
+ *** Showing vnf template ...
+ {'tosca_definitions_version': 'tosca_simple_profile_for_nfv_1_0_0', 'metadata': {'template_name': 'sample-vnfd-userdata'}, 'description': 'Demo with user-data', 'topology_template': {'node_templates': {'VDU1': {'type': 'tosca.nodes.nfv.VDU.Tacker', 'properties': {'image': 'cirros-0.3.5-x86_64-disk', 'user_data_format': 'RAW', 'config': 'param0: key1\nparam1: key2\n', 'user_data': '#!/bin/sh\necho "my hostname is `hostname`" &gt; /tmp/hostname\necho 1 &gt; /proc/sys/net/ipv4/ip_forward\nip route add default via 192.168.120.10\n', 'mgmt_driver': 'noop'}, 'capabilities': {'nfv_compute': {'properties': {'mem_size': '512 MB', 'num_cpus': 1, 'disk_size': '1 GB'}}}}, 'CP1': {'type': 'tosca.nodes.nfv.CP.Tacker', 'requirements': [{'virtualLink': {'node': 'VL1'}}, {'virtualBinding': {'node': 'VDU1'}}], 'properties': {'anti_spoofing_protection': False, 'management': True, 'order': 0}}, 'VL1': {'type': 'tosca.nodes.nfv.VL', 'properties': {'network_name': 'net_mgmt', 'vendor': 'ACME'}}}}}
+
+</code></pre></div>    </div>
+  </li>
+  <li>
+<strong>VNF creation/listing/removal</strong>
+    <div class="highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> $ sudo ./mininfv.py
+ *** Configuring hosts
+ *** Starting controller
+ *** Starting 0 switches
+ *** Starting CLI:
+
+ mininfv&gt; vnf_&lt;TAB&gt;
+ vnf_create  vnf_delete  vnf_list
+
+ mininfv&gt; vnf_create
+ Use: vnf_create --vnfd-name &lt;VNFD-NAME&gt; &lt;VNF-NAME&gt;
+      vnf_create --vnfd-file &lt;yaml file path&gt; &lt;VNFD-NAME&gt;
+      vnf_create --vnfd-template &lt;yaml file path&gt; &lt;VNFD-NAME&gt;
+
+ mininfv&gt; vnf_create --vnfd-file samples/vnfd/tosca-vnfd-userdata.yaml vnfUD
+ *** Initializing VDU vnf-userdata ...
+ *** user-data : ('#!/bin/sh\necho "my hostname is `hostname`" &gt; /tmp/hostname\ndf -h &gt; /tmp/diskinfo\n',)
+
+ mininfv&gt; nodes
+ available nodes are: 
+ c0 s192.168.1 vnfUD
+
+ mininfv&gt; vnf_list
+ ['vnfUD']
+
+ mininfv&gt; vnfUD ifconfig
+ ud-eth0   Link encap:Ethernet  HWaddr 76:2c:90:f5:72:13  
+           inet addr:192.168.120.10  Bcast:192.168.120.255  Mask:255.255.255.0
+           inet6 addr: fe80::742c:90ff:fef5:7213/64 Scope:Link
+           UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+           RX packets:41 errors:0 dropped:10 overruns:0 frame:0
+           TX packets:8 errors:0 dropped:0 overruns:0 carrier:0
+           collisions:0 txqueuelen:1000 
+           RX bytes:6751 (6.7 KB)  TX bytes:648 (648.0 B)
+
+ mininfv&gt; vnf_delete vnf-userdata
+
+ mininfv&gt; nodes
+ available nodes are: 
+ c0 s192.168.1
+
+ mininfv&gt; vnf_list
+ []
+</code></pre></div>    </div>
+    <p>Or just source  <a href="/samples/topology/vnf_test"><code class="highlighter-rouge">vnf_test</code></a> from mininfv:</p>
+    <div class="highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> mininfv&gt; source samples/topology/vnf_test
+ *** Starting vnf &lt;tosca-vnfd-userdata.yaml&gt; ...
+ *** Initializing VDU vnfUD ...
+ *** vnfUD : ('#!/bin/sh\necho "my hostname is `hostname`" &gt; /tmp/hostname\necho 1 &gt; /proc/sys/net/ipv4/ip_forward\nip route add default via 192.168.120.10\n',)
+
+ *** Listing vNF interfaces:
+ vnfUD-eth0: flags=4163&lt;UP,BROADCAST,RUNNING,MULTICAST&gt;  mtu 1500
+         inet 192.168.120.10  netmask 255.255.255.0  broadcast 192.168.120.255
+         inet6 fe80::7032:2dff:fe89:175e  prefixlen 64  scopeid 0x20&lt;link&gt;
+         ether 72:32:2d:89:17:5e  txqueuelen 1000  (Ethernet)
+         RX packets 0  bytes 0 (0.0 B)
+         RX errors 0  dropped 0  overruns 0  frame 0
+         TX packets 0  bytes 0 (0.0 B)
+         TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+ *** Listing nodes:
+ available nodes are: 
+ c0 s192.168.1 vnfUD
+</code></pre></div>    </div>
+  </li>
+  <li>
+<strong>Adding hosts to the topology</strong>
+    <div class="highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> $ sudo ./mininfv.py
+ *** Configuring hosts
+ *** Starting controller
+ *** Starting 0 switches
+ *** Starting CLI:
+
+ mininfv&gt; add_host
+ Use: add_host &lt;HOST-NAME&gt; [&lt;IP1/masc&gt; &lt;IP2/masc&gt; ...]
+
+ mininfv&gt; add_host h1 10.0.0.11/24 20.0.0.11/24
+
+ mininfv&gt; nodes
+ available nodes are: 
+ c0 h1 s10.0.0.0 s20.0.0.0 ud
+
+ mininfv&gt; h1 ifconfig
+ h1-eth0   Link encap:Ethernet  HWaddr 3e:b2:ba:99:4e:dc  
+           inet addr:10.0.0.11  Bcast:10.255.255.255  Mask:255.255.255.0
+           inet6 addr: fe80::3cb2:baff:fe99:4edc/64 Scope:Link
+           UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+           RX packets:24 errors:0 dropped:1 overruns:0 frame:0
+           TX packets:7 errors:0 dropped:0 overruns:0 carrier:0
+           collisions:0 txqueuelen:1000 
+           RX bytes:3445 (3.4 KB)  TX bytes:578 (578.0 B)
+
+ h1-eth1   Link encap:Ethernet  HWaddr aa:08:cf:38:e8:d5  
+           inet addr:20.0.0.10  Bcast:20.255.255.255  Mask:255.255.255.0
+           inet6 addr: fe80::a808:cfff:fe38:e8d5/64 Scope:Link
+           UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+           RX packets:25 errors:0 dropped:1 overruns:0 frame:0
+           TX packets:7 errors:0 dropped:0 overruns:0 carrier:0
+           collisions:0 txqueuelen:1000 
+           RX bytes:3515 (3.5 KB)  TX bytes:578 (578.0 B)
+
+ mininfv&gt; add_host h2 10.0.0.12/24
+
+ mininfv&gt; switch s10.0.0.0 start
+
+ mininfv&gt; h1 ping -c3 h2
+ PING 10.0.0.12 (10.0.0.12) 56(84) bytes of data.
+ 64 bytes from 10.0.0.12: icmp_seq=1 ttl=64 time=2.93 ms
+ 64 bytes from 10.0.0.12: icmp_seq=2 ttl=64 time=0.736 ms
+ 64 bytes from 10.0.0.12: icmp_seq=3 ttl=64 time=0.142 ms
+
+ --- 10.0.0.12 ping statistics ---
+ 3 packets transmitted, 3 received, 0% packet loss, time 2032ms
+ rtt min/avg/max/mdev = 0.142/1.270/2.934/1.201 ms
+</code></pre></div>    </div>
+    <p>Or just source  <a href="/samples/topology/host_test"><code class="highlighter-rouge">host_test</code></a> from mininfv:</p>
+    <div class="highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> mininfv&gt; source samples/topology/host_test
+ *** Creating host h1 with two interfaces ...
+ *** Listing interfaces of the host:
+ h1-eth0: flags=4163&lt;UP,BROADCAST,RUNNING,MULTICAST&gt;  mtu 1500
+         inet 10.0.0.11  netmask 255.255.255.0  broadcast 10.0.0.255
+         inet6 fe80::609d:6fff:fe6e:eae8  prefixlen 64  scopeid 0x20&lt;link&gt;
+         ether 62:9d:6f:6e:ea:e8  txqueuelen 1000  (Ethernet)
+         RX packets 1  bytes 90 (90.0 B)
+         RX errors 0  dropped 0  overruns 0  frame 0
+         TX packets 1  bytes 90 (90.0 B)
+         TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+ h1-eth1: flags=4163&lt;UP,BROADCAST,RUNNING,MULTICAST&gt;  mtu 1500
+         inet 20.0.0.11  netmask 255.255.255.0  broadcast 20.0.0.255
+         inet6 fe80::bc42:45ff:fee1:6e0b  prefixlen 64  scopeid 0x20&lt;link&gt;
+         ether be:42:45:e1:6e:0b  txqueuelen 1000  (Ethernet)
+         RX packets 0  bytes 0 (0.0 B)
+         RX errors 0  dropped 0  overruns 0  frame 0
+         TX packets 0  bytes 0 (0.0 B)
+         TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+ *** Creating host h2
+ *** Starting switch ...
+ *** Listing nodes:
+ available nodes are: 
+ c0 h1 h2 s10.0.0.0 s192.168.1 s20.0.0.0 vnfUD
+
+ *** Testing conectivity ...
+ PING 10.0.0.12 (10.0.0.12) 56(84) bytes of data.
+ 64 bytes from 10.0.0.12: icmp_seq=1 ttl=64 time=3.43 ms
+ 64 bytes from 10.0.0.12: icmp_seq=2 ttl=64 time=0.716 ms
+ 64 bytes from 10.0.0.12: icmp_seq=3 ttl=64 time=0.111 ms
+
+ --- 10.0.0.12 ping statistics ---
+ 3 packets transmitted, 3 received, 0% packet loss, time 2003ms
+ rtt min/avg/max/mdev = 0.111/1.419/3.430/1.443 ms
+</code></pre></div>    </div>
+  </li>
 </ul>
 
-<p>mininfv&gt; vnfd_<tab>
-vnfd_create         vnfd_delete         vnfd_list           vnfd_template_show</tab></p>
+<h2 id="nfv-orchestrator-use">NFV Orchestrator Use</h2>
 
-<p>mininfv&gt; vnfd_create
-Use: vnfd_create –vnfd-file <yaml file="" path=""> <vnfd-name></vnfd-name></yaml></p>
+<ul>
+  <li>
+<strong>VNFFG creation/listing/removal</strong>
+    <div class="highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> $ sudo ./mininfv.py
+ *** Configuring hosts
+ *** Starting controller
+ *** Starting 0 switches
+ *** Starting CLI:
 
-<p>mininfv&gt; vnfd_create –vnfd-file samples/vnfd/tosca-vnfd-userdata.yaml vnfd-userdata</p>
+ mininfv&gt; vnf_create --vnfd-file samples/vnfd/tosca-vnfd-userdata.yaml vnfUD
+ *** Initializing VDU vnf-userdata ...
+ *** user-data : ('#!/bin/sh\necho "my hostname is `hostname`" &gt; /tmp/hostname\ndf -h &gt; /tmp/diskinfo\n',)
 
-<p>mininfv&gt; vnfd_create –vnfd-file samples/vnfd/tosca-vnfd-hello-world.yaml vnfd-helloworld</p>
+ mininfv&gt; add_host http_cl 192.168.120.1/24
 
-<p>mininfv&gt; vnfd_list
-vnfd-helloworld: Demo example
-vnfd-userdata: Demo with user-data</p>
+ mininfv&gt; add_host http_sr 192.168.120.2/24
 
-<p>mininfv&gt; vnfd_template_show vnfd-userdata
-{‘VDU1’: {‘type’: ‘tosca.nodes.nfv.VDU.Tacker’, ‘properties’: {‘image’: ‘cirros-0.3.5-x86_64-disk’, ‘user_data_format’: ‘RAW’, ‘config’: ‘param0: key1\nparam1: key2\n’, ‘user_data’: ‘#!/bin/sh\necho “my hostname is <code class="highlighter-rouge">hostname</code>” &gt; /tmp/hostname\ndf -h &gt; /tmp/diskinfo\n’, ‘mgmt_driver’: ‘noop’}, ‘capabilities’: {‘nfv_compute’: {‘properties’: {‘mem_size’: ‘512 MB’, ‘num_cpus’: 1, ‘disk_size’: ‘1 GB’}}}}, ‘CP1’: {‘type’: ‘tosca.nodes.nfv.CP.Tacker’, ‘requirements’: [{‘virtualLink’: {‘node’: ‘VL1’}}, {‘virtualBinding’: {‘node’: ‘VDU1’}}], ‘properties’: {‘anti_spoofing_protection’: False, ‘management’: True, ‘order’: 0}}, ‘VL1’: {‘type’: ‘tosca.nodes.nfv.VL’, ‘properties’: {‘network_name’: ‘net_mgmt’, ‘vendor’: ‘ACME’}}}</p>
+ mininfv&gt; nodes
+ available nodes are: 
+ c0 http_cl http_sr s192.168.1 vnfUD
 
-<p>mininfv&gt; vnfd_delete vnfd-userdata</p>
+ mininfv&gt; switch s192.168.1 start
 
-<p>mininfv&gt; vnfd_list
-vnfd-helloworld: Demo example</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Or just source  [`vnfd_test`](/samples/topology/vnfd_test) from mininfv:
-</code></pre></div></div>
-<p>mininfv&gt; source samples/topology/vnfd_test
-<em>** Creating vnfds userdata and hello-world …
-**</em> Listing vnfds …
-vnfd-helloworld: Demo example
-vnfd-userdata: Demo with user-data</p>
+ mininfv&gt; py http_sr.cmdPrint('python -m SimpleHTTPServer 80 <span class="err">&amp;</span>')
 
-<p>*** Showing vnf template …
-{‘tosca_definitions_version’: ‘tosca_simple_profile_for_nfv_1_0_0’, ‘metadata’: {‘template_name’: ‘sample-vnfd-userdata’}, ‘description’: ‘Demo with user-data’, ‘topology_template’: {‘node_templates’: {‘VDU1’: {‘type’: ‘tosca.nodes.nfv.VDU.Tacker’, ‘properties’: {‘image’: ‘cirros-0.3.5-x86_64-disk’, ‘user_data_format’: ‘RAW’, ‘config’: ‘param0: key1\nparam1: key2\n’, ‘user_data’: ‘#!/bin/sh\necho “my hostname is <code class="highlighter-rouge">hostname</code>” &gt; /tmp/hostname\necho 1 &gt; /proc/sys/net/ipv4/ip_forward\nip route add default via 192.168.120.10\n’, ‘mgmt_driver’: ‘noop’}, ‘capabilities’: {‘nfv_compute’: {‘properties’: {‘mem_size’: ‘512 MB’, ‘num_cpus’: 1, ‘disk_size’: ‘1 GB’}}}}, ‘CP1’: {‘type’: ‘tosca.nodes.nfv.CP.Tacker’, ‘requirements’: [{‘virtualLink’: {‘node’: ‘VL1’}}, {‘virtualBinding’: {‘node’: ‘VDU1’}}], ‘properties’: {‘anti_spoofing_protection’: False, ‘management’: True, ‘order’: 0}}, ‘VL1’: {‘type’: ‘tosca.nodes.nfv.VL’, ‘properties’: {‘network_name’: ‘net_mgmt’, ‘vendor’: ‘ACME’}}}}}</p>
+ mininfv&gt; vnffg_<span class="nt">&lt;TAB&gt;</span>
+ vnffg_create  vnffg_delete  vnffg_list
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
-- **VNF creation/listing/removal**
-</code></pre></div></div>
-<p>$ sudo ./mininfv.py
-<em>** Configuring hosts
-**</em> Starting controller
-<em>** Starting 0 switches
-**</em> Starting CLI:</p>
+ mininfv&gt; vnffg_create
+ Use: vnffg-create --vnffgd-name <span class="nt">&lt;vnffgd-name&gt;</span> --vnf-mapping <span class="nt">&lt;vnf-mapping&gt;</span>
+                   --symmetrical <span class="nt">&lt;boolean&gt;</span> <span class="nt">&lt;vnffg-name&gt;</span>
+      vnffg-create --vnffgd-template <span class="nt">&lt;vnffgd-template&gt;</span> --vnf-mapping <span class="nt">&lt;vnf-mapping&gt;</span>
+                   --symmetrical <span class="nt">&lt;boolean&gt;</span> <span class="nt">&lt;vnffg-name&gt;</span>
 
-<p>mininfv&gt; vnf_<tab>
-vnf_create  vnf_delete  vnf_list</tab></p>
+ mininfv&gt; vnffg_create --vnffgd-template samples/vnffgd/tosca-vnffgd-helloworld.yaml --vnf-mapping vnfd-helloworld:'vnfUD' --symmetrical false vnffg-sample
 
-<p>mininfv&gt; vnf_create
-Use: vnf_create –vnfd-name <vnfd-name> <vnf-name>
-     vnf_create --vnfd-file <yaml file="" path=""> <vnfd-name>
-     vnf_create --vnfd-template <yaml file="" path=""> <vnfd-name></vnfd-name></yaml></vnfd-name></yaml></vnf-name></vnfd-name></p>
+ mininfv&gt; vnffg_list
+ ['vnffg-sample']
 
-<p>mininfv&gt; vnf_create –vnfd-file samples/vnfd/tosca-vnfd-userdata.yaml vnfUD
-<em>** Initializing VDU vnf-userdata …
-**</em> user-data : (‘#!/bin/sh\necho “my hostname is <code class="highlighter-rouge">hostname</code>” &gt; /tmp/hostname\ndf -h &gt; /tmp/diskinfo\n’,)</p>
+ mininfv&gt; xterm vnfUD
 
-<p>mininfv&gt; nodes
-available nodes are: 
-c0 s192.168.1 vnfUD</p>
+ mininfv&gt; http_cl curl http_sr
+ <span class="cp">&lt;!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN"&gt;</span><span class="nt">&lt;html&gt;</span>
+ ...
 
-<p>mininfv&gt; vnf_list
-[‘vnfUD’]</p>
+ mininfv&gt; vnffg_delete vnffg-sample
 
-<p>mininfv&gt; vnfUD ifconfig
-ud-eth0   Link encap:Ethernet  HWaddr 76:2c:90:f5:72:13<br>
-          inet addr:192.168.120.10  Bcast:192.168.120.255  Mask:255.255.255.0
-          inet6 addr: fe80::742c:90ff:fef5:7213/64 Scope:Link
-          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
-          RX packets:41 errors:0 dropped:10 overruns:0 frame:0
-          TX packets:8 errors:0 dropped:0 overruns:0 carrier:0
-          collisions:0 txqueuelen:1000 
-          RX bytes:6751 (6.7 KB)  TX bytes:648 (648.0 B)</p>
+ mininfv&gt; vnffg_list
+ []
+</code></pre></div>    </div>
 
-<p>mininfv&gt; vnf_delete vnf-userdata</p>
+    <p>Or just source  <a href="https://github.com/josecastillolema/mini-nfv/blob/master/samples/topology/vnffg_test" target="_blank" rel="noopener noreferrer"><code class="highlighter-rouge">vnffg_test</code></a> from mininfv:
+ <code class="highlighter-rouge">mininfv&gt; source samples/topology/vnffg_test</code></p>
 
-<p>mininfv&gt; nodes
-available nodes are: 
-c0 s192.168.1</p>
-
-<p>mininfv&gt; vnf_list
-[]</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Or just source  [`vnf_test`](/samples/topology/vnf_test) from mininfv:
-</code></pre></div></div>
-<p>mininfv&gt; source samples/topology/vnf_test
-*** Starting vnf <tosca-vnfd-userdata.yaml> ...
-*** Initializing VDU vnfUD ...
-*** vnfUD : ('#!/bin/sh\necho "my hostname is `hostname`" &gt; /tmp/hostname\necho 1 &gt; /proc/sys/net/ipv4/ip_forward\nip route add default via 192.168.120.10\n',)</tosca-vnfd-userdata.yaml></p>
-
-<p>*** Listing vNF interfaces:
-vnfUD-eth0: flags=4163&lt;UP,BROADCAST,RUNNING,MULTICAST&gt;  mtu 1500
-        inet 192.168.120.10  netmask 255.255.255.0  broadcast 192.168.120.255
-        inet6 fe80::7032:2dff:fe89:175e  prefixlen 64  scopeid 0x20<link>
-        ether 72:32:2d:89:17:5e  txqueuelen 1000  (Ethernet)
-        RX packets 0  bytes 0 (0.0 B)
-        RX errors 0  dropped 0  overruns 0  frame 0
-        TX packets 0  bytes 0 (0.0 B)
-        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0</p>
-
-<p>*** Listing nodes:
-available nodes are: 
-c0 s192.168.1 vnfUD</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
-- **Adding hosts to the topology**
-</code></pre></div></div>
-<p>$ sudo ./mininfv.py
-<em>** Configuring hosts
-**</em> Starting controller
-<em>** Starting 0 switches
-**</em> Starting CLI:</p>
-
-<p>mininfv&gt; add_host
-Use: add_host <host-name> [&lt;IP1/masc&gt; &lt;IP2/masc&gt; ...]</host-name></p>
-
-<p>mininfv&gt; add_host h1 10.0.0.11/24 20.0.0.11/24</p>
-
-<p>mininfv&gt; nodes
-available nodes are: 
-c0 h1 s10.0.0.0 s20.0.0.0 ud</p>
-
-<p>mininfv&gt; h1 ifconfig
-h1-eth0   Link encap:Ethernet  HWaddr 3e:b2:ba:99:4e:dc<br>
-          inet addr:10.0.0.11  Bcast:10.255.255.255  Mask:255.255.255.0
-          inet6 addr: fe80::3cb2:baff:fe99:4edc/64 Scope:Link
-          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
-          RX packets:24 errors:0 dropped:1 overruns:0 frame:0
-          TX packets:7 errors:0 dropped:0 overruns:0 carrier:0
-          collisions:0 txqueuelen:1000 
-          RX bytes:3445 (3.4 KB)  TX bytes:578 (578.0 B)</p>
-
-<p>h1-eth1   Link encap:Ethernet  HWaddr aa:08:cf:38:e8:d5<br>
-          inet addr:20.0.0.10  Bcast:20.255.255.255  Mask:255.255.255.0
-          inet6 addr: fe80::a808:cfff:fe38:e8d5/64 Scope:Link
-          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
-          RX packets:25 errors:0 dropped:1 overruns:0 frame:0
-          TX packets:7 errors:0 dropped:0 overruns:0 carrier:0
-          collisions:0 txqueuelen:1000 
-          RX bytes:3515 (3.5 KB)  TX bytes:578 (578.0 B)</p>
-
-<p>mininfv&gt; add_host h2 10.0.0.12/24</p>
-
-<p>mininfv&gt; switch s10.0.0.0 start</p>
-
-<p>mininfv&gt; h1 ping -c3 h2
-PING 10.0.0.12 (10.0.0.12) 56(84) bytes of data.
-64 bytes from 10.0.0.12: icmp_seq=1 ttl=64 time=2.93 ms
-64 bytes from 10.0.0.12: icmp_seq=2 ttl=64 time=0.736 ms
-64 bytes from 10.0.0.12: icmp_seq=3 ttl=64 time=0.142 ms</p>
-
-<p>— 10.0.0.12 ping statistics —
-3 packets transmitted, 3 received, 0% packet loss, time 2032ms
-rtt min/avg/max/mdev = 0.142/1.270/2.934/1.201 ms</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Or just source  [`host_test`](/samples/topology/host_test) from mininfv:
-</code></pre></div></div>
-<p>mininfv&gt; source samples/topology/host_test
-<em>** Creating host h1 with two interfaces …
-**</em> Listing interfaces of the host:
-h1-eth0: flags=4163&lt;UP,BROADCAST,RUNNING,MULTICAST&gt;  mtu 1500
-        inet 10.0.0.11  netmask 255.255.255.0  broadcast 10.0.0.255
-        inet6 fe80::609d:6fff:fe6e:eae8  prefixlen 64  scopeid 0x20<link>
-        ether 62:9d:6f:6e:ea:e8  txqueuelen 1000  (Ethernet)
-        RX packets 1  bytes 90 (90.0 B)
-        RX errors 0  dropped 0  overruns 0  frame 0
-        TX packets 1  bytes 90 (90.0 B)
-        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0</p>
-
-<p>h1-eth1: flags=4163&lt;UP,BROADCAST,RUNNING,MULTICAST&gt;  mtu 1500
-        inet 20.0.0.11  netmask 255.255.255.0  broadcast 20.0.0.255
-        inet6 fe80::bc42:45ff:fee1:6e0b  prefixlen 64  scopeid 0x20<link>
-        ether be:42:45:e1:6e:0b  txqueuelen 1000  (Ethernet)
-        RX packets 0  bytes 0 (0.0 B)
-        RX errors 0  dropped 0  overruns 0  frame 0
-        TX packets 0  bytes 0 (0.0 B)
-        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0</p>
-
-<p><em>** Creating host h2
-**</em> Starting switch …
-*** Listing nodes:
-available nodes are: 
-c0 h1 h2 s10.0.0.0 s192.168.1 s20.0.0.0 vnfUD</p>
-
-<p>*** Testing conectivity …
-PING 10.0.0.12 (10.0.0.12) 56(84) bytes of data.
-64 bytes from 10.0.0.12: icmp_seq=1 ttl=64 time=3.43 ms
-64 bytes from 10.0.0.12: icmp_seq=2 ttl=64 time=0.716 ms
-64 bytes from 10.0.0.12: icmp_seq=3 ttl=64 time=0.111 ms</p>
-
-<p>— 10.0.0.12 ping statistics —
-3 packets transmitted, 3 received, 0% packet loss, time 2003ms
-rtt min/avg/max/mdev = 0.111/1.419/3.430/1.443 ms</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
-NFV Orchestrator Use
---------------
-
-- **VNFFG creation/listing/removal**
-</code></pre></div></div>
-<p>$ sudo ./mininfv.py
-<em>** Configuring hosts
-**</em> Starting controller
-<em>** Starting 0 switches
-**</em> Starting CLI:</p>
-
-<p>mininfv&gt; vnf_create –vnfd-file samples/vnfd/tosca-vnfd-userdata.yaml vnfUD
-<em>** Initializing VDU vnf-userdata …
-**</em> user-data : (‘#!/bin/sh\necho “my hostname is <code class="highlighter-rouge">hostname</code>” &gt; /tmp/hostname\ndf -h &gt; /tmp/diskinfo\n’,)</p>
-
-<p>mininfv&gt; add_host http_cl 192.168.120.1/24</p>
-
-<p>mininfv&gt; add_host http_sr 192.168.120.2/24</p>
-
-<p>mininfv&gt; nodes
-available nodes are: 
-c0 http_cl http_sr s192.168.1 vnfUD</p>
-
-<p>mininfv&gt; switch s192.168.1 start</p>
-
-<p>mininfv&gt; py http_sr.cmdPrint(‘python -m SimpleHTTPServer 80 &amp;’)</p>
-
-<p>mininfv&gt; vnffg_<tab>
-vnffg_create  vnffg_delete  vnffg_list</tab></p>
-
-<p>mininfv&gt; vnffg_create
-Use: vnffg-create –vnffgd-name <vnffgd-name> --vnf-mapping <vnf-mapping>
-                  --symmetrical <boolean> <vnffg-name>
-     vnffg-create --vnffgd-template <vnffgd-template> --vnf-mapping <vnf-mapping>
-                  --symmetrical <boolean> <vnffg-name></vnffg-name></boolean></vnf-mapping></vnffgd-template></vnffg-name></boolean></vnf-mapping></vnffgd-name></p>
-
-<p>mininfv&gt; vnffg_create –vnffgd-template samples/vnffgd/tosca-vnffgd-helloworld.yaml –vnf-mapping vnfd-helloworld:’vnfUD’ –symmetrical false vnffg-sample</p>
-
-<p>mininfv&gt; vnffg_list
-[‘vnffg-sample’]</p>
-
-<p>mininfv&gt; xterm vnfUD</p>
-
-<p>mininfv&gt; http_cl curl http_sr
-&lt;!DOCTYPE html PUBLIC “-//W3C//DTD HTML 3.2 Final//EN”&gt;&lt;html&gt;
-…</p>
-
-<p>mininfv&gt; vnffg_delete vnffg-sample</p>
-
-<p>mininfv&gt; vnffg_list
-[]
-```</p>
-
-<p>Or just source  <a href="/samples/topology/vnffg_test"><code class="highlighter-rouge">vnffg_test</code></a> from mininfv:
-<code class="highlighter-rouge">mininfv&gt; source samples/topology/vnffg_test</code></p>
-
-<p>In the xterm window of the vnfUD we opened at step 11, if we sniff the interface we can see the http and icmp traffic corresponding to the curl and ping passing through the VNF interface:
-<img src="/doc/img/screendshot_vnfUD.png" alt="Screenshot of the VNF xterm"></p>
+    <p>In the xterm window of the vnfUD we opened at step 11, if we sniff the interface we can see the http and icmp traffic corresponding to the curl and ping passing through the VNF interface:
+<img src="https://raw.githubusercontent.com/josecastillolema/mini-nfv/master/doc/img/screendshot_vnfUD.png" alt="Screenshot of the VNF xterm"></p>
+  </li>
+</ul>
 
 
         
