@@ -11,6 +11,12 @@ var store = [{
         "url": "https://josecastillolema.github.io/iscc/",
         "teaser": null
       },{
+        "title": "Evolving Future Internet clean-slate ETArch with QoS control-plane extensions",
+        "excerpt":"Biblioteca Digital Brasileira de Teses e Dissertações   LEMA, José Castillo. Extensões orientadas a qualidade ao plano de controle da Arquitetura Entidade-Título. 2014. 62 f. Dissertação (Mestrado em Ciência da Computação) - Universidade Federal do Rio Grande do Norte, Natal, 2014.  ","categories": [],
+        "tags": ["networks"],
+        "url": "https://josecastillolema.github.io/mdthesis/",
+        "teaser": null
+      },{
         "title": "IEEE GLOBECOM 2014",
         "excerpt":"Global Communications Conference 2014 Additions to the ETArch control plane to support multimedia QoS-guaranteed content transport over OpenFlow-enabled SDN future internet systems José Castillo - Federal University of Rio Grande do Norte (UFRN), Brazil Augusto Neto - Federal University of Rio Grande do Norte (UFRN), Brazil Flavio Silva - Federal...","categories": [],
         "tags": ["events","networks"],
@@ -39,6 +45,12 @@ var store = [{
         "excerpt":"  ","categories": [],
         "tags": ["classes","huawei","networks"],
         "url": "https://josecastillolema.github.io/hntd-01/",
+        "teaser": null
+      },{
+        "title": "FIAP Corporate",
+        "excerpt":"      Citibank: Internet of Things (2017)   Gerdau: Internet of Things (2017)   Ambev: Computers Networks and Cloud Computing (2018)   T-Systems: Internet of Things (2018)  ","categories": [],
+        "tags": ["classes","fiap"],
+        "url": "https://josecastillolema.github.io/fiap-corporate/",
         "teaser": null
       },{
         "title": "HCNA-HNTD Training - 2nd edition",
@@ -151,7 +163,7 @@ var store = [{
       },{
         "title": "FIAP Red Hat Academy Partnership",
         "excerpt":"Middleware Development Red Hat Application Development I: Programming in Java EE Red Hat Application Development II: Implementing Microservice Architecture Red Hat OpenShift Container Platform Introduction to Containers, Kubernetes and Red Hat OpenShift Red Hat Enterprise Linux Red Hat System Administration I Red Hat System Administration II Red Hat System Administration...","categories": [],
-        "tags": ["classes","fiap","redhat"],
+        "tags": ["classes","fiap","openshift","openstack","redhat"],
         "url": "https://josecastillolema.github.io/redhat-academy/",
         "teaser": null
       },{
@@ -183,6 +195,12 @@ var store = [{
         "excerpt":"      Cloud Computing   Fast Data &amp; Microservices   Internet das Coisas   Microserviços   ","categories": [],
         "tags": ["classes","fiap"],
         "url": "https://josecastillolema.github.io/fiap-bdt/",
+        "teaser": null
+      },{
+        "title": "Zabbix templates for OpenStack",
+        "excerpt":"zabbix-for-openstack Zabbix templates for OpenStack (through Zabbix user parameters). In the following screenshot you can see the final result: As you can see, hosts are segregated by groups (controllers, compute, ceph, external Horizon, IdM, storage, etc.), and the items we monitore in each group are different. Some things we do...","categories": [],
+        "tags": ["ansible","openstack","monitoring","redhat"],
+        "url": "https://josecastillolema.github.io/zabbix/",
         "teaser": null
       },{
         "title": "AWS Educate Cloud Ambassador",

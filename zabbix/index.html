@@ -9,8 +9,8 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>HCNA-HNTD Training - 1st edition - GitOps</title>
-<meta name="description" content=" ">
+<!-- begin _includes/seo.html --><title>Zabbix templates for OpenStack - GitOps</title>
+<meta name="description" content="zabbix-for-openstack Zabbix templates for OpenStack (through Zabbix user parameters).  In the following screenshot you can see the final result:    As you can see, hosts are segregated by groups (controllers, compute, ceph, external Horizon, IdM, storage, etc.), and the items we monitore in each group are different.  Some things we do monitor:    SNMP of the servers IPMI   CPU (specially load above 30), memory (above 85% because of KSM), disk and network interfaces   Status of the network bonds   Number of processes/workers for each OpenStack Linux service (nova-scheduler, nova-api, etc.)   Response times of every OpenStack API   Status of Open vSwitch services   Pacemaker cluster status   Galera SQL cluster status   Health of RabbitMQ e Redis   Status of OpenStack agents            Nova: openstack compute service list       Neutron: openstack agent list       Cinder: openstack volume service list           The presence of virtual machines, volumes or volume snapshots in error state   Storage   Presence of failed multipath routes   Problems with LVM mappings   Incongruences with the Device Mapper (DM)   etc.   Some Zabbix user parameters needed modifications in standard SELinux policies in order to properly work.  Besides this, we have another separated Zabbix server specifically to monitor capacity of the environment. In this second server we monitor:    Number of virtual routers   Number of namespaces in the controller nodes   Number of virtual machines   Number of assigned floating IPs   Memory used by virtual machines   vCPUs used   Storage IOPs / throughput   North-South traffic   etc.   The templates will surely need some customization work to adapt to each customer environment. They include an Ansible playbook to automate the Zabbix agent installation along with firewall liberations, sudoers file customizations, Zabbix user agents and corresponding scripts, SELinux policies, etc.  I hope it helps.  ">
 
 
   <meta name="author" content="Jose Castillo Lema">
@@ -19,32 +19,32 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="GitOps">
-<meta property="og:title" content="HCNA-HNTD Training - 1st edition">
-<meta property="og:url" content="https://josecastillolema.github.io/hntd-01/">
+<meta property="og:title" content="Zabbix templates for OpenStack">
+<meta property="og:url" content="https://josecastillolema.github.io/zabbix/">
 
 
-  <meta property="og:description" content=" ">
-
-
-
+  <meta property="og:description" content="zabbix-for-openstack Zabbix templates for OpenStack (through Zabbix user parameters).  In the following screenshot you can see the final result:    As you can see, hosts are segregated by groups (controllers, compute, ceph, external Horizon, IdM, storage, etc.), and the items we monitore in each group are different.  Some things we do monitor:    SNMP of the servers IPMI   CPU (specially load above 30), memory (above 85% because of KSM), disk and network interfaces   Status of the network bonds   Number of processes/workers for each OpenStack Linux service (nova-scheduler, nova-api, etc.)   Response times of every OpenStack API   Status of Open vSwitch services   Pacemaker cluster status   Galera SQL cluster status   Health of RabbitMQ e Redis   Status of OpenStack agents            Nova: openstack compute service list       Neutron: openstack agent list       Cinder: openstack volume service list           The presence of virtual machines, volumes or volume snapshots in error state   Storage   Presence of failed multipath routes   Problems with LVM mappings   Incongruences with the Device Mapper (DM)   etc.   Some Zabbix user parameters needed modifications in standard SELinux policies in order to properly work.  Besides this, we have another separated Zabbix server specifically to monitor capacity of the environment. In this second server we monitor:    Number of virtual routers   Number of namespaces in the controller nodes   Number of virtual machines   Number of assigned floating IPs   Memory used by virtual machines   vCPUs used   Storage IOPs / throughput   North-South traffic   etc.   The templates will surely need some customization work to adapt to each customer environment. They include an Ansible playbook to automate the Zabbix agent installation along with firewall liberations, sudoers file customizations, Zabbix user agents and corresponding scripts, SELinux policies, etc.  I hope it helps.  ">
 
 
 
 
-  <meta property="article:published_time" content="2016-12-12T00:00:00-02:00">
 
 
 
-  <meta property="article:modified_time" content="2016-12-12T18:00:58-02:00">
+  <meta property="article:published_time" content="2019-04-25T00:00:00-03:00">
 
 
 
-  
+  <meta property="article:modified_time" content="2019-04-25T17:00:58-03:00">
+
+
 
   
 
+  
 
-<link rel="canonical" href="https://josecastillolema.github.io/hntd-01/">
+
+<link rel="canonical" href="https://josecastillolema.github.io/zabbix/">
 
 
 
@@ -328,15 +328,15 @@
 
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="HCNA-HNTD Training - 1st edition">
-    <meta itemprop="description" content="">
-    <meta itemprop="datePublished" content="2016-12-12T00:00:00-02:00">
-    <meta itemprop="dateModified" content="2016-12-12T18:00:58-02:00">
+    <meta itemprop="headline" content="Zabbix templates for OpenStack">
+    <meta itemprop="description" content="zabbix-for-openstackZabbix templates for OpenStack (through Zabbix user parameters).In the following screenshot you can see the final result:As you can see, hosts are segregated by groups (controllers, compute, ceph, external Horizon, IdM, storage, etc.), and the items we monitore in each group are different.Some things we do monitor:  SNMP of the servers IPMI  CPU (specially load above 30), memory (above 85% because of KSM), disk and network interfaces  Status of the network bonds  Number of processes/workers for each OpenStack Linux service (nova-scheduler, nova-api, etc.)  Response times of every OpenStack API  Status of Open vSwitch services  Pacemaker cluster status  Galera SQL cluster status  Health of RabbitMQ e Redis  Status of OpenStack agents          Nova: openstack compute service list      Neutron: openstack agent list      Cinder: openstack volume service list        The presence of virtual machines, volumes or volume snapshots in error state  Storage  Presence of failed multipath routes  Problems with LVM mappings  Incongruences with the Device Mapper (DM)  etc.Some Zabbix user parameters needed modifications in standard SELinux policies in order to properly work.Besides this, we have another separated Zabbix server specifically to monitor capacity of the environment. In this second server we monitor:  Number of virtual routers  Number of namespaces in the controller nodes  Number of virtual machines  Number of assigned floating IPs  Memory used by virtual machines  vCPUs used  Storage IOPs / throughput  North-South traffic  etc.The templates will surely need some customization work to adapt to each customer environment. They include an Ansible playbook to automate the Zabbix agent installation along with firewall liberations, sudoers file customizations, Zabbix user agents and corresponding scripts, SELinux policies, etc.I hope it helps.">
+    <meta itemprop="datePublished" content="2019-04-25T00:00:00-03:00">
+    <meta itemprop="dateModified" content="2019-04-25T17:00:58-03:00">
 
     <div class="page__inner-wrap">
       
         <header>
-          <h1 id="page-title" class="page__title" itemprop="headline">HCNA-HNTD Training - 1st edition
+          <h1 id="page-title" class="page__title" itemprop="headline">Zabbix templates for OpenStack
 </h1>
           
             <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
@@ -344,7 +344,7 @@
 
 
 
-  less than 1 minute read
+  1 minute read
 
 </p>
           
@@ -353,7 +353,60 @@
 
       <section class="page__content" itemprop="text">
         
-        <p><img src="/assets/images/posts/2016-12-12-hntd-01.jpeg" alt=""></p>
+        <h1 id="zabbix-for-openstack"><a href="https://github.com/josecastillolema/zabbix-for-openstack" target="_blank" rel="noopener noreferrer">zabbix-for-openstack</a></h1>
+<p>Zabbix templates for OpenStack (through Zabbix user parameters).</p>
+
+<p>In the following screenshot you can see the final result:</p>
+
+<p><img src="https://raw.githubusercontent.com/josecastillolema/zabbix-for-openstack/master/img/pastedImage_1.png" alt="Zabbix screenshot"></p>
+
+<p>As you can see, hosts are segregated by groups (controllers, compute, ceph, external Horizon, IdM, storage, etc.), and the items we monitore in each group are different.</p>
+
+<p>Some things we do monitor:</p>
+<ul>
+  <li>SNMP of the servers IPMI</li>
+  <li>CPU (specially load above 30), memory (above 85% because of KSM), disk and network interfaces</li>
+  <li>Status of the network bonds</li>
+  <li>Number of processes/workers for each OpenStack Linux service (nova-scheduler, nova-api, etc.)</li>
+  <li>Response times of every OpenStack API</li>
+  <li>Status of Open vSwitch services</li>
+  <li>Pacemaker cluster status</li>
+  <li>Galera SQL cluster status</li>
+  <li>Health of RabbitMQ e Redis</li>
+  <li>Status of OpenStack agents
+    <ul>
+      <li>Nova: openstack compute service list</li>
+      <li>Neutron: openstack agent list</li>
+      <li>Cinder: openstack volume service list</li>
+    </ul>
+  </li>
+  <li>The presence of virtual machines, volumes or volume snapshots in error state</li>
+  <li>Storage</li>
+  <li>Presence of failed multipath routes</li>
+  <li>Problems with LVM mappings</li>
+  <li>Incongruences with the Device Mapper (DM)</li>
+  <li>etc.</li>
+</ul>
+
+<p>Some Zabbix user parameters needed modifications in standard SELinux policies in order to properly work.</p>
+
+<p>Besides this, we have another separated Zabbix server specifically to monitor capacity of the environment. In this second server we monitor:</p>
+<ul>
+  <li>Number of virtual routers</li>
+  <li>Number of namespaces in the controller nodes</li>
+  <li>Number of virtual machines</li>
+  <li>Number of assigned floating IPs</li>
+  <li>Memory used by virtual machines</li>
+  <li>vCPUs used</li>
+  <li>Storage IOPs / throughput</li>
+  <li>North-South traffic</li>
+  <li>etc.</li>
+</ul>
+
+<p>The templates will surely need some customization work to adapt to each customer environment. They include an Ansible playbook to automate the Zabbix agent installation along with firewall liberations, sudoers file customizations, Zabbix user agents and corresponding scripts, SELinux policies, etc.</p>
+
+<p>I hope it helps.</p>
+
 
         
       </section>
@@ -374,15 +427,19 @@
     
       
       
-      <a href="/tags/#classes" class="page__taxonomy-item" rel="tag">classes</a><span class="sep">, </span>
+      <a href="/tags/#ansible" class="page__taxonomy-item" rel="tag">ansible</a><span class="sep">, </span>
     
       
       
-      <a href="/tags/#huawei" class="page__taxonomy-item" rel="tag">huawei</a><span class="sep">, </span>
+      <a href="/tags/#monitoring" class="page__taxonomy-item" rel="tag">monitoring</a><span class="sep">, </span>
     
       
       
-      <a href="/tags/#networks" class="page__taxonomy-item" rel="tag">networks</a>
+      <a href="/tags/#openstack" class="page__taxonomy-item" rel="tag">openstack</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#redhat" class="page__taxonomy-item" rel="tag">redhat</a>
     
     </span>
   </p>
@@ -391,7 +448,7 @@
 
 
         
-          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2016-12-12">December 12, 2016</time></p>
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2019-04-25">April 25, 2019</time></p>
         
       </footer>
 
@@ -400,11 +457,11 @@
       
   <nav class="pagination">
     
-      <a href="/fiap-mba-mob/" class="pagination--pager" title="FIAP MBA em Mobile Development (MOB)
+      <a href="/fiap-bdt/" class="pagination--pager" title="FIAP MBA em Big Data (Data Science) (BDT)
 ">Previous</a>
     
     
-      <a href="/fiap-corporate/" class="pagination--pager" title="FIAP Corporate
+      <a href="/abs-ambassador/" class="pagination--pager" title="AWS Educate Cloud Ambassador
 ">Next</a>
     
   </nav>
