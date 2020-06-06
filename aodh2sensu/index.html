@@ -20,7 +20,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="GitOps">
 <meta property="og:title" content="aodh2sensu - importing alarms from Aodh into Sensu Core">
-<meta property="og:url" content="http://localhost:4000/aodh2sensu/">
+<meta property="og:url" content="https://josecastillolema.github.io/aodh2sensu/">
 
 
   <meta property="og:description" content="aodh2sensu  Imports OpenStack Aodh alarms into Sensu Core Server.  Install  $ pip3 install -r ./requirements.txt   Use  Usage: aodh2sensu.py [options]  Imports OpenStack Aodh alarms into Sensu Core Server.  Options:   -h, --help            show this help message and exit   --sensu-url URL       if not specified, defaults to localhost:4567           Run the aodh2sensu proxy. sensu_url must point to the sensu server. The proxy must be run in a server reachable from OpenStack controllers and with access to the Sensu Server (for example, the Sensu Server itself).       $ ./aodh2sensu.py           Create an Aodh alarm from OpenStack side. This example alarm will trigger an HTTP POST message to the aodh2sensu proxy whenever the cpu utilization of $INSTANCE_ID goes above 20%:      $ openstack alarm create \  --name cpu_hi \  --type gnocchi_resources_threshold \  --description &#39;CPU High Average&#39; \  --metric cpu_util4 \  --threshold 20.0 \  --comparison-operator gt \  --aggregation-method mean \  --granularity 300 \  --evaluation-periods 1 \  --resource-type instance \  --resource-id $INSTANSCE_ID \  --alarm-action &#39;http://x.y.z.w:50000&#39; \  --ok-action &#39;http://x.y.z.w:50000&#39; \  --insufficient-data-action &#39;http://x.y.z.w:50000&#39;          where x.y.z.w is the IP address of the server running aodh2sensu proxy.      Confirm the alarm transitions from insufficient_data state to ok state:      $ openstack alarm list  +--------------------------------------+--------------------------------------------+----------------+-------------------+----------+---------+  | alarm_id                             | type                                       | name           | state             | severity | enabled |  +--------------------------------------+--------------------------------------------+----------------+-------------------+----------+---------+  | c466d832-cfce-4488-9726-c631800a36b1 | gnocchi_resources_threshold                | cpu_hi4        | ok                | low      | True    |  +--------------------------------------+--------------------------------------------+----------------+-------------------+----------+---------+           Generate load in the instance above the 20% threeshold, and wait for the alarm to transitition to alarm state:      $ openstack alarm list  +--------------------------------------+--------------------------------------------+----------------+-------------------+----------+---------+  | alarm_id                             | type                                       | name           | state             | severity | enabled |  +--------------------------------------+--------------------------------------------+----------------+-------------------+----------+---------+  | c466d832-cfce-4488-9726-c631800a36b1 | gnocchi_resources_threshold                | cpu_hi4        | alarm             | low      | True    |  +--------------------------------------+--------------------------------------------+----------------+-------------------+----------+---------+                Check the alarm from the Uchiwa dashboard:        Stop the load generation in the instance, wait for the alarm to transition back to ok state:      $ openstack alarm list  +--------------------------------------+--------------------------------------------+----------------+-------------------+----------+---------+  | alarm_id                             | type                                       | name           | state             | severity | enabled |  +--------------------------------------+--------------------------------------------+----------------+-------------------+----------+---------+  | c466d832-cfce-4488-9726-c631800a36b1 | gnocchi_resources_threshold                | cpu_hi4        | ok                | low      | True    |  +--------------------------------------+--------------------------------------------+----------------+-------------------+----------+---------+                Check the new state of the sensu alert:       Confirm it has disappeared from the list of active alerts:    Docker To build the image:  $ buildah build-using-dockerfile -t aodh2sensu .   To run the image:  $ podman run --name aodh2sensu --add-host=&quot;localhost:10.88.0.1&quot; -d -p 50000:50000 aodh2sensu   Pointing to a specific Sensu Server URL:  $ podman run --name aodh2sensu --add-host=&quot;localhost:10.88.0.1&quot; -d -p 50000:50000 -e SENSU_URL=x.y.z.w:p aodh2sensu   Check logs: $ podman logs aodh2sensu   Systemd  To run aodh2sensu as a systemd service.  Normal # cat /usr/lib/systemd/system/aodh2sensu.service [Unit] Description=aodh2sensu service  [Service] Type=simple ExecStart=/opt/aodh2sensu/aodh2sensu.py  [Install] WantedBy=multi-user.target   Docker # cat ~/.config/systemd/user/aodh2sensu.service  [Unit] Description=aodh2sensu service via podman  [Service] Restart=on-failure ExecStartPre=/usr/bin/rm -f /%t/%n-pid /%t/%n-cid ExecStart=/usr/bin/podman run --conmon-pidfile  /%t/%n-pid  --cidfile /%t/%n-cid --add-host=&quot;localhost:10.88.0.1&quot; -d --name aodh2sensu -p 50000:50000 aodh2sensu ExecStop=/usr/bin/sh -c &quot;/usr/bin/podman rm -f `cat /%t/%n-cid`&quot; KillMode=none Type=forking PIDFile=/%t/%n-pid  [Install] WantedBy=multi-user.target    ">
@@ -44,7 +44,7 @@
   
 
 
-<link rel="canonical" href="http://localhost:4000/aodh2sensu/">
+<link rel="canonical" href="https://josecastillolema.github.io/aodh2sensu/">
 
 
 
@@ -55,7 +55,7 @@
     
       "@type": "Person",
       "name": "Jose Castillo Lema",
-      "url": "http://localhost:4000/",
+      "url": "https://josecastillolema.github.io/",
       "sameAs": ["https://www.linkedin.com/in/jose-castillo-lema","https://github.com/josecastillolema","https://stackoverflow.com/users/4288758/jos%c3%a9-castillo-lema","https://www.researchgate.net/profile/Jose_Castillo-Lema","https://scholar.google.com.br/citations?user=_xNpHiwAAAAJ","http://lattes.cnpq.br/7955703023492257","https://ambassadors.opennetworking.org/directory/jose-castillo-lema/"]
     
   }
@@ -550,7 +550,11 @@ WantedBy=multi-user.target
     
       
       
-      <a href="/tags/#openstack" class="page__taxonomy-item" rel="tag">openstack</a>
+      <a href="/tags/#openstack" class="page__taxonomy-item" rel="tag">openstack</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#redhat" class="page__taxonomy-item" rel="tag">redhat</a>
     
     </span>
   </p>
@@ -624,7 +628,7 @@ WantedBy=multi-user.target
     
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="/thesis/" rel="permalink">A generic NFV MANO for Content-Centric Networks
+        <a href="/onf-ambassador/" rel="permalink">Open Networking Foundation Ambassador
 </a>
       
     </h2>
@@ -638,7 +642,7 @@ WantedBy=multi-user.target
 
 </p>
     
-    <p class="archive__item-excerpt" itemprop="description">Biblioteca Digital de Teses e Dissertações da USP
+    <p class="archive__item-excerpt" itemprop="description">ONF Ambassador Program
 
 </p>
   </article>
@@ -654,7 +658,7 @@ WantedBy=multi-user.target
     
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="/netsof/" rel="permalink">IEEE NetSoft/S4SI 2019
+        <a href="/fiapon-live-1aso/" rel="permalink">FIAP MBA ON Live - 1ASO - Fase 3 - Cloud
 </a>
       
     </h2>
@@ -668,8 +672,7 @@ WantedBy=multi-user.target
 
 </p>
     
-    <p class="archive__item-excerpt" itemprop="description">IEEE Conference on Network Softwarization / 2nd Workshop on Advances in Slicing for Softwarized Infrastructures
-
+    <p class="archive__item-excerpt" itemprop="description">
 </p>
   </article>
 </div>
@@ -684,7 +687,7 @@ WantedBy=multi-user.target
     
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="/sumare/" rel="permalink">11a Semana de TI da Sumaré
+        <a href="/fiap-ia/" rel="permalink">FIAP MBA em Artificial Intelligence &amp; Machine Learning (IA)
 </a>
       
     </h2>
@@ -698,7 +701,11 @@ WantedBy=multi-user.target
 
 </p>
     
-    <p class="archive__item-excerpt" itemprop="description">Agenda
+    <p class="archive__item-excerpt" itemprop="description">
+
+
+  Princípios de Robótica e IoT
+
 
 </p>
   </article>

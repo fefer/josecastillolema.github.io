@@ -20,7 +20,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="GitOps">
 <meta property="og:title" content="GitOps">
-<meta property="og:url" content="http://localhost:4000/mininfv/">
+<meta property="og:url" content="https://josecastillolema.github.io/mininfv/">
 
 
   <meta property="og:description" content="Networks, SDN, NFVi, OpenStack, K8s/OpenShift. ">
@@ -40,7 +40,7 @@
   
 
 
-<link rel="canonical" href="http://localhost:4000/mininfv/">
+<link rel="canonical" href="https://josecastillolema.github.io/mininfv/">
 
 
 
@@ -51,7 +51,7 @@
     
       "@type": "Person",
       "name": "Jose Castillo Lema",
-      "url": "http://localhost:4000/",
+      "url": "https://josecastillolema.github.io/",
       "sameAs": ["https://www.linkedin.com/in/jose-castillo-lema","https://github.com/josecastillolema","https://stackoverflow.com/users/4288758/jos%c3%a9-castillo-lema","https://www.researchgate.net/profile/Jose_Castillo-Lema","https://scholar.google.com.br/citations?user=_xNpHiwAAAAJ","http://lattes.cnpq.br/7955703023492257","https://ambassadors.opennetworking.org/directory/jose-castillo-lema/"]
     
   }
@@ -377,13 +377,16 @@
 <ul>
   <li>TOSCA YAML
     <ul>
-      <li>YAML Simple Profile: http://docs.oasis-open.org/tosca/TOSCA-Simple-Profile-YAML/v1.1/csprd02/TOSCA-Simple-Profile-YAML-v1.1-csprd02.html</li>
+      <li>YAML Simple Profile: <a href="http://docs.oasis-open.org/tosca/TOSCA-Simple-Profile-YAML/v1.1/csprd02/TOSCA-Simple-Profile-YAML-v1.1-csprd02.html" target="_blank" rel="noopener noreferrer">http://docs.oasis-open.org/tosca/TOSCA-Simple-Profile-YAML/v1.1/csprd02/TOSCA-Simple-Profile-YAML-v1.1-csprd02.html</a>
+</li>
     </ul>
   </li>
   <li>TOSCA NFV Profile:
     <ul>
-      <li>Latest spec is available here: https://www.oasis-open.org/committees/document.php?document_id=56577&amp;wg_abbrev=tosca</li>
-      <li>Current latest (as of Oct 2015) is: https://www.oasis-open.org/committees/download.php/56577/tosca-nfv-v1.0-wd02-rev03.doc</li>
+      <li>Latest spec is available here: <a href="https://www.oasis-open.org/committees/document.php?document_id=56577&amp;wg_abbrev=tosca" target="_blank" rel="noopener noreferrer">https://www.oasis-open.org/committees/document.php?document_id=56577&amp;wg_abbrev=tosca</a>
+</li>
+      <li>Current latest (as of Oct 2015) is: <a href="https://www.oasis-open.org/committees/download.php/56577/tosca-nfv-v1.0-wd02-rev03.doc" target="_blank" rel="noopener noreferrer">https://www.oasis-open.org/committees/download.php/56577/tosca-nfv-v1.0-wd02-rev03.doc</a>
+</li>
     </ul>
   </li>
 </ul>
@@ -426,13 +429,13 @@
 <p>Mini-nfv supports:</p>
 <ul>
   <li>Jinja2 templating, to automate the scale-out of vNF deplyments and NFV orquestration graphs within the TOSCA templates</li>
-  <li>network definition via VL <a href="/README.md#network-definition">↵</a>
+  <li>network definition via VL <a href="#network-definition">↵</a>
 </li>
-  <li>IP/mac definition via CP <a href="/README.md#ipmac-definition">↵</a>
+  <li>IP/mac definition via CP <a href="#ipmac-definition">↵</a>
 </li>
-  <li>emulation of num CPUs and flavor properties through Mininet’s CPULimitedHost <a href="/README.md#flavor-and-number-of-cpus">↵</a>
+  <li>emulation of num CPUs and flavor properties through Mininet’s CPULimitedHost <a href="#flavor-and-number-of-cpus">↵</a>
 </li>
-  <li>cloud-init scripts <a href="/README.md#cloud-init">↵</a>
+  <li>cloud-init scripts <a href="#cloud-init">↵</a>
 </li>
 </ul>
 
@@ -459,7 +462,7 @@
   <li>net1: 10.10.1.0/24</li>
 </ul>
 
-<p>It is also possible to manually define the networks, within the Virtual Link (VL) definition, see <a href="/samples/vnfd/tosca-vnfd-network.yaml">tosca-vnfd-network.yaml</a>:</p>
+<p>It is also possible to manually define the networks, within the Virtual Link (VL) definition, see <a href="https://github.com/josecastillolema/mini-nfv/blob/master/samples/vnfd/tosca-vnfd-network.yaml" target="_blank" rel="noopener noreferrer">tosca-vnfd-network.yaml</a>:</p>
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    VL2:
       type: tosca.nodes.nfv.VL
       properties:
@@ -474,7 +477,7 @@
 
 <h2 id="ipmac-definition">IP/MAC definition</h2>
 <p>If not specified otherwise, mini-nfv will assign random IPs within the defined networks.
-However, it is also possibly to manually define IP/MAC for a VNF, within the Connection Point (CP) definition, see <a href="/samples/vnfd/tosca-vnfd-mac-ip.yaml">tosca-vnfd-mac-ip.yaml</a>:</p>
+However, it is also possibly to manually define IP/MAC for a VNF, within the Connection Point (CP) definition, see <a href="https://github.com/josecastillolema/mini-nfv/blob/master/samples/vnfd/tosca-vnfd-mac-ip.yaml" target="_blank" rel="noopener noreferrer">tosca-vnfd-mac-ip.yaml</a>:</p>
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    CP1:
       type: tosca.nodes.nfv.CP.Tacker
       properties:
@@ -520,7 +523,7 @@ Currently, mini-nfv support the folowing flavors:</p>
 <p>Mini-nfv will assign 1/(8-num_cpus))) to each VNF.</p>
 
 <h2 id="cloud-init">Cloud-init</h2>
-<p>Mini-nfv supports VNFs configuration through user-data, see <a href="/samples/vnfd/tosca-vnfd-userdata.yaml">tosca-vnfd-userdata.yaml</a>:</p>
+<p>Mini-nfv supports VNFs configuration through user-data, see <a href="https://github.com/josecastillolema/mini-nfv/blob/master/samples/vnfd/tosca-vnfd-userdata.yaml" target="_blank" rel="noopener noreferrer">tosca-vnfd-userdata.yaml</a>:</p>
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    VDU1:
       type: tosca.nodes.nfv.VDU.Tacker
       properties:
@@ -624,7 +627,7 @@ NXST_FLOW reply (xid=0x4):
 
 <ul>
   <li>
-    <p><strong>VNFD creation/listing/removal/template</strong></p>
+    <p><strong>VNFD creation/listing/removal/template show</strong></p>
 
     <div class="highlighter-rouge">
 <div class="highlight"><pre class="highlight"><code> $ sudo ./mininfv.py
@@ -655,7 +658,7 @@ NXST_FLOW reply (xid=0x4):
  mininfv&gt; vnfd_list
  vnfd-helloworld: Demo example
 </code></pre></div>    </div>
-    <p>Or just source  <a href="/samples/topology/vnfd_test"><code class="highlighter-rouge">vnfd_test</code></a> from mininfv:</p>
+    <p>Or just source  <a href="https://github.com/josecastillolema/mini-nfv/blob/master/samples/topology/vnfd_test" target="_blank" rel="noopener noreferrer"><code class="highlighter-rouge">vnfd_test</code></a> from mininfv:</p>
     <div class="highlighter-rouge">
 <div class="highlight"><pre class="highlight"><code> mininfv&gt; source samples/topology/vnfd_test
  *** Creating vnfds userdata and hello-world ...
@@ -715,7 +718,7 @@ NXST_FLOW reply (xid=0x4):
  mininfv&gt; vnf_list
  []
 </code></pre></div>    </div>
-    <p>Or just source  <a href="/samples/topology/vnf_test"><code class="highlighter-rouge">vnf_test</code></a> from mininfv:</p>
+    <p>Or just source  <a href="https://github.com/josecastillolema/mini-nfv/blob/master/samples/topology/vnf_test" target="_blank" rel="noopener noreferrer"><code class="highlighter-rouge">vnf_test</code></a> from mininfv:</p>
     <div class="highlighter-rouge">
 <div class="highlight"><pre class="highlight"><code> mininfv&gt; source samples/topology/vnf_test
  *** Starting vnf &lt;tosca-vnfd-userdata.yaml&gt; ...
@@ -788,7 +791,7 @@ NXST_FLOW reply (xid=0x4):
  3 packets transmitted, 3 received, 0% packet loss, time 2032ms
  rtt min/avg/max/mdev = 0.142/1.270/2.934/1.201 ms
 </code></pre></div>    </div>
-    <p>Or just source  <a href="/samples/topology/host_test"><code class="highlighter-rouge">host_test</code></a> from mininfv:</p>
+    <p>Or just source  <a href="https://github.com/josecastillolema/mini-nfv/blob/master/samples/topology/host_test" target="_blank" rel="noopener noreferrer"><code class="highlighter-rouge">host_test</code></a> from mininfv:</p>
     <div class="highlighter-rouge">
 <div class="highlight"><pre class="highlight"><code> mininfv&gt; source samples/topology/host_test
  *** Creating host h1 with two interfaces ...
