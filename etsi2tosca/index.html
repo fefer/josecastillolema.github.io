@@ -9,8 +9,8 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>FIAP MBA em Artificial Intelligence &amp; Machine Learning (IA) - GitOps</title>
-<meta name="description" content="     Princípios de Robótica e IoT   ">
+<!-- begin _includes/seo.html --><title>etsi2tosca - Converting ETSI NFV templates into TOSCA profile - GitOps</title>
+<meta name="description" content="etsi2tosca Converts ETSI NFV templates into TOSCA profile.  Use Usage: etsi2tosca FILE  Converts ETSI NFV templates into TOSCA profile  Options:   -h, --help            show this help message and exit   Examples  Example 1: $ ./etsi2tosca.py samples/opencv_transcoder_vnfd.yaml  tosca_definitions_version: tosca_simple_profile_for_nfv_1_0_0  description: OpenCV Transcoder VNF  metadata:   template_name: opencv_transcoder_vnf  topology_template:   inputs:    ssh-hostname:      type: string       default: &lt;rw_mgmt_ip&gt;     ssh-username:      type: string       default: ubuntu     ssh-password:      type: string       default: 5ginfire     ssh-private-key:      type: string     stream-ip:      type: string     output-port:      type: integer    node_templates:     VDU1:       type: tosca.nodes.nfv.VDU.Tacker       capabilities:         nfv_compute:           properties:             num_cpus: 8             mem_size: 8192 MB             disk_size: 20 GB       properties:         image: opencv_transcoder_image         mgmt_driver: noop         user_data:           str_replace:             template: {get_file: transcoder_cloud_init.cfg}      CP0       type: tosca.nodes.nfv.CP.Tacker       properties:         management: false         order: 0         anti_spoofing_protection: false       requirements:         - virtualLink:             node: VL0         - virtualBinding:             node: VDU1     CP1       type: tosca.nodes.nfv.CP.Tacker       properties:         management: false         order: 1         anti_spoofing_protection: false       requirements:         - virtualLink:             node: VL1         - virtualBinding:             node: VDU1      VL0       type: tosca.nodes.nfv.VL       properties:         network_name: eth0         vendor: 5GinFIRE      VL1       type: tosca.nodes.nfv.VL       properties:         network_name: eth1         vendor: 5GinFIRE   Example 2: $ ./etsi2tosca.py samples/opencv_transcoder_vnfd.yaml &gt; opencv_transcoder_vndf_tosca.yaml   ">
 
 
   <meta name="author" content="Jose Castillo Lema">
@@ -19,32 +19,32 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="GitOps">
-<meta property="og:title" content="FIAP MBA em Artificial Intelligence &amp; Machine Learning (IA)">
-<meta property="og:url" content="https://josecastillolema.github.io/fiap-ia/">
+<meta property="og:title" content="etsi2tosca - Converting ETSI NFV templates into TOSCA profile">
+<meta property="og:url" content="https://josecastillolema.github.io/etsi2tosca/">
 
 
-  <meta property="og:description" content="     Princípios de Robótica e IoT   ">
-
-
-
+  <meta property="og:description" content="etsi2tosca Converts ETSI NFV templates into TOSCA profile.  Use Usage: etsi2tosca FILE  Converts ETSI NFV templates into TOSCA profile  Options:   -h, --help            show this help message and exit   Examples  Example 1: $ ./etsi2tosca.py samples/opencv_transcoder_vnfd.yaml  tosca_definitions_version: tosca_simple_profile_for_nfv_1_0_0  description: OpenCV Transcoder VNF  metadata:   template_name: opencv_transcoder_vnf  topology_template:   inputs:    ssh-hostname:      type: string       default: &lt;rw_mgmt_ip&gt;     ssh-username:      type: string       default: ubuntu     ssh-password:      type: string       default: 5ginfire     ssh-private-key:      type: string     stream-ip:      type: string     output-port:      type: integer    node_templates:     VDU1:       type: tosca.nodes.nfv.VDU.Tacker       capabilities:         nfv_compute:           properties:             num_cpus: 8             mem_size: 8192 MB             disk_size: 20 GB       properties:         image: opencv_transcoder_image         mgmt_driver: noop         user_data:           str_replace:             template: {get_file: transcoder_cloud_init.cfg}      CP0       type: tosca.nodes.nfv.CP.Tacker       properties:         management: false         order: 0         anti_spoofing_protection: false       requirements:         - virtualLink:             node: VL0         - virtualBinding:             node: VDU1     CP1       type: tosca.nodes.nfv.CP.Tacker       properties:         management: false         order: 1         anti_spoofing_protection: false       requirements:         - virtualLink:             node: VL1         - virtualBinding:             node: VDU1      VL0       type: tosca.nodes.nfv.VL       properties:         network_name: eth0         vendor: 5GinFIRE      VL1       type: tosca.nodes.nfv.VL       properties:         network_name: eth1         vendor: 5GinFIRE   Example 2: $ ./etsi2tosca.py samples/opencv_transcoder_vnfd.yaml &gt; opencv_transcoder_vndf_tosca.yaml   ">
 
 
 
 
-  <meta property="article:published_time" content="2019-09-03T00:00:00-03:00">
 
 
 
-  <meta property="article:modified_time" content="2019-09-03T17:00:58-03:00">
+  <meta property="article:published_time" content="2018-12-16T00:00:00-02:00">
 
 
 
-  
+  <meta property="article:modified_time" content="2018-12-16T18:00:58-02:00">
+
+
 
   
 
+  
 
-<link rel="canonical" href="https://josecastillolema.github.io/fiap-ia/">
+
+<link rel="canonical" href="https://josecastillolema.github.io/etsi2tosca/">
 
 
 
@@ -328,15 +328,15 @@
 
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="FIAP MBA em Artificial Intelligence &amp; Machine Learning (IA)">
-    <meta itemprop="description" content="  Princípios de Robótica e IoT">
-    <meta itemprop="datePublished" content="2019-09-03T00:00:00-03:00">
-    <meta itemprop="dateModified" content="2019-09-03T17:00:58-03:00">
+    <meta itemprop="headline" content="etsi2tosca - Converting ETSI NFV templates into TOSCA profile">
+    <meta itemprop="description" content="etsi2toscaConverts ETSI NFV templates into TOSCA profile.UseUsage: etsi2tosca FILEConverts ETSI NFV templates into TOSCA profileOptions:  -h, --help            show this help message and exitExamplesExample 1:$ ./etsi2tosca.py samples/opencv_transcoder_vnfd.yaml tosca_definitions_version: tosca_simple_profile_for_nfv_1_0_0description: OpenCV Transcoder VNFmetadata:  template_name: opencv_transcoder_vnftopology_template:  inputs:   ssh-hostname:     type: string      default: &lt;rw_mgmt_ip&gt;   ssh-username:     type: string      default: ubuntu   ssh-password:     type: string      default: 5ginfire   ssh-private-key:     type: string   stream-ip:     type: string   output-port:     type: integer  node_templates:    VDU1:      type: tosca.nodes.nfv.VDU.Tacker      capabilities:        nfv_compute:          properties:            num_cpus: 8            mem_size: 8192 MB            disk_size: 20 GB      properties:        image: opencv_transcoder_image        mgmt_driver: noop        user_data:          str_replace:            template: {get_file: transcoder_cloud_init.cfg}    CP0      type: tosca.nodes.nfv.CP.Tacker      properties:        management: false        order: 0        anti_spoofing_protection: false      requirements:        - virtualLink:            node: VL0        - virtualBinding:            node: VDU1    CP1      type: tosca.nodes.nfv.CP.Tacker      properties:        management: false        order: 1        anti_spoofing_protection: false      requirements:        - virtualLink:            node: VL1        - virtualBinding:            node: VDU1    VL0      type: tosca.nodes.nfv.VL      properties:        network_name: eth0        vendor: 5GinFIRE    VL1      type: tosca.nodes.nfv.VL      properties:        network_name: eth1        vendor: 5GinFIREExample 2:$ ./etsi2tosca.py samples/opencv_transcoder_vnfd.yaml &gt; opencv_transcoder_vndf_tosca.yaml">
+    <meta itemprop="datePublished" content="2018-12-16T00:00:00-02:00">
+    <meta itemprop="dateModified" content="2018-12-16T18:00:58-02:00">
 
     <div class="page__inner-wrap">
       
         <header>
-          <h1 id="page-title" class="page__title" itemprop="headline">FIAP MBA em Artificial Intelligence &amp; Machine Learning (IA)
+          <h1 id="page-title" class="page__title" itemprop="headline">etsi2tosca - Converting ETSI NFV templates into TOSCA profile
 </h1>
           
             <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
@@ -344,7 +344,7 @@
 
 
 
-  less than 1 minute read
+  1 minute read
 
 </p>
           
@@ -353,11 +353,124 @@
 
       <section class="page__content" itemprop="text">
         
-        <p><a href="https://www.fiap.com.br/mba/mba-em-artificial-intelligence-e-machine-learning/" target="_blank" rel="noopener noreferrer"><img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/img/ia.png" alt="FIAP MBA"></a></p>
-
-<ul>
-  <li><a href="https://github.com/josecastillolema/fiap/tree/master/ia/iot" target="_blank" rel="noopener noreferrer">Princípios de Robótica e IoT</a></li>
+          <aside class="sidebar__right ">
+            <nav class="toc">
+              <header><h4 class="nav__title">
+<i class="fas fa-file-alt"></i> Getting Started</h4></header>
+              <ul class="toc__menu">
+  <li>
+<a href="#etsi2tosca">etsi2tosca</a>
+    <ul>
+      <li><a href="#use">Use</a></li>
+      <li><a href="#examples">Examples</a></li>
+    </ul>
+  </li>
 </ul>
+
+            </nav>
+          </aside>
+        
+        <h1 id="etsi2tosca"><a href="https://github.com/josecastillolema/etsi2tosca" target="_blank" rel="noopener noreferrer">etsi2tosca</a></h1>
+<p>Converts ETSI NFV templates into TOSCA profile.</p>
+
+<h2 id="use">Use</h2>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Usage: etsi2tosca FILE
+
+Converts ETSI NFV templates into TOSCA profile
+
+Options:
+  -h, --help            show this help message and exit
+</code></pre></div></div>
+
+<h2 id="examples">Examples</h2>
+
+<p>Example 1:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ./etsi2tosca.py samples/opencv_transcoder_vnfd.yaml 
+tosca_definitions_version: tosca_simple_profile_for_nfv_1_0_0
+
+description: OpenCV Transcoder VNF
+
+metadata:
+  template_name: opencv_transcoder_vnf
+
+topology_template:
+  inputs:
+   ssh-hostname:
+     type: string
+      default: &lt;rw_mgmt_ip&gt;
+
+   ssh-username:
+     type: string
+      default: ubuntu
+
+   ssh-password:
+     type: string
+      default: 5ginfire
+
+   ssh-private-key:
+     type: string
+
+   stream-ip:
+     type: string
+
+   output-port:
+     type: integer
+
+  node_templates:
+    VDU1:
+      type: tosca.nodes.nfv.VDU.Tacker
+      capabilities:
+        nfv_compute:
+          properties:
+            num_cpus: 8
+            mem_size: 8192 MB
+            disk_size: 20 GB
+      properties:
+        image: opencv_transcoder_image
+        mgmt_driver: noop
+        user_data:
+          str_replace:
+            template: {get_file: transcoder_cloud_init.cfg}
+
+    CP0
+      type: tosca.nodes.nfv.CP.Tacker
+      properties:
+        management: false
+        order: 0
+        anti_spoofing_protection: false
+      requirements:
+        - virtualLink:
+            node: VL0
+        - virtualBinding:
+            node: VDU1
+    CP1
+      type: tosca.nodes.nfv.CP.Tacker
+      properties:
+        management: false
+        order: 1
+        anti_spoofing_protection: false
+      requirements:
+        - virtualLink:
+            node: VL1
+        - virtualBinding:
+            node: VDU1
+
+    VL0
+      type: tosca.nodes.nfv.VL
+      properties:
+        network_name: eth0
+        vendor: 5GinFIRE
+
+    VL1
+      type: tosca.nodes.nfv.VL
+      properties:
+        network_name: eth1
+        vendor: 5GinFIRE
+</code></pre></div></div>
+
+<p>Example 2:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ./etsi2tosca.py samples/opencv_transcoder_vnfd.yaml &gt; opencv_transcoder_vndf_tosca.yaml
+</code></pre></div></div>
 
 
         
@@ -379,15 +492,11 @@
     
       
       
-      <a href="/tags/#classes" class="page__taxonomy-item" rel="tag">classes</a><span class="sep">, </span>
+      <a href="/tags/#networks" class="page__taxonomy-item" rel="tag">networks</a><span class="sep">, </span>
     
       
       
-      <a href="/tags/#fiap" class="page__taxonomy-item" rel="tag">fiap</a><span class="sep">, </span>
-    
-      
-      
-      <a href="/tags/#iot" class="page__taxonomy-item" rel="tag">iot</a>
+      <a href="/tags/#nfv" class="page__taxonomy-item" rel="tag">nfv</a>
     
     </span>
   </p>
@@ -396,7 +505,7 @@
 
 
         
-          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2019-09-03">September 3, 2019</time></p>
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2018-12-16">December 16, 2018</time></p>
         
       </footer>
 
@@ -405,11 +514,11 @@
       
   <nav class="pagination">
     
-      <a href="/thesis/" class="pagination--pager" title="A generic NFV MANO for Content-Centric Networks
+      <a href="/mandic-webinar/" class="pagination--pager" title="Webinar Mandic Cloud - IPv6 no OpenStack
 ">Previous</a>
     
     
-      <a href="/fiapon-live-1aso/" class="pagination--pager" title="FIAP MBA ON Live - 1ASO - Fase 3 - Cloud
+      <a href="/fiap-aso/" class="pagination--pager" title="FIAP MBA em Arquitetura de Soluções (ASO)
 ">Next</a>
     
   </nav>

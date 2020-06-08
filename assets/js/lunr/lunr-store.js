@@ -7,37 +7,49 @@ var store = [{
       },{
         "title": "ISCC 2014",
         "excerpt":"The nineteenth IEEE Symposium on Computers And Communications Program Entity Title Architecture Extensions Towards Advanced Quality-oriented Mobility Control Capabilities Felipe Sampaio Dantas da Silva (Federal Institute of Education, Science and Technology of Rio Grande do Norte, Brazil) José Castillo Lema (Universidade Federal do Rio Grande do Norte, Spain) Augusto Jose...","categories": [],
-        "tags": ["events","networks"],
+        "tags": ["events","networks","sdn"],
         "url": "https://josecastillolema.github.io/iscc/",
         "teaser": null
       },{
         "title": "Evolving Future Internet clean-slate ETArch with QoS control-plane extensions",
         "excerpt":"Biblioteca Digital Brasileira de Teses e Dissertações   LEMA, José Castillo. Extensões orientadas a qualidade ao plano de controle da Arquitetura Entidade-Título. 2014. 62 f. Dissertação (Mestrado em Ciência da Computação) - Universidade Federal do Rio Grande do Norte, Natal, 2014.  ","categories": [],
-        "tags": ["networks"],
+        "tags": ["networks","sdn"],
         "url": "https://josecastillolema.github.io/mdthesis/",
+        "teaser": null
+      },{
+        "title": "Support of Mobile Sessions with High Transport Network Resource Demand",
+        "excerpt":"smart-OF-controller This project aims to design and develop a clean-slate Future Internet framework called SMART (Support of Mobile Sessions with High Transport Network Resource Demand). In this framework, Software-Defined Networking mechanisms will be applied and fitted in vital aspects of the RNP (Brazilian National Research and Education Network) infrastructure, to...","categories": [],
+        "tags": ["networks","sdn"],
+        "url": "https://josecastillolema.github.io/smart/",
+        "teaser": null
+      },{
+        "title": "Smart Campus SP",
+        "excerpt":"Smart Campus SP SmartCampus is a FI-Ware software prototype to measure the contamination levels in the University of São Paulo (USP) Campus with a group of Android, Arduino and Galileo sensors. Below you can find a diagram of all the system components and a brief explanation of their functions. The...","categories": [],
+        "tags": ["fiware","iot"],
+        "url": "https://josecastillolema.github.io/smartcampus/",
         "teaser": null
       },{
         "title": "IEEE GLOBECOM 2014",
         "excerpt":"Global Communications Conference 2014 Additions to the ETArch control plane to support multimedia QoS-guaranteed content transport over OpenFlow-enabled SDN future internet systems José Castillo - Federal University of Rio Grande do Norte (UFRN), Brazil Augusto Neto - Federal University of Rio Grande do Norte (UFRN), Brazil Flavio Silva - Federal...","categories": [],
-        "tags": ["events","networks"],
+        "tags": ["events","networks","sdn"],
         "url": "https://josecastillolema.github.io/globecom/",
         "teaser": null
       },{
         "title": "FIAP MBA em Full Stack Developer - Microservices, Cloud e IoT (SCJ)",
         "excerpt":"      Arquitetura e Desenvolvimento Java com IoT   Arquitetura e Desenvolvimento Java de Alta Disponibilidade para Cloud Computing   Arquitetura e Infraestrutura de Cloud Computing e Internet das Coisas   Cloud Development   Desenvolvimento de aplicações usando Cloud Computing   ","categories": [],
-        "tags": ["classes","fiap"],
+        "tags": ["aws","azure","classes","fiap"],
         "url": "https://josecastillolema.github.io/fiap-mba-scj/",
         "teaser": null
       },{
         "title": "Computer Networks - Volume 107",
         "excerpt":"   Volume 107, Part 2, Pages 270-291   An innovative software-defined WiNeMO architecture for advanced QoS-guaranteed mobile service transport      Felipe S. Dantas Silva   Augusto Venâncio Netob   Douglas Maciel   José Castillo-Lema   Flávio Silva   Pedro Frosi   EduardoCerqueira.  ","categories": [],
-        "tags": ["networks"],
+        "tags": ["networks","sdn"],
         "url": "https://josecastillolema.github.io/computer-networks/",
         "teaser": null
       },{
         "title": "FIAP MBA em Mobile Development (MOB)",
         "excerpt":"      DevOps &amp; Cloud Oriented Architecture   Segurança para Aplicações Móveis para Internet das Coisas e Cloud Computing   ","categories": [],
-        "tags": ["classes","fiap"],
+        "tags": ["aws","azure","classes","fiap"],
         "url": "https://josecastillolema.github.io/fiap-mba-mob/",
         "teaser": null
       },{
@@ -49,7 +61,7 @@ var store = [{
       },{
         "title": "FIAP Corporate",
         "excerpt":"      Citibank: Internet of Things (2017)   Gerdau: Internet of Things (2017)   Ambev: Computers Networks and Cloud Computing (2018)   T-Systems: Internet of Things (2018)  ","categories": [],
-        "tags": ["classes","fiap"],
+        "tags": ["aws","azure","classes","fiap","iot","networks"],
         "url": "https://josecastillolema.github.io/fiap-corporate/",
         "teaser": null
       },{
@@ -61,7 +73,7 @@ var store = [{
       },{
         "title": "PUC-SP Cursos de extensão - Internet das Coisas",
         "excerpt":"  ","categories": [],
-        "tags": ["classes"],
+        "tags": ["classes","iot"],
         "url": "https://josecastillolema.github.io/puc/",
         "teaser": null
       },{
@@ -145,7 +157,7 @@ var store = [{
       },{
         "title": "FIAP MBA em Cloud Computing (CLD)",
         "excerpt":"      BootCamp OpenStack   Implementação de Cloud   Implementação OpenStack   ","categories": [],
-        "tags": ["classes","fiap"],
+        "tags": ["classes","fiap","openstack"],
         "url": "https://josecastillolema.github.io/fiap-mba-cld/",
         "teaser": null
       },{
@@ -179,21 +191,33 @@ var store = [{
         "url": "https://josecastillolema.github.io/mandic-webinar/",
         "teaser": null
       },{
+        "title": "etsi2tosca - Converting ETSI NFV templates into TOSCA profile",
+        "excerpt":"etsi2tosca Converts ETSI NFV templates into TOSCA profile. Use Usage: etsi2tosca FILE Converts ETSI NFV templates into TOSCA profile Options: -h, --help show this help message and exit Examples Example 1: $ ./etsi2tosca.py samples/opencv_transcoder_vnfd.yaml tosca_definitions_version: tosca_simple_profile_for_nfv_1_0_0 description: OpenCV Transcoder VNF metadata: template_name: opencv_transcoder_vnf topology_template: inputs: ssh-hostname: type: string default: &lt;rw_mgmt_ip&gt;...","categories": [],
+        "tags": ["networks","nfv"],
+        "url": "https://josecastillolema.github.io/etsi2tosca/",
+        "teaser": null
+      },{
         "title": "FIAP MBA em Arquitetura de Soluções (ASO)",
         "excerpt":"           Arquitetura de Storage / DataCenter / Virtualização e Microcontainers            Arquitetura em MultiCloud (AWS / GCP / Azure / IBM Cloud)       ","categories": [],
-        "tags": ["classes","fiap"],
+        "tags": ["aws","azure","classes","fiap"],
         "url": "https://josecastillolema.github.io/fiap-aso/",
+        "teaser": null
+      },{
+        "title": "A Locust CCN client compatible with ccn-lite",
+        "excerpt":"locust-ccnclient   A Locust CCN client compatible with ccn-lite.   It allows the execution of load test experiments againts a CCN network.           ","categories": [],
+        "tags": ["ccn","networks"],
+        "url": "https://josecastillolema.github.io/locust-ccnclient/",
         "teaser": null
       },{
         "title": "FIAP MBA em Arquitetura e Desenvolvimento na Plataforma .NET (NET)",
         "excerpt":"      Arquitetura Windows Azure Services   ","categories": [],
-        "tags": ["classes","fiap"],
+        "tags": ["azure","classes","fiap"],
         "url": "https://josecastillolema.github.io/fiap-net/",
         "teaser": null
       },{
         "title": "FIAP MBA em Big Data (Data Science) (BDT)",
         "excerpt":"      Cloud Computing   Fast Data &amp; Microservices   Internet das Coisas   Microserviços   ","categories": [],
-        "tags": ["classes","fiap"],
+        "tags": ["aws","classes","fiap","iot"],
         "url": "https://josecastillolema.github.io/fiap-bdt/",
         "teaser": null
       },{
@@ -211,7 +235,7 @@ var store = [{
       },{
         "title": "SBRC/WPEIF 2019",
         "excerpt":"XXXVII Simpósio Brasileiro de Redes de Computadores e Sistemas Distribuídos / Workshop de Pesquisa Experimental da Internet do Futuro Proceedings Network Function Virtualization in Content-Centric Networks José Castillo Lema, Universidade de São Paulo, Brazil Augusto J. Venancio Neto, Federal University of Rio Grande do Norte, Brazil Flavio de Oliveira Silva,...","categories": [],
-        "tags": ["events","networks"],
+        "tags": ["ccn","events","networks","nfv"],
         "url": "https://josecastillolema.github.io/sbrc19/",
         "teaser": null
       },{
@@ -223,31 +247,31 @@ var store = [{
       },{
         "title": "FIAP MBA em Blockchain Development & Technologies (BLC)",
         "excerpt":"      DevOps &amp; Cloud Oriented Architecture   ","categories": [],
-        "tags": ["classes","fiap"],
+        "tags": ["aws","azure","classes","fiap"],
         "url": "https://josecastillolema.github.io/fiap-blc/",
         "teaser": null
       },{
         "title": "IEEE NetSoft/S4SI 2019",
         "excerpt":"IEEE Conference on Network Softwarization / 2nd Workshop on Advances in Slicing for Softwarized Infrastructures Agenda Mininet-NFV: Evolving Mininet with OASIS TOSCA NVF profiles Towards Reproducible NFV Prototyping José Castillo Lema, Universidade de São Paulo, Brazil Augusto J. Venancio Neto, Federal University of Rio Grande do Norte, Brazil Flavio de...","categories": [],
-        "tags": ["events","networks"],
+        "tags": ["events","networks","nfv","sdn"],
         "url": "https://josecastillolema.github.io/netsof/",
         "teaser": null
       },{
         "title": "FIAP MBA em Engenharia de Software - Online (AOJO)",
         "excerpt":"      Cloud Computing &amp; SRE   ","categories": [],
-        "tags": ["classes","fiap"],
+        "tags": ["aws","azure","classes","fiap"],
         "url": "https://josecastillolema.github.io/fiap-aojo/",
         "teaser": null
       },{
         "title": "A generic NFV MANO for Content-Centric Networks",
         "excerpt":"Biblioteca Digital de Teses e Dissertações da USP ISO CASTILLO LEMA, José. A generic network function virtualization manager and orchestrator for content-centric networks [doi:10.11606/T.3.2019.tde-23102019-120559]. São Paulo : Escola Politécnica, Universidade de São Paulo, 2019. Tese de Doutorado em Sistemas Eletrônicos. [acesso 2020-06-01]. ABNT CASTILLO LEMA, José. A generic network function...","categories": [],
-        "tags": ["networks"],
+        "tags": ["ccn","networks","nfv"],
         "url": "https://josecastillolema.github.io/thesis/",
         "teaser": null
       },{
         "title": "FIAP MBA em Artificial Intelligence & Machine Learning (IA)",
         "excerpt":"      Princípios de Robótica e IoT   ","categories": [],
-        "tags": ["classes","fiap"],
+        "tags": ["classes","fiap","iot"],
         "url": "https://josecastillolema.github.io/fiap-ia/",
         "teaser": null
       },{
@@ -259,7 +283,7 @@ var store = [{
       },{
         "title": "Open Networking Foundation Ambassador",
         "excerpt":"ONF Ambassador Program   Profile  ","categories": [],
-        "tags": ["ambassador","networks"],
+        "tags": ["ambassador","networks","nfv","sdn"],
         "url": "https://josecastillolema.github.io/onf-ambassador/",
         "teaser": null
       },{
