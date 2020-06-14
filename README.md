@@ -1,5 +1,8 @@
 ![gem](https://img.shields.io/badge/gem-3.1.2-blue)
 ![ruby](https://img.shields.io/badge/ruby-2.7-blue)
+![jekyll](https://img.shields.io/badge/jekyll-3.8.7-blue)
+![bundler](https://img.shields.io/badge/bundler-2.1.4-blue)
+
 
 Sources of the GitOps project's website (https://https://josecastillolema.github.io/).
 
