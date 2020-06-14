@@ -1,3 +1,4 @@
+![GitHub language count](https://img.shields.io/github/languages/count/josecastillolema/josecastillolema.github.io)
 ![GitHub top language](https://img.shields.io/github/languages/top/josecastillolema/josecastillolema.github.io)
 ![gem](https://img.shields.io/badge/gem-3.1.2-blue)
 ![ruby](https://img.shields.io/badge/ruby-2.7-blue)
