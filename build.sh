@@ -1,5 +1,5 @@
 set -v
-bundle exec jekyll build
+JEKYLL_ENV=production bundle exec jekyll build
 git add *
 git commit -m "auto build"
 git push
