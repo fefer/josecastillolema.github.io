@@ -1,0 +1,23 @@
+# main links
+main:
+  #- title: "Quick-Start Guide"
+  #  url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
+  # - title: "Sample Posts"
+  #   url: /year-archive/
+  # - title: "Sample Collections"
+  #   url: /collection-archive/
+  # - title: "Sitemap"
+  #   url: /sitemap/
+  - title: "fiap"
+    url: /fiap/
+  - title: "mini-nfv"
+    url: /mininfv/
+  - title: "posts"
+    url: /posts/
+  #- title: "Categories"
+  #  url: /categories/
+  - title: "tags"
+    url: /tags/
+  - title: "about"
+    url: /about/
+
