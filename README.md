@@ -1,4 +1,5 @@
 ![gem](https://img.shields.io/badge/gem-3.1.2-blue)
+![ruby](https://img.shields.io/badge/ruby-2.7-blue)
 
 Sources of the GitOps project's website (https://https://josecastillolema.github.io/).
 
