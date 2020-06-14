@@ -1,3 +1,5 @@
+[![Gem version](https://img.shields.io/gem/v/bootstrap.svg)](https://rubygems.org/gems/bootstrap)
+
 This is the sources of the GitOps project's website (https://https://josecastillolema.github.io/).
 
 It is built with [Jekyll](http://jekyllrb.com/) as a static site.
