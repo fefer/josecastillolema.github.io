@@ -8,7 +8,7 @@
 ![GitHub last commit](https://img.shields.io/github/last-commit/josecastillolema/josecastillolema.github.io)
 
 
-Sources of the GitOps project's website (https://https://josecastillolema.github.io/).
+Sources of the GitOps project's website (https://josecastillolema.github.io/).
 
 It is built with [Jekyll](http://jekyllrb.com/) as a static site.
 The `master` branch contains only the generated files, ie what is in the `_site`.
