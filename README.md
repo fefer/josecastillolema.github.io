@@ -1,3 +1,4 @@
+![GitHub top language](https://img.shields.io/github/languages/top/josecastillolema/josecastillolema.github.io)
 ![gem](https://img.shields.io/badge/gem-3.1.2-blue)
 ![ruby](https://img.shields.io/badge/ruby-2.7-blue)
 ![jekyll](https://img.shields.io/badge/jekyll-3.8.7-blue)
