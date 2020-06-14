@@ -1,4 +1,8 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.7">Jekyll</generator><link href="https://josecastillolema.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://josecastillolema.github.io/" rel="alternate" type="text/html" /><updated>2020-06-14T12:50:41-03:00</updated><id>https://josecastillolema.github.io/feed.xml</id><title type="html">GitOps</title><subtitle>Networks, SDN, NFVi, OpenStack, K8s/OpenShift.</subtitle><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><entry><title type="html">aodh2sensu - importing alarms from Aodh into Sensu Core</title><link href="https://josecastillolema.github.io/aodh2sensu/" rel="alternate" type="text/html" title="aodh2sensu - importing alarms from Aodh into Sensu Core" /><published>2020-05-25T00:00:00-03:00</published><updated>2020-04-26T17:00:58-03:00</updated><id>https://josecastillolema.github.io/aodh2sensu</id><content type="html" xml:base="https://josecastillolema.github.io/aodh2sensu/">&lt;h1 id=&quot;aodh2sensu&quot;&gt;&lt;a href=&quot;https://github.com/josecastillolema/aodh2sensu&quot;&gt;aodh2sensu&lt;/a&gt;&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.7">Jekyll</generator><link href="https://josecastillolema.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://josecastillolema.github.io/" rel="alternate" type="text/html" /><updated>2020-06-14T19:05:47-03:00</updated><id>https://josecastillolema.github.io/feed.xml</id><title type="html">GitOps</title><subtitle>Networks, SDN, NFVi, OpenStack, K8s/OpenShift.</subtitle><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><entry><title type="html">aodh2sensu - importing alarms from Aodh into Sensu Core</title><link href="https://josecastillolema.github.io/aodh2sensu/" rel="alternate" type="text/html" title="aodh2sensu - importing alarms from Aodh into Sensu Core" /><published>2020-05-25T00:00:00-03:00</published><updated>2020-04-26T17:00:58-03:00</updated><id>https://josecastillolema.github.io/aodh2sensu</id><content type="html" xml:base="https://josecastillolema.github.io/aodh2sensu/">&lt;iframe src=&quot;https://ghbtns.com/github-btn.html?user=josecastillolema&amp;amp;repo=aodh2sensu&amp;amp;type=watch&amp;amp;count=true&amp;amp;size=large&amp;amp;v=2&quot; frameborder=&quot;0&quot; scrolling=&quot;0&quot; width=&quot;130&quot; height=&quot;30&quot; title=&quot;GitHub&quot;&gt;&lt;/iframe&gt;
+&lt;iframe src=&quot;https://ghbtns.com/github-btn.html?user=josecastillolema&amp;amp;repo=aodh2sensu&amp;amp;type=star&amp;amp;count=true&amp;amp;size=large&quot; frameborder=&quot;0&quot; scrolling=&quot;0&quot; width=&quot;115&quot; height=&quot;30&quot; title=&quot;GitHub&quot;&gt;&lt;/iframe&gt;
+&lt;iframe src=&quot;https://ghbtns.com/github-btn.html?user=josecastillolema&amp;amp;repo=aodh2sensu&amp;amp;type=fork&amp;amp;count=true&amp;amp;size=large&quot; frameborder=&quot;0&quot; scrolling=&quot;0&quot; width=&quot;170&quot; height=&quot;30&quot; title=&quot;GitHub&quot;&gt;&lt;/iframe&gt;
+
+&lt;h1 id=&quot;aodh2sensu&quot;&gt;aodh2sensu&lt;/h1&gt;
 
 &lt;p&gt;Imports &lt;a href=&quot;https://docs.openstack.org/aodh/latest/&quot;&gt;OpenStack Aodh&lt;/a&gt; alarms into &lt;a href=&quot;https://docs.sensu.io/sensu-core/latest/&quot;&gt;Sensu Core&lt;/a&gt; Server.&lt;/p&gt;
 
@@ -25,7 +29,7 @@ Options:
     &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; $ ./aodh2sensu.py
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
   &lt;/li&gt;
-  &lt;li&gt;Create an Aodh alarm from OpenStack side. This example alarm will trigger an HTTP POST message to the &lt;code class=&quot;highlighter-rouge&quot;&gt;aodh2sensu&lt;/code&gt; proxy whenever the cpu utilization of $INSTANCE_ID goes above 20%:
+  &lt;li&gt;Create an Aodh alarm from OpenStack side. This example alarm will trigger an HTTP POST message to the &lt;code class=&quot;highlighter-rouge&quot;&gt;aodh2sensu&lt;/code&gt; proxy whenever the cpu utilization of &lt;code class=&quot;highlighter-rouge&quot;&gt;$INSTANCE_ID&lt;/code&gt; goes above 20%:
     &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; $ openstack alarm create \
  --name cpu_hi \
  --type gnocchi_resources_threshold \
@@ -37,7 +41,7 @@ Options:
  --granularity 300 \
  --evaluation-periods 1 \
  --resource-type instance \
- --resource-id $INSTANSCE_ID \
+ --resource-id $INSTANCE_ID \
  --alarm-action 'http://x.y.z.w:50000' \
  --ok-action 'http://x.y.z.w:50000' \
  --insufficient-data-action 'http://x.y.z.w:50000'
@@ -109,36 +113,37 @@ Options:
 &lt;p&gt;To run &lt;code class=&quot;highlighter-rouge&quot;&gt;aodh2sensu&lt;/code&gt; as a systemd service.&lt;/p&gt;
 
 &lt;h3 id=&quot;normal&quot;&gt;Normal&lt;/h3&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# cat /usr/lib/systemd/system/aodh2sensu.service
-[Unit]
-Description=aodh2sensu service
+&lt;div class=&quot;language-ini highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# cat /usr/lib/systemd/system/aodh2sensu.service
+&lt;/span&gt;&lt;span class=&quot;nn&quot;&gt;[Unit]&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;Description&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;aodh2sensu service&lt;/span&gt;
 
-[Service]
-Type=simple
-ExecStart=/opt/aodh2sensu/aodh2sensu.py
+&lt;span class=&quot;nn&quot;&gt;[Service]&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;Type&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;simple&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;ExecStart&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;/opt/aodh2sensu/aodh2sensu.py&lt;/span&gt;
 
-[Install]
-WantedBy=multi-user.target
+&lt;span class=&quot;nn&quot;&gt;[Install]&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;WantedBy&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;multi-user.target&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h3 id=&quot;docker-1&quot;&gt;Docker&lt;/h3&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# cat ~/.config/systemd/user/aodh2sensu.service 
-[Unit]
-Description=aodh2sensu service via podman
+&lt;div class=&quot;language-ini highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# cat ~/.config/systemd/user/aodh2sensu.service 
+&lt;/span&gt;&lt;span class=&quot;nn&quot;&gt;[Unit]&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;Description&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;aodh2sensu service via podman&lt;/span&gt;
 
-[Service]
-Restart=on-failure
-ExecStartPre=/usr/bin/rm -f /%t/%n-pid /%t/%n-cid
-ExecStart=/usr/bin/podman run --conmon-pidfile  /%t/%n-pid  --cidfile /%t/%n-cid --add-host=&quot;localhost:10.88.0.1&quot; -d --name aodh2sensu -p 50000:50000 aodh2sensu
-ExecStop=/usr/bin/sh -c &quot;/usr/bin/podman rm -f `cat /%t/%n-cid`&quot;
-KillMode=none
-Type=forking
-PIDFile=/%t/%n-pid
+&lt;span class=&quot;nn&quot;&gt;[Service]&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;Restart&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;on-failure&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;ExecStartPre&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;/usr/bin/rm -f /%t/%n-pid /%t/%n-cid&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;ExecStart&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;/usr/bin/podman run --conmon-pidfile  /%t/%n-pid  --cidfile /%t/%n-cid --add-host=&quot;localhost:10.88.0.1&quot; -d --name aodh2sensu -p 50000:50000 aodh2sensu&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;ExecStop&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;/usr/bin/sh -c &quot;/usr/bin/podman rm -f `cat /%t/%n-cid`&quot;&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;KillMode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;none&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;Type&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;forking&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;PIDFile&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;/%t/%n-pid&lt;/span&gt;
 
-[Install]
-WantedBy=multi-user.target
+&lt;span class=&quot;nn&quot;&gt;[Install]&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;WantedBy&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;multi-user.target&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><category term="openstack" /><category term="monitoring" /><category term="redhat" /><summary type="html">aodh2sensu Imports OpenStack Aodh alarms into Sensu Core Server. Install $ pip3 install -r ./requirements.txt Use Usage: aodh2sensu.py [options] Imports OpenStack Aodh alarms into Sensu Core Server. Options: -h, --help show this help message and exit --sensu-url URL if not specified, defaults to localhost:4567 Run the aodh2sensu proxy. sensu_url must point to the sensu server. The proxy must be run in a server reachable from OpenStack controllers and with access to the Sensu Server (for example, the Sensu Server itself). $ ./aodh2sensu.py Create an Aodh alarm from OpenStack side. This example alarm will trigger an HTTP POST message to the aodh2sensu proxy whenever the cpu utilization of $INSTANCE_ID goes above 20%: $ openstack alarm create \ --name cpu_hi \ --type gnocchi_resources_threshold \ --description 'CPU High Average' \ --metric cpu_util4 \ --threshold 20.0 \ --comparison-operator gt \ --aggregation-method mean \ --granularity 300 \ --evaluation-periods 1 \ --resource-type instance \ --resource-id $INSTANSCE_ID \ --alarm-action 'http://x.y.z.w:50000' \ --ok-action 'http://x.y.z.w:50000' \ --insufficient-data-action 'http://x.y.z.w:50000' where x.y.z.w is the IP address of the server running aodh2sensu proxy. Confirm the alarm transitions from insufficient_data state to ok state: $ openstack alarm list +--------------------------------------+--------------------------------------------+----------------+-------------------+----------+---------+ | alarm_id | type | name | state | severity | enabled | +--------------------------------------+--------------------------------------------+----------------+-------------------+----------+---------+ | c466d832-cfce-4488-9726-c631800a36b1 | gnocchi_resources_threshold | cpu_hi4 | ok | low | True | +--------------------------------------+--------------------------------------------+----------------+-------------------+----------+---------+ Generate load in the instance above the 20% threeshold, and wait for the alarm to transitition to alarm state: $ openstack alarm list +--------------------------------------+--------------------------------------------+----------------+-------------------+----------+---------+ | alarm_id | type | name | state | severity | enabled | +--------------------------------------+--------------------------------------------+----------------+-------------------+----------+---------+ | c466d832-cfce-4488-9726-c631800a36b1 | gnocchi_resources_threshold | cpu_hi4 | alarm | low | True | +--------------------------------------+--------------------------------------------+----------------+-------------------+----------+---------+ Check the alarm from the Uchiwa dashboard: Stop the load generation in the instance, wait for the alarm to transition back to ok state: $ openstack alarm list +--------------------------------------+--------------------------------------------+----------------+-------------------+----------+---------+ | alarm_id | type | name | state | severity | enabled | +--------------------------------------+--------------------------------------------+----------------+-------------------+----------+---------+ | c466d832-cfce-4488-9726-c631800a36b1 | gnocchi_resources_threshold | cpu_hi4 | ok | low | True | +--------------------------------------+--------------------------------------------+----------------+-------------------+----------+---------+ Check the new state of the sensu alert: Confirm it has disappeared from the list of active alerts: Docker To build the image: $ buildah build-using-dockerfile -t aodh2sensu . To run the image: $ podman run --name aodh2sensu --add-host=&quot;localhost:10.88.0.1&quot; -d -p 50000:50000 aodh2sensu Pointing to a specific Sensu Server URL: $ podman run --name aodh2sensu --add-host=&quot;localhost:10.88.0.1&quot; -d -p 50000:50000 -e SENSU_URL=x.y.z.w:p aodh2sensu Check logs: $ podman logs aodh2sensu Systemd To run aodh2sensu as a systemd service. Normal # cat /usr/lib/systemd/system/aodh2sensu.service [Unit] Description=aodh2sensu service [Service] Type=simple ExecStart=/opt/aodh2sensu/aodh2sensu.py [Install] WantedBy=multi-user.target Docker # cat ~/.config/systemd/user/aodh2sensu.service [Unit] Description=aodh2sensu service via podman [Service] Restart=on-failure ExecStartPre=/usr/bin/rm -f /%t/%n-pid /%t/%n-cid ExecStart=/usr/bin/podman run --conmon-pidfile /%t/%n-pid --cidfile /%t/%n-cid --add-host=&quot;localhost:10.88.0.1&quot; -d --name aodh2sensu -p 50000:50000 aodh2sensu ExecStop=/usr/bin/sh -c &quot;/usr/bin/podman rm -f `cat /%t/%n-cid`&quot; KillMode=none Type=forking PIDFile=/%t/%n-pid [Install] WantedBy=multi-user.target</summary></entry><entry><title type="html">OpenShift 4.3 on RHOSP 13: Installation and Integrations</title><link href="https://josecastillolema.github.io/osp43-on-rhosp13/" rel="alternate" type="text/html" title="OpenShift 4.3 on RHOSP 13: Installation and Integrations" /><published>2020-04-26T00:00:00-03:00</published><updated>2020-04-26T17:00:58-03:00</updated><id>https://josecastillolema.github.io/osp43-on-rhosp13</id><content type="html" xml:base="https://josecastillolema.github.io/osp43-on-rhosp13/">&lt;p&gt;I would like to share my experience installing and integrating OpenShift with various OpenStack services, namely Cinder, Swift and Keystone (Neutron and Octavia TBD).&lt;/p&gt;
+&lt;iframe src=&quot;https://ghbtns.com/github-btn.html?user=josecastillolema&amp;amp;type=follow&amp;amp;count=true&amp;amp;size=large&quot; frameborder=&quot;0&quot; scrolling=&quot;0&quot; width=&quot;230&quot; height=&quot;30&quot; title=&quot;GitHub&quot;&gt;&lt;/iframe&gt;</content><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><category term="openstack" /><category term="monitoring" /><category term="redhat" /><summary type="html"></summary></entry><entry><title type="html">OpenShift 4.3 on RHOSP 13: Installation and Integrations</title><link href="https://josecastillolema.github.io/osp43-on-rhosp13/" rel="alternate" type="text/html" title="OpenShift 4.3 on RHOSP 13: Installation and Integrations" /><published>2020-04-26T00:00:00-03:00</published><updated>2020-04-26T17:00:58-03:00</updated><id>https://josecastillolema.github.io/osp43-on-rhosp13</id><content type="html" xml:base="https://josecastillolema.github.io/osp43-on-rhosp13/">&lt;p&gt;I would like to share my experience installing and integrating OpenShift with various OpenStack services, namely Cinder, Swift and Keystone (Neutron and Octavia TBD).&lt;/p&gt;
 
 &lt;h2 id=&quot;prerequisites&quot;&gt;Prerequisites&lt;/h2&gt;
 &lt;ul&gt;

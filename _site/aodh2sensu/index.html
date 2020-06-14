@@ -10,7 +10,7 @@
     <meta charset="utf-8">
 
 <!-- begin _includes/seo.html --><title>aodh2sensu - importing alarms from Aodh into Sensu Core - GitOps</title>
-<meta name="description" content="aodh2sensu  Imports OpenStack Aodh alarms into Sensu Core Server.  Install  $ pip3 install -r ./requirements.txt   Use  Usage: aodh2sensu.py [options]  Imports OpenStack Aodh alarms into Sensu Core Server.  Options:   -h, --help            show this help message and exit   --sensu-url URL       if not specified, defaults to localhost:4567           Run the aodh2sensu proxy. sensu_url must point to the sensu server. The proxy must be run in a server reachable from OpenStack controllers and with access to the Sensu Server (for example, the Sensu Server itself).       $ ./aodh2sensu.py           Create an Aodh alarm from OpenStack side. This example alarm will trigger an HTTP POST message to the aodh2sensu proxy whenever the cpu utilization of $INSTANCE_ID goes above 20%:      $ openstack alarm create \  --name cpu_hi \  --type gnocchi_resources_threshold \  --description &#39;CPU High Average&#39; \  --metric cpu_util4 \  --threshold 20.0 \  --comparison-operator gt \  --aggregation-method mean \  --granularity 300 \  --evaluation-periods 1 \  --resource-type instance \  --resource-id $INSTANSCE_ID \  --alarm-action &#39;http://x.y.z.w:50000&#39; \  --ok-action &#39;http://x.y.z.w:50000&#39; \  --insufficient-data-action &#39;http://x.y.z.w:50000&#39;          where x.y.z.w is the IP address of the server running aodh2sensu proxy.      Confirm the alarm transitions from insufficient_data state to ok state:      $ openstack alarm list  +--------------------------------------+--------------------------------------------+----------------+-------------------+----------+---------+  | alarm_id                             | type                                       | name           | state             | severity | enabled |  +--------------------------------------+--------------------------------------------+----------------+-------------------+----------+---------+  | c466d832-cfce-4488-9726-c631800a36b1 | gnocchi_resources_threshold                | cpu_hi4        | ok                | low      | True    |  +--------------------------------------+--------------------------------------------+----------------+-------------------+----------+---------+           Generate load in the instance above the 20% threeshold, and wait for the alarm to transitition to alarm state:      $ openstack alarm list  +--------------------------------------+--------------------------------------------+----------------+-------------------+----------+---------+  | alarm_id                             | type                                       | name           | state             | severity | enabled |  +--------------------------------------+--------------------------------------------+----------------+-------------------+----------+---------+  | c466d832-cfce-4488-9726-c631800a36b1 | gnocchi_resources_threshold                | cpu_hi4        | alarm             | low      | True    |  +--------------------------------------+--------------------------------------------+----------------+-------------------+----------+---------+                Check the alarm from the Uchiwa dashboard:        Stop the load generation in the instance, wait for the alarm to transition back to ok state:      $ openstack alarm list  +--------------------------------------+--------------------------------------------+----------------+-------------------+----------+---------+  | alarm_id                             | type                                       | name           | state             | severity | enabled |  +--------------------------------------+--------------------------------------------+----------------+-------------------+----------+---------+  | c466d832-cfce-4488-9726-c631800a36b1 | gnocchi_resources_threshold                | cpu_hi4        | ok                | low      | True    |  +--------------------------------------+--------------------------------------------+----------------+-------------------+----------+---------+                Check the new state of the sensu alert:       Confirm it has disappeared from the list of active alerts:    Docker To build the image:  $ buildah build-using-dockerfile -t aodh2sensu .   To run the image:  $ podman run --name aodh2sensu --add-host=&quot;localhost:10.88.0.1&quot; -d -p 50000:50000 aodh2sensu   Pointing to a specific Sensu Server URL:  $ podman run --name aodh2sensu --add-host=&quot;localhost:10.88.0.1&quot; -d -p 50000:50000 -e SENSU_URL=x.y.z.w:p aodh2sensu   Check logs: $ podman logs aodh2sensu   Systemd  To run aodh2sensu as a systemd service.  Normal # cat /usr/lib/systemd/system/aodh2sensu.service [Unit] Description=aodh2sensu service  [Service] Type=simple ExecStart=/opt/aodh2sensu/aodh2sensu.py  [Install] WantedBy=multi-user.target   Docker # cat ~/.config/systemd/user/aodh2sensu.service  [Unit] Description=aodh2sensu service via podman  [Service] Restart=on-failure ExecStartPre=/usr/bin/rm -f /%t/%n-pid /%t/%n-cid ExecStart=/usr/bin/podman run --conmon-pidfile  /%t/%n-pid  --cidfile /%t/%n-cid --add-host=&quot;localhost:10.88.0.1&quot; -d --name aodh2sensu -p 50000:50000 aodh2sensu ExecStop=/usr/bin/sh -c &quot;/usr/bin/podman rm -f `cat /%t/%n-cid`&quot; KillMode=none Type=forking PIDFile=/%t/%n-pid  [Install] WantedBy=multi-user.target    ">
+<meta name="description" content="    ">
 
 
   <meta name="author" content="Jose Castillo Lema">
@@ -23,7 +23,7 @@
 <meta property="og:url" content="https://josecastillolema.github.io/aodh2sensu/">
 
 
-  <meta property="og:description" content="aodh2sensu  Imports OpenStack Aodh alarms into Sensu Core Server.  Install  $ pip3 install -r ./requirements.txt   Use  Usage: aodh2sensu.py [options]  Imports OpenStack Aodh alarms into Sensu Core Server.  Options:   -h, --help            show this help message and exit   --sensu-url URL       if not specified, defaults to localhost:4567           Run the aodh2sensu proxy. sensu_url must point to the sensu server. The proxy must be run in a server reachable from OpenStack controllers and with access to the Sensu Server (for example, the Sensu Server itself).       $ ./aodh2sensu.py           Create an Aodh alarm from OpenStack side. This example alarm will trigger an HTTP POST message to the aodh2sensu proxy whenever the cpu utilization of $INSTANCE_ID goes above 20%:      $ openstack alarm create \  --name cpu_hi \  --type gnocchi_resources_threshold \  --description &#39;CPU High Average&#39; \  --metric cpu_util4 \  --threshold 20.0 \  --comparison-operator gt \  --aggregation-method mean \  --granularity 300 \  --evaluation-periods 1 \  --resource-type instance \  --resource-id $INSTANSCE_ID \  --alarm-action &#39;http://x.y.z.w:50000&#39; \  --ok-action &#39;http://x.y.z.w:50000&#39; \  --insufficient-data-action &#39;http://x.y.z.w:50000&#39;          where x.y.z.w is the IP address of the server running aodh2sensu proxy.      Confirm the alarm transitions from insufficient_data state to ok state:      $ openstack alarm list  +--------------------------------------+--------------------------------------------+----------------+-------------------+----------+---------+  | alarm_id                             | type                                       | name           | state             | severity | enabled |  +--------------------------------------+--------------------------------------------+----------------+-------------------+----------+---------+  | c466d832-cfce-4488-9726-c631800a36b1 | gnocchi_resources_threshold                | cpu_hi4        | ok                | low      | True    |  +--------------------------------------+--------------------------------------------+----------------+-------------------+----------+---------+           Generate load in the instance above the 20% threeshold, and wait for the alarm to transitition to alarm state:      $ openstack alarm list  +--------------------------------------+--------------------------------------------+----------------+-------------------+----------+---------+  | alarm_id                             | type                                       | name           | state             | severity | enabled |  +--------------------------------------+--------------------------------------------+----------------+-------------------+----------+---------+  | c466d832-cfce-4488-9726-c631800a36b1 | gnocchi_resources_threshold                | cpu_hi4        | alarm             | low      | True    |  +--------------------------------------+--------------------------------------------+----------------+-------------------+----------+---------+                Check the alarm from the Uchiwa dashboard:        Stop the load generation in the instance, wait for the alarm to transition back to ok state:      $ openstack alarm list  +--------------------------------------+--------------------------------------------+----------------+-------------------+----------+---------+  | alarm_id                             | type                                       | name           | state             | severity | enabled |  +--------------------------------------+--------------------------------------------+----------------+-------------------+----------+---------+  | c466d832-cfce-4488-9726-c631800a36b1 | gnocchi_resources_threshold                | cpu_hi4        | ok                | low      | True    |  +--------------------------------------+--------------------------------------------+----------------+-------------------+----------+---------+                Check the new state of the sensu alert:       Confirm it has disappeared from the list of active alerts:    Docker To build the image:  $ buildah build-using-dockerfile -t aodh2sensu .   To run the image:  $ podman run --name aodh2sensu --add-host=&quot;localhost:10.88.0.1&quot; -d -p 50000:50000 aodh2sensu   Pointing to a specific Sensu Server URL:  $ podman run --name aodh2sensu --add-host=&quot;localhost:10.88.0.1&quot; -d -p 50000:50000 -e SENSU_URL=x.y.z.w:p aodh2sensu   Check logs: $ podman logs aodh2sensu   Systemd  To run aodh2sensu as a systemd service.  Normal # cat /usr/lib/systemd/system/aodh2sensu.service [Unit] Description=aodh2sensu service  [Service] Type=simple ExecStart=/opt/aodh2sensu/aodh2sensu.py  [Install] WantedBy=multi-user.target   Docker # cat ~/.config/systemd/user/aodh2sensu.service  [Unit] Description=aodh2sensu service via podman  [Service] Restart=on-failure ExecStartPre=/usr/bin/rm -f /%t/%n-pid /%t/%n-cid ExecStart=/usr/bin/podman run --conmon-pidfile  /%t/%n-pid  --cidfile /%t/%n-cid --add-host=&quot;localhost:10.88.0.1&quot; -d --name aodh2sensu -p 50000:50000 aodh2sensu ExecStop=/usr/bin/sh -c &quot;/usr/bin/podman rm -f `cat /%t/%n-cid`&quot; KillMode=none Type=forking PIDFile=/%t/%n-pid  [Install] WantedBy=multi-user.target    ">
+  <meta property="og:description" content="    ">
 
 
 
@@ -329,7 +329,7 @@
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
     <meta itemprop="headline" content="aodh2sensu - importing alarms from Aodh into Sensu Core">
-    <meta itemprop="description" content="aodh2sensuImports OpenStack Aodh alarms into Sensu Core Server.Install$ pip3 install -r ./requirements.txtUseUsage: aodh2sensu.py [options]Imports OpenStack Aodh alarms into Sensu Core Server.Options:  -h, --help            show this help message and exit  --sensu-url URL       if not specified, defaults to localhost:4567      Run the aodh2sensu proxy. sensu_url must point to the sensu server. The proxy must be run in a server reachable from OpenStack controllers and with access to the Sensu Server (for example, the Sensu Server itself).     $ ./aodh2sensu.py        Create an Aodh alarm from OpenStack side. This example alarm will trigger an HTTP POST message to the aodh2sensu proxy whenever the cpu utilization of $INSTANCE_ID goes above 20%:     $ openstack alarm create \ --name cpu_hi \ --type gnocchi_resources_threshold \ --description 'CPU High Average' \ --metric cpu_util4 \ --threshold 20.0 \ --comparison-operator gt \ --aggregation-method mean \ --granularity 300 \ --evaluation-periods 1 \ --resource-type instance \ --resource-id $INSTANSCE_ID \ --alarm-action 'http://x.y.z.w:50000' \ --ok-action 'http://x.y.z.w:50000' \ --insufficient-data-action 'http://x.y.z.w:50000'        where x.y.z.w is the IP address of the server running aodh2sensu proxy.    Confirm the alarm transitions from insufficient_data state to ok state:     $ openstack alarm list +--------------------------------------+--------------------------------------------+----------------+-------------------+----------+---------+ | alarm_id                             | type                                       | name           | state             | severity | enabled | +--------------------------------------+--------------------------------------------+----------------+-------------------+----------+---------+ | c466d832-cfce-4488-9726-c631800a36b1 | gnocchi_resources_threshold                | cpu_hi4        | ok                | low      | True    | +--------------------------------------+--------------------------------------------+----------------+-------------------+----------+---------+        Generate load in the instance above the 20% threeshold, and wait for the alarm to transitition to alarm state:     $ openstack alarm list +--------------------------------------+--------------------------------------------+----------------+-------------------+----------+---------+ | alarm_id                             | type                                       | name           | state             | severity | enabled | +--------------------------------------+--------------------------------------------+----------------+-------------------+----------+---------+ | c466d832-cfce-4488-9726-c631800a36b1 | gnocchi_resources_threshold                | cpu_hi4        | alarm             | low      | True    | +--------------------------------------+--------------------------------------------+----------------+-------------------+----------+---------+            Check the alarm from the Uchiwa dashboard:    Stop the load generation in the instance, wait for the alarm to transition back to ok state:     $ openstack alarm list +--------------------------------------+--------------------------------------------+----------------+-------------------+----------+---------+ | alarm_id                             | type                                       | name           | state             | severity | enabled | +--------------------------------------+--------------------------------------------+----------------+-------------------+----------+---------+ | c466d832-cfce-4488-9726-c631800a36b1 | gnocchi_resources_threshold                | cpu_hi4        | ok                | low      | True    | +--------------------------------------+--------------------------------------------+----------------+-------------------+----------+---------+            Check the new state of the sensu alert:    Confirm it has disappeared from the list of active alerts:DockerTo build the image:$ buildah build-using-dockerfile -t aodh2sensu .To run the image:$ podman run --name aodh2sensu --add-host=&quot;localhost:10.88.0.1&quot; -d -p 50000:50000 aodh2sensuPointing to a specific Sensu Server URL:$ podman run --name aodh2sensu --add-host=&quot;localhost:10.88.0.1&quot; -d -p 50000:50000 -e SENSU_URL=x.y.z.w:p aodh2sensuCheck logs:$ podman logs aodh2sensuSystemdTo run aodh2sensu as a systemd service.Normal# cat /usr/lib/systemd/system/aodh2sensu.service[Unit]Description=aodh2sensu service[Service]Type=simpleExecStart=/opt/aodh2sensu/aodh2sensu.py[Install]WantedBy=multi-user.targetDocker# cat ~/.config/systemd/user/aodh2sensu.service [Unit]Description=aodh2sensu service via podman[Service]Restart=on-failureExecStartPre=/usr/bin/rm -f /%t/%n-pid /%t/%n-cidExecStart=/usr/bin/podman run --conmon-pidfile  /%t/%n-pid  --cidfile /%t/%n-cid --add-host=&quot;localhost:10.88.0.1&quot; -d --name aodh2sensu -p 50000:50000 aodh2sensuExecStop=/usr/bin/sh -c &quot;/usr/bin/podman rm -f `cat /%t/%n-cid`&quot;KillMode=noneType=forkingPIDFile=/%t/%n-pid[Install]WantedBy=multi-user.target">
+    <meta itemprop="description" content="">
     <meta itemprop="datePublished" content="2020-05-25T00:00:00-03:00">
     <meta itemprop="dateModified" content="2020-04-26T17:00:58-03:00">
 
@@ -378,7 +378,11 @@
             </nav>
           </aside>
         
-        <h1 id="aodh2sensu"><a href="https://github.com/josecastillolema/aodh2sensu" target="_blank" rel="noopener noreferrer">aodh2sensu</a></h1>
+        <iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&amp;repo=aodh2sensu&amp;type=watch&amp;count=true&amp;size=large&amp;v=2" frameborder="0" scrolling="0" width="130" height="30" title="GitHub"></iframe>
+<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&amp;repo=aodh2sensu&amp;type=star&amp;count=true&amp;size=large" frameborder="0" scrolling="0" width="115" height="30" title="GitHub"></iframe>
+<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&amp;repo=aodh2sensu&amp;type=fork&amp;count=true&amp;size=large" frameborder="0" scrolling="0" width="170" height="30" title="GitHub"></iframe>
+
+<h1 id="aodh2sensu">aodh2sensu</h1>
 
 <p>Imports <a href="https://docs.openstack.org/aodh/latest/" target="_blank" rel="noopener noreferrer">OpenStack Aodh</a> alarms into <a href="https://docs.sensu.io/sensu-core/latest/" target="_blank" rel="noopener noreferrer">Sensu Core</a> Server.</p>
 
@@ -406,7 +410,7 @@ Options:
 <div class="highlight"><pre class="highlight"><code> $ ./aodh2sensu.py
 </code></pre></div>    </div>
   </li>
-  <li>Create an Aodh alarm from OpenStack side. This example alarm will trigger an HTTP POST message to the <code class="highlighter-rouge">aodh2sensu</code> proxy whenever the cpu utilization of $INSTANCE_ID goes above 20%:
+  <li>Create an Aodh alarm from OpenStack side. This example alarm will trigger an HTTP POST message to the <code class="highlighter-rouge">aodh2sensu</code> proxy whenever the cpu utilization of <code class="highlighter-rouge">$INSTANCE_ID</code> goes above 20%:
     <div class="highlighter-rouge">
 <div class="highlight"><pre class="highlight"><code> $ openstack alarm create \
  --name cpu_hi \
@@ -419,7 +423,7 @@ Options:
  --granularity 300 \
  --evaluation-periods 1 \
  --resource-type instance \
- --resource-id $INSTANSCE_ID \
+ --resource-id $INSTANCE_ID \
  --alarm-action 'http://x.y.z.w:50000' \
  --ok-action 'http://x.y.z.w:50000' \
  --insufficient-data-action 'http://x.y.z.w:50000'
@@ -495,37 +499,37 @@ Options:
 <p>To run <code class="highlighter-rouge">aodh2sensu</code> as a systemd service.</p>
 
 <h3 id="normal">Normal</h3>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code># cat /usr/lib/systemd/system/aodh2sensu.service
-[Unit]
-Description=aodh2sensu service
+<div class="language-ini highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># cat /usr/lib/systemd/system/aodh2sensu.service
+</span><span class="nn">[Unit]</span>
+<span class="py">Description</span><span class="p">=</span><span class="s">aodh2sensu service</span>
 
-[Service]
-Type=simple
-ExecStart=/opt/aodh2sensu/aodh2sensu.py
+<span class="nn">[Service]</span>
+<span class="py">Type</span><span class="p">=</span><span class="s">simple</span>
+<span class="py">ExecStart</span><span class="p">=</span><span class="s">/opt/aodh2sensu/aodh2sensu.py</span>
 
-[Install]
-WantedBy=multi-user.target
+<span class="nn">[Install]</span>
+<span class="py">WantedBy</span><span class="p">=</span><span class="s">multi-user.target</span>
 </code></pre></div></div>
 
 <h3 id="docker-1">Docker</h3>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code># cat ~/.config/systemd/user/aodh2sensu.service 
-[Unit]
-Description=aodh2sensu service via podman
+<div class="language-ini highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># cat ~/.config/systemd/user/aodh2sensu.service 
+</span><span class="nn">[Unit]</span>
+<span class="py">Description</span><span class="p">=</span><span class="s">aodh2sensu service via podman</span>
 
-[Service]
-Restart=on-failure
-ExecStartPre=/usr/bin/rm -f /%t/%n-pid /%t/%n-cid
-ExecStart=/usr/bin/podman run --conmon-pidfile  /%t/%n-pid  --cidfile /%t/%n-cid --add-host="localhost:10.88.0.1" -d --name aodh2sensu -p 50000:50000 aodh2sensu
-ExecStop=/usr/bin/sh -c "/usr/bin/podman rm -f `cat /%t/%n-cid`"
-KillMode=none
-Type=forking
-PIDFile=/%t/%n-pid
+<span class="nn">[Service]</span>
+<span class="py">Restart</span><span class="p">=</span><span class="s">on-failure</span>
+<span class="py">ExecStartPre</span><span class="p">=</span><span class="s">/usr/bin/rm -f /%t/%n-pid /%t/%n-cid</span>
+<span class="py">ExecStart</span><span class="p">=</span><span class="s">/usr/bin/podman run --conmon-pidfile  /%t/%n-pid  --cidfile /%t/%n-cid --add-host="localhost:10.88.0.1" -d --name aodh2sensu -p 50000:50000 aodh2sensu</span>
+<span class="py">ExecStop</span><span class="p">=</span><span class="s">/usr/bin/sh -c "/usr/bin/podman rm -f `cat /%t/%n-cid`"</span>
+<span class="py">KillMode</span><span class="p">=</span><span class="s">none</span>
+<span class="py">Type</span><span class="p">=</span><span class="s">forking</span>
+<span class="py">PIDFile</span><span class="p">=</span><span class="s">/%t/%n-pid</span>
 
-[Install]
-WantedBy=multi-user.target
-
+<span class="nn">[Install]</span>
+<span class="py">WantedBy</span><span class="p">=</span><span class="s">multi-user.target</span>
 </code></pre></div></div>
 
+<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&amp;type=follow&amp;count=true&amp;size=large" frameborder="0" scrolling="0" width="230" height="30" title="GitHub"></iframe>
 
         
       </section>

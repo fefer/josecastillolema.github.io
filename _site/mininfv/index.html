@@ -366,7 +366,11 @@
             </nav>
           </aside>
         
-        <h1 id="mini-nfv">mini-nfv</h1>
+        <iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&amp;repo=mini-nfv&amp;type=watch&amp;count=true&amp;size=large&amp;v=2" frameborder="0" scrolling="0" width="130" height="30" title="GitHub"></iframe>
+<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&amp;repo=mini-nfv&amp;type=star&amp;count=true&amp;size=large" frameborder="0" scrolling="0" width="115" height="30" title="GitHub"></iframe>
+<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&amp;repo=mini-nfv&amp;type=fork&amp;count=true&amp;size=large" frameborder="0" scrolling="0" width="170" height="30" title="GitHub"></iframe>
+
+<h1 id="mini-nfv">mini-nfv</h1>
 <p>Mini-nfv is a framework for NFV Orchestration with a general purpose VNF Manager to deploy and operate Virtual Network Functions (VNFs) and Network Services on Mininet. It is based on ETSI MANO Architectural Framework.</p>
 
 <p>Mini-nfv manages the life-cycle of a Virtual Network Function (VNF). Mini-nfv takes care of deployment, monitoring, scaling and removal of VNFs on Mininet.</p>
@@ -463,52 +467,52 @@
 </ul>
 
 <p>It is also possible to manually define the networks, within the Virtual Link (VL) definition, see <a href="https://github.com/josecastillolema/mini-nfv/blob/master/samples/vnfd/tosca-vnfd-network.yaml" target="_blank" rel="noopener noreferrer">tosca-vnfd-network.yaml</a>:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    VL2:
-      type: tosca.nodes.nfv.VL
-      properties:
-        network_name: custom_net0
-        vendor: Tacker
-        ip_version: 4
-        cidr: '20.0.0.0/24'
-        start_ip: '20.0.0.50'
-        end_ip: '20.0.0.200'
-        gateway_ip: '20.0.0.1'
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">VL2</span><span class="pi">:</span>
+  <span class="na">type</span><span class="pi">:</span> <span class="s">tosca.nodes.nfv.VL</span>
+  <span class="na">properties</span><span class="pi">:</span>
+    <span class="na">network_name</span><span class="pi">:</span> <span class="s">custom_net0</span>
+    <span class="na">vendor</span><span class="pi">:</span> <span class="s">Tacker</span>
+    <span class="na">ip_version</span><span class="pi">:</span> <span class="m">4</span>
+    <span class="na">cidr</span><span class="pi">:</span> <span class="s1">'</span><span class="s">20.0.0.0/24'</span>
+    <span class="na">start_ip</span><span class="pi">:</span> <span class="s1">'</span><span class="s">20.0.0.50'</span>
+    <span class="na">end_ip</span><span class="pi">:</span> <span class="s1">'</span><span class="s">20.0.0.200'</span>
+    <span class="na">gateway_ip</span><span class="pi">:</span> <span class="s1">'</span><span class="s">20.0.0.1'</span>
 </code></pre></div></div>
 
 <h2 id="ipmac-definition">IP/MAC definition</h2>
 <p>If not specified otherwise, mini-nfv will assign random IPs within the defined networks.
 However, it is also possibly to manually define IP/MAC for a VNF, within the Connection Point (CP) definition, see <a href="https://github.com/josecastillolema/mini-nfv/blob/master/samples/vnfd/tosca-vnfd-mac-ip.yaml" target="_blank" rel="noopener noreferrer">tosca-vnfd-mac-ip.yaml</a>:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    CP1:
-      type: tosca.nodes.nfv.CP.Tacker
-      properties:
-        management: true
-        mac_address: 6c:40:08:a0:de:0a
-        ip_address: 10.10.1.12
-        order: 0
-        anti_spoofing_protection: false
-      requirements:
-        - virtualLink:
-            node: VL1
-        - virtualBinding:
-            node: VDU1
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">CP1</span><span class="pi">:</span>
+  <span class="na">type</span><span class="pi">:</span> <span class="s">tosca.nodes.nfv.CP.Tacker</span>
+  <span class="na">properties</span><span class="pi">:</span>
+    <span class="na">management</span><span class="pi">:</span> <span class="no">true</span>
+    <span class="na">mac_address</span><span class="pi">:</span> <span class="s">6c:40:08:a0:de:0a</span>
+    <span class="na">ip_address</span><span class="pi">:</span> <span class="s">10.10.1.12</span>
+    <span class="na">order</span><span class="pi">:</span> <span class="m">0</span>
+    <span class="na">anti_spoofing_protection</span><span class="pi">:</span> <span class="no">false</span>
+  <span class="na">requirements</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">virtualLink</span><span class="pi">:</span>
+        <span class="na">node</span><span class="pi">:</span> <span class="s">VL1</span>
+    <span class="pi">-</span> <span class="na">virtualBinding</span><span class="pi">:</span>
+        <span class="na">node</span><span class="pi">:</span> <span class="s">VDU1</span>
 </code></pre></div></div>
 
 <h2 id="flavor-and-number-of-cpus">Flavor and number of cpus</h2>
 <p>Mini-nfv emulates VNF resource configuration defined via <code class="highlighter-rouge">num_cpus</code> properties:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    VDU1:
-      type: tosca.nodes.nfv.VDU.Tacker
-      capabilities:
-        nfv_compute:
-          properties:
-            num_cpus: 1
-            mem_size: 512 MB
-            disk_size: 1 GB
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">VDU1</span><span class="pi">:</span>
+  <span class="na">type</span><span class="pi">:</span> <span class="s">tosca.nodes.nfv.VDU.Tacker</span>
+  <span class="na">capabilities</span><span class="pi">:</span>
+    <span class="na">nfv_compute</span><span class="pi">:</span>
+      <span class="na">properties</span><span class="pi">:</span>
+        <span class="na">num_cpus</span><span class="pi">:</span> <span class="m">1</span>
+        <span class="na">mem_size</span><span class="pi">:</span> <span class="s">512 MB</span>
+        <span class="na">disk_size</span><span class="pi">:</span> <span class="s">1 GB</span>
 </code></pre></div></div>
 <p>or through flavor:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    VDU1:
-      type: tosca.nodes.nfv.VDU.Tacker
-      properties:
-        flavor: m1.tiny
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">VDU1</span><span class="pi">:</span>
+  <span class="na">type</span><span class="pi">:</span> <span class="s">tosca.nodes.nfv.VDU.Tacker</span>
+  <span class="na">properties</span><span class="pi">:</span>
+    <span class="na">flavor</span><span class="pi">:</span> <span class="s">m1.tiny</span>
 </code></pre></div></div>
 <p>Mini-nfv maps flavors and number of cpus property configuration into <a href="http://mininet.org/api/classmininet_1_1node_1_1CPULimitedHost.html" target="_blank" rel="noopener noreferrer">Mininet’s CPULimitedHost</a>.
 Currently, mini-nfv support the folowing flavors:</p>
@@ -524,14 +528,14 @@ Currently, mini-nfv support the folowing flavors:</p>
 
 <h2 id="cloud-init">Cloud-init</h2>
 <p>Mini-nfv supports VNFs configuration through user-data, see <a href="https://github.com/josecastillolema/mini-nfv/blob/master/samples/vnfd/tosca-vnfd-userdata.yaml" target="_blank" rel="noopener noreferrer">tosca-vnfd-userdata.yaml</a>:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    VDU1:
-      type: tosca.nodes.nfv.VDU.Tacker
-      properties:
-        user_data_format: RAW
-        user_data: |
-          #!/bin/sh
-          echo "my hostname is `hostname`" &gt; /tmp/hostname
-          df -h &gt; /tmp/diskinfo
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">VDU1</span><span class="pi">:</span>
+  <span class="na">type</span><span class="pi">:</span> <span class="s">tosca.nodes.nfv.VDU.Tacker</span>
+  <span class="na">properties</span><span class="pi">:</span>
+    <span class="na">user_data_format</span><span class="pi">:</span> <span class="s">RAW</span>
+    <span class="na">user_data</span><span class="pi">:</span> <span class="pi">|</span>
+      <span class="s">#!/bin/sh</span>
+      <span class="s">echo "my hostname is `hostname`" &gt; /tmp/hostname</span>
+      <span class="s">df -h &gt; /tmp/diskinfo</span>
 </code></pre></div></div>
 
 <h2 id="dependencies">Dependencies</h2>
@@ -545,14 +549,14 @@ Currently, mini-nfv support the folowing flavors:</p>
   <li>python-yaml (it can also be installed via <code class="highlighter-rouge">pip</code>)</li>
 </ul>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pip install -r ./requirements.txt
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ pip install -r ./requirements.txt
 </code></pre></div></div>
 <p>If you are running Ubuntu 16.04, the <code class="highlighter-rouge">openvswitch-ovscontroller</code> was recently renamed to <code class="highlighter-rouge">openvswitch-testcontroller</code>.
 To solve it, you need to create a symbolic link to <code class="highlighter-rouge">ovs-testcontroller</code> that is called <code class="highlighter-rouge">ovs-controller</code>.</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo ln /usr/bin/ovs-testcontroller /usr/bin/ovs-controller
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo ln /usr/bin/ovs-testcontroller /usr/bin/ovs-controller
 </code></pre></div></div>
 <p>In Ubuntu 18.04 <code class="highlighter-rouge">openvswitch-testcontroller</code> must be stopped before running mini-nfv in standalone mode.</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo systemctl stop openvswitch-testcontroller.service
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo systemctl stop openvswitch-testcontroller.service
 </code></pre></div></div>
 
 <h2 id="mini-nfv-use">mini-nfv use</h2>
@@ -567,8 +571,8 @@ Options:
                         remote=RemoteController
 </code></pre></div></div>
 <p>Whithou any explicit options mininfv runs mininet with its default controller. This way can be usefull to test the VNF Manager functionality with full connectivity between VNFs hosts and NFV Orchestration capabilities without the need of running POX, Ryu or other SDN controller. However, if you wish to include a SDN controller into your experiments mininfv must be run with the <code class="highlighter-rouge">--controller=remote</code> option alongside with the controller running in the background, for example:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./pox.py pox.forwarding.l3_learning openflow.discovery                              or
-./pox.py log.level --DEBUG pox.forwarding.l3_learning openflow.discovery           (debug mode)
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ./pox.py pox.forwarding.l3_learning openflow.discovery                              or
+$ ./pox.py log.level --DEBUG pox.forwarding.l3_learning openflow.discovery           (debug mode)
 </code></pre></div></div>
 
 <h2 id="mini-nfv-debugging">mini-nfv debugging</h2>
@@ -895,6 +899,7 @@ NXST_FLOW reply (xid=0x4):
   </li>
 </ul>
 
+<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&amp;type=follow&amp;count=true&amp;size=large" frameborder="0" scrolling="0" width="230" height="30" title="GitHub"></iframe>
 
         
       </section>
