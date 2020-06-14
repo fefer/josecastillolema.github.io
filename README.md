@@ -1,3 +1,4 @@
+![Uptime Robot status](https://img.shields.io/uptimerobot/status/m785297761-3cb3eb53ca3a7966274012bc)
 ![GitHub language count](https://img.shields.io/github/languages/count/josecastillolema/josecastillolema.github.io)
 ![GitHub top language](https://img.shields.io/github/languages/top/josecastillolema/josecastillolema.github.io)
 ![gem](https://img.shields.io/badge/gem-3.1.2-blue)
