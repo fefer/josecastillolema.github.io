@@ -20,7 +20,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="GitOps">
 <meta property="og:title" content="Smart Campus SP">
-<meta property="og:url" content="https://josecastillolema.github.io/smartcampus/">
+<meta property="og:url" content="http://localhost:4000/smartcampus/">
 
 
   <meta property="og:description" content="Smart Campus SP  SmartCampus is a FI-Ware software prototype to measure the contamination levels in the University of São Paulo (USP) Campus with a group of Android, Arduino and Galileo sensors. Below you can find a diagram of all the system components and a brief explanation of their functions. The following sections will detail how the components were connected and all the software and hardware installed.    SmartCampus makes use of several FI-Ware building blocks, all of them deployed in the FI-Lab testbed:    Context Broker: a data concentrator for all the measures, manages subscriptions and data access. Needs some configuring in order to integrate it with Cosmos through the Cygnus plugin.   Wirecloud: Front End based on HTML5+JS widget composing, offers some libraries to integrate with the CB.   Cosmos: Big Data platform to store and analyze measure data.   Detailed description  Polution sensors instrumentation and hardware connection  In the first iteration of the prototype, the system will only manage one magnitude of the polution metrics: temperature, pressure, noise and air particles.  NGSI Clients  All the heterogeneus sensor reading is send to the Context Broker using the NGSI Protocol.  Developing the NGSI Client  The Context Broker, where the measures will be aggregated and distributed, listens for requests following the NGSI protocol. In order to communicate with this component, two NGSI clients were developed (python and java). The NGSI protocol defines several resources and operations, but the client only use a very restricted set:     Appending a new measure for a context   Getting measures for a particular context   The NGSI protocol is a REST protocol that accepts both XML and JSON payloads. JSON was prefered for this project.  Python version  Intented to be used with Arduino and Galileo sensors. All the communications were stablished using the requests HTTP library with JSON payloads (the default json python library).  Java version  Intended to be used with Android OS. For the Java version, the Jersey API was used.  The Context Broker  The Orion Context Broker was used as the central data node of the system. All the data of the sensors is sent to Orion who, in turn, send it to all its suscribers and can be queried from the frontend systems to get up-to-date information of any of the measures.  For the prototype, we used a dedicated cloud instance in FI-Lab, that has a preinstalled Context Broker service (the image name is orion-psb-image-R3.2). It should start listening on port 1026. Remember to open this port in the Security Group.  Wirecloud Management Widget The Front End of the system was designed as a series of widgets deployed in FI-Ware’s Mashup Platform: Wirecloud. The widgets were deployed in the FI-Lab’s marketplace and composed in a new workspace.  Three widgets were deployed:    NGSI Updater   Map viewer: that consumes data from the Context Broker, showing a map of the campus with realtime information on the temperature, signaling what parts are too cool or too warm.   Linear graph: Works as a historical data widget, depicting the evolution of the temperature over the last minutes.       Connection to Cosmos (HDFS and Hive)  In order to consume the historical data from the widgets, it has to be first stored somewhere. FI-Ware sensor data is stored in the HDFS system of its Big Data GE: Cosmos. The data is stored in Cosmos through the use of a script in the Context Broker machine (Cygnus), that is subscribed to the measure update.  Android client  The Android client was developed in Java. The Jersey API was used for REST and JSON-related tasks.    ">
@@ -44,7 +44,7 @@
   
 
 
-<link rel="canonical" href="https://josecastillolema.github.io/smartcampus/">
+<link rel="canonical" href="http://localhost:4000/smartcampus/">
 
 
 
@@ -55,7 +55,7 @@
     
       "@type": "Person",
       "name": "Jose Castillo Lema",
-      "url": "https://josecastillolema.github.io/",
+      "url": "http://localhost:4000/",
       "sameAs": ["https://www.linkedin.com/in/jose-castillo-lema","https://github.com/josecastillolema","https://stackoverflow.com/users/4288758/jos%c3%a9-castillo-lema","https://www.researchgate.net/profile/Jose_Castillo-Lema","https://scholar.google.com.br/citations?user=_xNpHiwAAAAJ","http://lattes.cnpq.br/7955703023492257","https://ambassadors.opennetworking.org/directory/jose-castillo-lema/"]
     
   }
