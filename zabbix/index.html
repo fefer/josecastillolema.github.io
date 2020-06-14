@@ -10,7 +10,7 @@
     <meta charset="utf-8">
 
 <!-- begin _includes/seo.html --><title>Zabbix templates for OpenStack - GitOps</title>
-<meta name="description" content="zabbix-for-openstack Zabbix templates for OpenStack (through Zabbix user parameters).  In the following screenshot you can see the final result:    As you can see, hosts are segregated by groups (controllers, compute, ceph, external Horizon, IdM, storage, etc.), and the items we monitore in each group are different.  Some things we do monitor:    SNMP of the servers IPMI   CPU (specially load above 30), memory (above 85% because of KSM), disk and network interfaces   Status of the network bonds   Number of processes/workers for each OpenStack Linux service (nova-scheduler, nova-api, etc.)   Response times of every OpenStack API   Status of Open vSwitch services   Pacemaker cluster status   Galera SQL cluster status   Health of RabbitMQ e Redis   Status of OpenStack agents            Nova: openstack compute service list       Neutron: openstack agent list       Cinder: openstack volume service list           The presence of virtual machines, volumes or volume snapshots in error state   Storage   Presence of failed multipath routes   Problems with LVM mappings   Incongruences with the Device Mapper (DM)   etc.   Some Zabbix user parameters needed modifications in standard SELinux policies in order to properly work.  Besides this, we have another separated Zabbix server specifically to monitor capacity of the environment. In this second server we monitor:    Number of virtual routers   Number of namespaces in the controller nodes   Number of virtual machines   Number of assigned floating IPs   Memory used by virtual machines   vCPUs used   Storage IOPs / throughput   North-South traffic   etc.   The templates will surely need some customization work to adapt to each customer environment. They include an Ansible playbook to automate the Zabbix agent installation along with firewall liberations, sudoers file customizations, Zabbix user agents and corresponding scripts, SELinux policies, etc.  I hope it helps.  ">
+<meta name="description" content="    ">
 
 
   <meta name="author" content="Jose Castillo Lema">
@@ -23,7 +23,7 @@
 <meta property="og:url" content="https://josecastillolema.github.io/zabbix/">
 
 
-  <meta property="og:description" content="zabbix-for-openstack Zabbix templates for OpenStack (through Zabbix user parameters).  In the following screenshot you can see the final result:    As you can see, hosts are segregated by groups (controllers, compute, ceph, external Horizon, IdM, storage, etc.), and the items we monitore in each group are different.  Some things we do monitor:    SNMP of the servers IPMI   CPU (specially load above 30), memory (above 85% because of KSM), disk and network interfaces   Status of the network bonds   Number of processes/workers for each OpenStack Linux service (nova-scheduler, nova-api, etc.)   Response times of every OpenStack API   Status of Open vSwitch services   Pacemaker cluster status   Galera SQL cluster status   Health of RabbitMQ e Redis   Status of OpenStack agents            Nova: openstack compute service list       Neutron: openstack agent list       Cinder: openstack volume service list           The presence of virtual machines, volumes or volume snapshots in error state   Storage   Presence of failed multipath routes   Problems with LVM mappings   Incongruences with the Device Mapper (DM)   etc.   Some Zabbix user parameters needed modifications in standard SELinux policies in order to properly work.  Besides this, we have another separated Zabbix server specifically to monitor capacity of the environment. In this second server we monitor:    Number of virtual routers   Number of namespaces in the controller nodes   Number of virtual machines   Number of assigned floating IPs   Memory used by virtual machines   vCPUs used   Storage IOPs / throughput   North-South traffic   etc.   The templates will surely need some customization work to adapt to each customer environment. They include an Ansible playbook to automate the Zabbix agent installation along with firewall liberations, sudoers file customizations, Zabbix user agents and corresponding scripts, SELinux policies, etc.  I hope it helps.  ">
+  <meta property="og:description" content="    ">
 
 
 
@@ -329,7 +329,7 @@
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
     <meta itemprop="headline" content="Zabbix templates for OpenStack">
-    <meta itemprop="description" content="zabbix-for-openstackZabbix templates for OpenStack (through Zabbix user parameters).In the following screenshot you can see the final result:As you can see, hosts are segregated by groups (controllers, compute, ceph, external Horizon, IdM, storage, etc.), and the items we monitore in each group are different.Some things we do monitor:  SNMP of the servers IPMI  CPU (specially load above 30), memory (above 85% because of KSM), disk and network interfaces  Status of the network bonds  Number of processes/workers for each OpenStack Linux service (nova-scheduler, nova-api, etc.)  Response times of every OpenStack API  Status of Open vSwitch services  Pacemaker cluster status  Galera SQL cluster status  Health of RabbitMQ e Redis  Status of OpenStack agents          Nova: openstack compute service list      Neutron: openstack agent list      Cinder: openstack volume service list        The presence of virtual machines, volumes or volume snapshots in error state  Storage  Presence of failed multipath routes  Problems with LVM mappings  Incongruences with the Device Mapper (DM)  etc.Some Zabbix user parameters needed modifications in standard SELinux policies in order to properly work.Besides this, we have another separated Zabbix server specifically to monitor capacity of the environment. In this second server we monitor:  Number of virtual routers  Number of namespaces in the controller nodes  Number of virtual machines  Number of assigned floating IPs  Memory used by virtual machines  vCPUs used  Storage IOPs / throughput  North-South traffic  etc.The templates will surely need some customization work to adapt to each customer environment. They include an Ansible playbook to automate the Zabbix agent installation along with firewall liberations, sudoers file customizations, Zabbix user agents and corresponding scripts, SELinux policies, etc.I hope it helps.">
+    <meta itemprop="description" content="">
     <meta itemprop="datePublished" content="2019-04-25T00:00:00-03:00">
     <meta itemprop="dateModified" content="2019-04-25T17:00:58-03:00">
 
@@ -353,12 +353,15 @@
 
       <section class="page__content" itemprop="text">
         
-        <h1 id="zabbix-for-openstack"><a href="https://github.com/josecastillolema/zabbix-for-openstack" target="_blank" rel="noopener noreferrer">zabbix-for-openstack</a></h1>
-<p>Zabbix templates for OpenStack (through Zabbix user parameters).</p>
+        <iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&amp;repo=zabbix-for-openstack&amp;type=watch&amp;count=true&amp;size=large&amp;v=2" frameborder="0" scrolling="0" width="130" height="30" title="GitHub"></iframe>
+<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&amp;repo=zabbix-for-openstack&amp;type=star&amp;count=true&amp;size=large" frameborder="0" scrolling="0" width="115" height="30" title="GitHub"></iframe>
+<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&amp;repo=zabbix-for-openstack&amp;type=fork&amp;count=true&amp;size=large" frameborder="0" scrolling="0" width="170" height="30" title="GitHub"></iframe>
 
-<p>In the following screenshot you can see the final result:</p>
+<h1 id="zabbix-for-openstack">zabbix-for-openstack</h1>
+<p>Zabbix templates for OpenStack (through Zabbix <a href="https://www.zabbix.com/documentation/3.4/manual/config/items/userparameters" target="_blank" rel="noopener noreferrer">user parameters</a>).</p>
 
-<p><img src="https://raw.githubusercontent.com/josecastillolema/zabbix-for-openstack/master/img/pastedImage_1.png" alt="Zabbix screenshot"></p>
+<p>In the following screenshot you can see the final result:
+<img src="https://raw.githubusercontent.com/josecastillolema/zabbix-for-openstack/master/img/pastedImage_1.png" alt="Zabbix screenshot"></p>
 
 <p>As you can see, hosts are segregated by groups (controllers, compute, ceph, external Horizon, IdM, storage, etc.), and the items we monitore in each group are different.</p>
 
@@ -410,6 +413,7 @@
 
 <p>I hope it helps.</p>
 
+<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&amp;type=follow&amp;count=true&amp;size=large" frameborder="0" scrolling="0" width="230" height="30" title="GitHub"></iframe>
 
         
       </section>
@@ -503,20 +507,11 @@
 
 </p>
     
-    <p class="archive__item-excerpt" itemprop="description">aodh2sensu
-
-Imports OpenStack Aodh alarms into Sensu Core Server.
-
-Install
-
-$ pip3 install -r ./requirements.txt
+    <p class="archive__item-excerpt" itemprop="description">
 
 
-Use
 
-Usage: aodh2sensu.py [options]
-
-Impor...</p>
+</p>
   </article>
 </div>
 

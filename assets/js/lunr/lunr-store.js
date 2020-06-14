@@ -203,8 +203,8 @@ var store = [{
         "url": "https://josecastillolema.github.io/fiap-aso/",
         "teaser": null
       },{
-        "title": "A Locust CCN client compatible with ccn-lite",
-        "excerpt":"locust-ccnclient   A Locust CCN client compatible with ccn-lite.   It allows the execution of load test experiments againts a CCN network.           ","categories": [],
+        "title": "Locust CCN client compatible with ccn-lite",
+        "excerpt":"    locust-ccnclient   A Locust CCN client compatible with ccn-lite.   It allows the execution of load test experiments againts a CCN network.            ","categories": [],
         "tags": ["ccn","networks"],
         "url": "https://josecastillolema.github.io/locust-ccnclient/",
         "teaser": null
