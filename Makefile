@@ -1,5 +1,5 @@
 publish:
-	bundle exec jekyll build
+	JEKYLL_ENV=production bundle exec jekyll build
 	git add *
 	git commit -m "auto build $(date +"%Y-%m-%d")"
 	git push
