@@ -1,5 +1,4 @@
-[![Gem version](https://img.shields.io/gem/v/bootstrap.svg)](https://rubygems.org/gems/bootstrap)
-![gem](https://img.shields.io/badge/gem-2.2.0-blue)
+![gem](https://img.shields.io/badge/gem-3.1.2-blue)
 [![Build Status](https://github.com/twbs/bootstrap/workflows/JS%20Tests/badge.svg?branch=master)](https://github.com/twbs/bootstrap/actions?query=workflow%3AJS+Tests+branch%3Amaster)
 
 Sources of the GitOps project's website (https://https://josecastillolema.github.io/).
