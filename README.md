@@ -1,3 +1,4 @@
+![GitHub](https://img.shields.io/github/license/josecastillolema/josecastillolema.github.io)
 ![Website](https://img.shields.io/website?url=https%3A%2F%2Fjosecastillolema.github.io)
 ![Uptime Robot status](https://img.shields.io/uptimerobot/status/m785297761-3cb3eb53ca3a7966274012bc)
 ![Uptime Robot ratio (30 days)](https://img.shields.io/uptimerobot/ratio/m785297761-3cb3eb53ca3a7966274012bc)
