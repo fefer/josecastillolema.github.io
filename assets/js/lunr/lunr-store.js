@@ -204,7 +204,7 @@ var store = [{
         "teaser": null
       },{
         "title": "Locust CCN client compatible with ccn-lite",
-        "excerpt":"         locust-ccnclient   A Locust CCN client compatible with ccn-lite.   It allows the execution of load test experiments againts a CCN network.            ","categories": [],
+        "excerpt":"           locust-ccnclient   A Locust CCN client compatible with ccn-lite.   It allows the execution of load test experiments againts a CCN network.            ","categories": [],
         "tags": ["ccn","networks"],
         "url": "https://josecastillolema.github.io/locust-ccnclient/",
         "teaser": null
@@ -294,7 +294,7 @@ var store = [{
         "teaser": null
       },{
         "title": "aodh2sensu - importing alarms from Aodh into Sensu Core",
-        "excerpt":"aodh2sensu Imports OpenStack Aodh alarms into Sensu Core Server. Install $ pip3 install -r ./requirements.txt Use Usage: aodh2sensu.py [options] Imports OpenStack Aodh alarms into Sensu Core Server. Options: -h, --help show this help message and exit --sensu-url URL if not specified, defaults to localhost:4567 Run the aodh2sensu proxy. sensu_url must...","categories": [],
+        "excerpt":"aodh2sensu Imports OpenStack Aodh alarms into Sensu Core Server. Install Via with requirements file $ pip3 install -r ./requirements.txt Via pipenv pipfile $ pipenv install Use Usage: aodh2sensu.py [options] Imports OpenStack Aodh alarms into Sensu Core Server. Options: -h, --help show this help message and exit --sensu-url URL if not...","categories": [],
         "tags": ["openstack","monitoring","redhat"],
         "url": "https://josecastillolema.github.io/aodh2sensu/",
         "teaser": null

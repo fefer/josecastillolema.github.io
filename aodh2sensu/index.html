@@ -361,7 +361,11 @@
   <li>
 <a href="#aodh2sensu">aodh2sensu</a>
     <ul>
-      <li><a href="#install">Install</a></li>
+      <li>
+<a href="#install">Install</a>
+      - {:.} <a href="#via-with-requirements-file">Via with requirements file</a>
+      - {:.} <a href="#via-pipenv-pipfile">Via pipenv pipfile</a>
+</li>
       <li><a href="#use">Use</a></li>
       <li><a href="#docker">Docker</a></li>
       <li>
@@ -385,6 +389,9 @@
 <p><img src="https://img.shields.io/github/license/josecastillolema/aodh2sensu" alt="GitHub">
 <img src="https://img.shields.io/github/languages/count/josecastillolema/aodh2sensu" alt="GitHub language count">
 <img src="https://img.shields.io/github/languages/top/josecastillolema/aodh2sensu" alt="GitHub top language">
+<img src="https://img.shields.io/github/pipenv/locked/python-version/josecastillolema/aodh2sensu" alt="GitHub Pipenv locked Python version">
+<img src="https://img.shields.io/github/pipenv/locked/dependency-version/josecastillolema/aodh2sensu/flask" alt="GitHub Pipenv locked dependency version">
+<img src="https://img.shields.io/github/pipenv/locked/dependency-version/josecastillolema/aodh2sensu/requests" alt="GitHub Pipenv locked dependency version">
 <a href="https://requires.io/github/josecastillolema/aodh2sensu/requirements/?branch=master" target="_blank" rel="noopener noreferrer"><img src="https://requires.io/github/josecastillolema/aodh2sensu/requirements.svg?branch=master" alt="Requirements Status"></a></p>
 
 <h1 id="aodh2sensu">aodh2sensu</h1>
@@ -393,7 +400,12 @@
 
 <h2 id="install">Install</h2>
 
+<h4 id="via-with-requirements-file">Via with requirements file</h4>
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ pip3 install -r ./requirements.txt
+</code></pre></div></div>
+
+<h4 id="via-pipenv-pipfile">Via pipenv pipfile</h4>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ pipenv install
 </code></pre></div></div>
 
 <h2 id="use">Use</h2>
@@ -413,6 +425,11 @@ Options:
 
     <div class="highlighter-rouge">
 <div class="highlight"><pre class="highlight"><code> $ ./aodh2sensu.py
+</code></pre></div>    </div>
+    <p>or alternatively via pipenv:</p>
+    <div class="highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> $ pipenv shell
+ $ ./aodh2sensu.py
 </code></pre></div>    </div>
   </li>
   <li>Create an Aodh alarm from OpenStack side. This example alarm will trigger an HTTP POST message to the <code class="highlighter-rouge">aodh2sensu</code> proxy whenever the cpu utilization of <code class="highlighter-rouge">$INSTANCE_ID</code> goes above 20%:
