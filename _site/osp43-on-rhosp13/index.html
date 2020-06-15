@@ -460,7 +460,8 @@ FATAL Bootstrap failed to complete: waiting for Kubernetes API: context deadline
 
 <p>Another issue we found at this point it is that for some reason the openshift-installer does not use soft anti-affinity policies (different from AWS and from <a href="https://github.com/openshift/installer/blob/master/docs/user/openstack/install_upi.md" target="_blank" rel="noopener noreferrer">OpenStack UPI installation</a>), and may create all the masters/workers in the same server. The only option to accomplish this would be to define different regions for the nodes, which is not supported from RHOSP side.</p>
 
-<p>Finally, installation completed:</p>
+<p>Finally, installation completed:
+<img src="/assets/images/posts/2020-04-26-osp43-on-rhosp13/0.png" alt=""></p>
 
 <h2 id="cinder-integration">Cinder Integration</h2>
 <p>Worked out of the box:</p>
@@ -512,7 +513,8 @@ FATAL Bootstrap failed to complete: waiting for Kubernetes API: context deadline
  <span class="s">storageClassName</span><span class="pi">:</span> <span class="s">standard‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍</span>
 </code></pre></div></div>
 
-<p>As the <code class="highlighter-rouge">volumeBindingMode</code> is set to <code class="highlighter-rouge">WaitForFirstConsumer</code>, we had to actually attach the PV to a deployment in order to the Cinder volume to be created. For that, we used OpenShift GUI:</p>
+<p>As the <code class="highlighter-rouge">volumeBindingMode</code> is set to <code class="highlighter-rouge">WaitForFirstConsumer</code>, we had to actually attach the PV to a deployment in order to the Cinder volume to be created. For that, we used OpenShift GUI:
+<img src="/assets/images/posts/2020-04-26-osp43-on-rhosp13/1.png" alt=""></p>
 
 <p>From OpenShift side:</p>
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cloud-user@bastion ~]$ oc get pv
