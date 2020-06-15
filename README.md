@@ -9,6 +9,7 @@
 ![bundler](https://img.shields.io/badge/bundler-2.1.4-blue)
 ![GitHub last commit](https://img.shields.io/github/last-commit/josecastillolema/josecastillolema.github.io)
 ![Security Headers](https://img.shields.io/security-headers?url=https%3A%2F%2Fjosecastillolema.github.io)
+![Chromium HSTS preload](https://img.shields.io/hsts/preload/josecastillolema.github.io)
 ![Mozilla HTTP Observatory Grade](https://img.shields.io/mozilla-observatory/grade-score/josecastillolema.github.io?publish)
 
 
