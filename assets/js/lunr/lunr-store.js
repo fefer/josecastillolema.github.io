@@ -180,7 +180,7 @@ var store = [{
         "teaser": null
       },{
         "title": "OpenStack Day SP 2018",
-        "excerpt":"IPv6 no OpenStack       ","categories": [],
+        "excerpt":"IPv6 no OpenStack            ","categories": [],
         "tags": ["events","openstack"],
         "url": "https://josecastillolema.github.io/openstackday/",
         "teaser": null
@@ -204,7 +204,7 @@ var store = [{
         "teaser": null
       },{
         "title": "Locust CCN client compatible with ccn-lite",
-        "excerpt":"    locust-ccnclient   A Locust CCN client compatible with ccn-lite.   It allows the execution of load test experiments againts a CCN network.            ","categories": [],
+        "excerpt":"         locust-ccnclient   A Locust CCN client compatible with ccn-lite.   It allows the execution of load test experiments againts a CCN network.            ","categories": [],
         "tags": ["ccn","networks"],
         "url": "https://josecastillolema.github.io/locust-ccnclient/",
         "teaser": null
@@ -222,7 +222,7 @@ var store = [{
         "teaser": null
       },{
         "title": "Zabbix templates for OpenStack",
-        "excerpt":"zabbix-for-openstack Zabbix templates for OpenStack (through Zabbix user parameters). In the following screenshot you can see the final result: As you can see, hosts are segregated by groups (controllers, compute, ceph, external Horizon, IdM, storage, etc.), and the items we monitore in each group are different. Some things we do...","categories": [],
+        "excerpt":"zabbix-for-openstack Ansible playbook for installing Zabbix and its templates for OpenStack (through Zabbix user parameters). In the following screenshot you can see the final result: As you can see, hosts are segregated by groups (controllers, compute, ceph, external Horizon, IdM, storage, etc.), and the items we monitore in each group...","categories": [],
         "tags": ["ansible","openstack","monitoring","redhat"],
         "url": "https://josecastillolema.github.io/zabbix/",
         "teaser": null
@@ -276,7 +276,7 @@ var store = [{
         "teaser": null
       },{
         "title": "FIAP MBA ON Live - 1ASO - Fase 3 - Cloud",
-        "excerpt":" ","categories": [],
+        "excerpt":"      ","categories": [],
         "tags": ["fiap","live"],
         "url": "https://josecastillolema.github.io/fiapon-live-1aso/",
         "teaser": null
