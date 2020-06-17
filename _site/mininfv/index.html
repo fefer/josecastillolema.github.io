@@ -354,7 +354,11 @@
       <li><a href="#ipmac-definition">IP/MAC definition</a></li>
       <li><a href="#flavor-and-number-of-cpus">Flavor and number of cpus</a></li>
       <li><a href="#cloud-init">Cloud-init</a></li>
-      <li><a href="#dependencies">Dependencies</a></li>
+      <li>
+<a href="#dependencies">Dependencies</a>
+      - {:.} <a href="#via-pip">Via pip</a>
+      - {:.} <a href="#via-pipenv">Via pipenv</a>
+</li>
       <li><a href="#mini-nfv-use">mini-nfv use</a></li>
       <li><a href="#mini-nfv-debugging">mini-nfv debugging</a></li>
       <li><a href="#vnf-manager-use">VNF Manager Use</a></li>
@@ -370,12 +374,15 @@
 <iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&amp;repo=mini-nfv&amp;type=star&amp;count=true&amp;size=large" frameborder="0" scrolling="0" width="115" height="30" title="GitHub"></iframe>
 <iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&amp;repo=mini-nfv&amp;type=fork&amp;count=true&amp;size=large" frameborder="0" scrolling="0" width="170" height="30" title="GitHub"></iframe>
 
-<p><img src="https://img.shields.io/github/license/josecastillolema/mini-nfv" alt="GitHub">
+<p><a href="https://zenodo.org/badge/latestdoi/116139340" target="_blank" rel="noopener noreferrer"><img src="https://zenodo.org/badge/116139340.svg" alt="DOI"></a>
+<img src="https://img.shields.io/github/v/release/josecastillolema/mini-nfv" alt="GitHub release (latest by date)">
+<img src="https://img.shields.io/github/v/tag/josecastillolema/mini-nfv" alt="GitHub tag (latest by date)">
 <img src="https://img.shields.io/github/languages/top/josecastillolema/mini-nfv" alt="GitHub top language">
 <img src="https://img.shields.io/github/pipenv/locked/python-version/josecastillolema/mini-nfv" alt="GitHub Pipenv locked Python version">
 <img src="https://img.shields.io/github/pipenv/locked/dependency-version/josecastillolema/mini-nfv/netaddr" alt="GitHub Pipenv locked dependency version">
 <img src="https://img.shields.io/github/pipenv/locked/dependency-version/josecastillolema/mini-nfv/pyyaml" alt="GitHub Pipenv locked dependency version">
 <img src="https://img.shields.io/github/pipenv/locked/dependency-version/josecastillolema/mini-nfv/jinja2" alt="GitHub Pipenv locked dependency version">
+<img src="https://img.shields.io/github/license/josecastillolema/mini-nfv" alt="GitHub">
 <a href="https://requires.io/github/josecastillolema/mini-nfv/requirements/?branch=master" target="_blank" rel="noopener noreferrer"><img src="https://requires.io/github/josecastillolema/mini-nfv/requirements.svg?branch=master" alt="Requirements Status"></a>
 <img src="https://img.shields.io/snyk/vulnerabilities/github/josecastillolema/mini-nfv" alt="Snyk Vulnerabilities for GitHub Repo"></p>
 
@@ -415,7 +422,16 @@
 
 <p>On the other hand, Mininet has shown itself as a great tool for agile network/SDN/NFV experimentation. The goal of mini-nfv is to alleviate the developers’ tedious task of setting up a whole service chaining environment and let them focus on their own work (e.g., developing a particular VNF, prototyping, implementing an orchestration algorithm or a customized traffic steering).</p>
 
-<p>On top of that, mini-nfv supports <a href="http://jinja.pocoo.org/docs/2.10/" target="_blank" rel="noopener noreferrer">Jinja2</a>, a full featured and designer-friendly template engine for Python, with an integrated sandboxed execution environment. This way, developers can easily automate the scale-out of vNF deployments and NFV orquestration graphs within the TOSCA templates.</p>
+<p>On top of that, mini-nfv supports <a href="http://jinja.pocoo.org/docs/2.10/" target="_blank" rel="noopener noreferrer">Jinja2</a>, a full featured and designer-friendly template engine for Python, with an integrated sandboxed execution environment. This way, developers can easily automate the scale-out of vNF deployments and NFV orquestration graphs within the TOSCA templates. Inside the TOSCA templates, variables or expres- sions can be defined, as in for example:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ip_dst_prefix: ’{{ ip_dst }}’
+</code></pre></div></div>
+<p>It is also possible to define tags, which control the logic of the template:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{% ip_masq == 24 %}
+</code></pre></div></div>
+<p>Variables will then be replaced with values when the templates are rendered. This can be done interactively through mini-nfv CLI, as in:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>px import yaml; net.values=yaml.load (’---\nip_dst: 10.0.40.10/24’)
+</code></pre></div></div>
+<p>Like this, using only one parametrized template it is possible to deploy any number of VNFs/VNFDs/VNFFGs with varying parameters.</p>
 
 <h2 id="characteristics">Characteristics</h2>
 <p>NFV Catalog</p>
@@ -552,14 +568,23 @@ Currently, mini-nfv support the folowing flavors:</p>
 
 <p>APT dependencies:</p>
 <ul>
-  <li>mininet</li>
-  <li>openvswitch-testcontroller (in Ubuntu 16.04 and 18.04)</li>
-  <li>python-netaddr (it can also be installed via <code class="highlighter-rouge">pip</code>)</li>
-  <li>python-yaml (it can also be installed via <code class="highlighter-rouge">pip</code>)</li>
+  <li><code class="highlighter-rouge">mininet</code></li>
+  <li>
+<code class="highlighter-rouge">openvswitch-testcontroller</code> (in Ubuntu 16.04 and 18.04)</li>
+  <li>
+<code class="highlighter-rouge">python-netaddr</code> (it can also be installed via <code class="highlighter-rouge">pip</code>)</li>
+  <li>
+<code class="highlighter-rouge">python-yaml</code> (it can also be installed via <code class="highlighter-rouge">pip</code>)</li>
 </ul>
 
+<h4 id="via-pip">Via pip</h4>
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ pip install -r ./requirements.txt
 </code></pre></div></div>
+
+<h4 id="via-pipenv">Via pipenv</h4>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ pipenv install
+</code></pre></div></div>
+
 <p>If you are running Ubuntu 16.04, the <code class="highlighter-rouge">openvswitch-ovscontroller</code> was recently renamed to <code class="highlighter-rouge">openvswitch-testcontroller</code>.
 To solve it, you need to create a symbolic link to <code class="highlighter-rouge">ovs-testcontroller</code> that is called <code class="highlighter-rouge">ovs-controller</code>.</p>
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo ln /usr/bin/ovs-testcontroller /usr/bin/ovs-controller
