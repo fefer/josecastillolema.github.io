@@ -26,8 +26,8 @@ Always write a clear log message for the commits. One-line messages are fine for
 
 1. Click 'Fork' on Github, creating e.g. ``username/theproject``.
 2. Clone the project: ``git clone git@github.com:username/theproject``.
-3. `Create and activate a virtual environment.
-4. Install the development requirements: ``gem install bundler jekyll``.
+3. Create and activate a virtual environment.
+4. Install the development requirements: `gem install bundler jekyll`.
 5. Create a branch: ``git checkout -b foo-the-bars 1.3``.
 
 ### Making the Changes
