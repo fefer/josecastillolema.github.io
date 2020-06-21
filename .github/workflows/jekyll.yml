@@ -33,4 +33,4 @@ jobs:
         push-branch: 'source'
         commit-message: 'auto build/push via github workflow'
         force-add: 'false'
-        files: $home/work/josecastillolema.github.io/josecastillolema.github.io
+        files: $home/work/josecastillolema.github.io/josecastillolema.github.io/*
