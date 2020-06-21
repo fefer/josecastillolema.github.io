@@ -22,7 +22,7 @@ jobs:
       uses: github-actions-x/commit@v2.6
       with:
         github-token: ${{ secrets.GITHUB_TOKEN }}
-        push-branch: 'master'
+        push-branch: 'source'
         commit-message: 'auto build/push via github workflow'
         force-add: 'true'
         files: _site
