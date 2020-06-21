@@ -26,3 +26,4 @@ jobs:
         commit-message: 'auto build/push via github workflow'
         force-add: 'false'
         files: _site
+        rebase: 'true'
