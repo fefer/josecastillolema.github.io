@@ -18,6 +18,11 @@ jobs:
         docker run \
         -v ${{ github.workspace }}:/srv/jekyll -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
         jekyll/builder:latest /bin/bash -c "chmod 777 /srv/jekyll && JEKYLL_ENV=production jekyll build --future"
+        pwd
+        ls
+        ls ${{ github.workspace }}
+        sudo apt install tree -y
+        tree ${{ github.workspace }}
     - name: push
       uses: github-actions-x/commit@v2.6
       with:
