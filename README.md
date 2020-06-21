@@ -13,6 +13,7 @@
 ![Chromium HSTS preload](https://img.shields.io/hsts/preload/josecastillolema.github.io)
 ![Mozilla HTTP Observatory Grade](https://img.shields.io/mozilla-observatory/grade/josecastillolema.github.io?publish)
 ![Snyk Vulnerabilities for GitHub Repo](https://img.shields.io/snyk/vulnerabilities/github/josecastillolema/josecastillolema.github.io?publish)
+![Jekyll site CI](https://github.com/josecastillolema/josecastillolema.github.io/workflows/Jekyll%20site%20CI/badge.svg)
 
 
 Sources of the GitOps project's website (https://josecastillolema.github.io/).
