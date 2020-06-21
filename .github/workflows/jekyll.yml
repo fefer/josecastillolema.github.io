@@ -26,11 +26,13 @@ jobs:
         # git filter-branch --subdirectory-filter _site/ -f
         # git checkout source
         # git push --all origin
-    - name: push
-      uses: github-actions-x/commit@v2.6
-      with:
-        github-token: ${{ secrets.GITHUB_TOKEN }}
-        push-branch: 'source'
-        commit-message: 'auto build/push via github workflow'
-        force-add: 'false'
-        files: $home/work/josecastillolema.github.io/josecastillolema.github.io/*
+    - name: action-push
+      uses: ludeeus/action-push@0.0.1
+    #- name: push
+    #  uses: github-actions-x/commit@v2.6
+    #  with:
+    #    github-token: ${{ secrets.GITHUB_TOKEN }}
+    #    push-branch: 'source'
+    #    commit-message: 'auto build/push via github workflow'
+    #    force-add: 'false'
+    #    files: /home/runner/work/josecastillolema.github.io/josecastillolema.github.io/*
