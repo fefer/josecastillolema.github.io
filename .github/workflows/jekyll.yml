@@ -33,6 +33,9 @@ jobs:
         ACTION_NAME: josecastillolema
         ACTION_BRANCH: source
         # ACTION_MESSAGE: ""
+    - uses: actions/checkout@v2
+      with:
+        ref: 'master'
     - name: Branch filtering
       run: |
         git config --local user.email "josecastillolema@gmail.com"
