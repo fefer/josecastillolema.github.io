@@ -28,6 +28,11 @@ jobs:
         # git push --all origin
     - name: action-push
       uses: ludeeus/action-push@0.0.1
+      env: 
+        ACTION_MAIL: josecastillolema@gmail.com
+        ACTION_NAME: josecastillolema
+        ACTION_BRANCH: source
+        # ACTION_MESSAGE: ""
     #- name: push
     #  uses: github-actions-x/commit@v2.6
     #  with:
