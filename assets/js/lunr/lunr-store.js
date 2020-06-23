@@ -287,6 +287,18 @@ var store = [{
         "url": "https://josecastillolema.github.io/onf-ambassador/",
         "teaser": null
       },{
+        "title": "New post",
+        "excerpt":"I would like to share my experience installing and integrating OpenShift with various OpenStack services, namely Cinder, Swift and Keystone (Neutron and Octavia TBD). Prerequisites This was not a disconnected environment. Note that virtual machines have to be born with proper DNS configuration for OpenShift to download proper CoreOS images...","categories": [],
+        "tags": ["openstack","openshift","redhat"],
+        "url": "https://josecastillolema.github.io/novo-artigo2/",
+        "teaser": null
+      },{
+        "title": "New post",
+        "excerpt":"I would like to share my experience installing and integrating OpenShift with various OpenStack services, namely Cinder, Swift and Keystone (Neutron and Octavia TBD). Prerequisites This was not a disconnected environment. Note that virtual machines have to be born with proper DNS configuration for OpenShift to download proper CoreOS images...","categories": [],
+        "tags": ["openstack","openshift","redhat"],
+        "url": "https://josecastillolema.github.io/novo-artigo/",
+        "teaser": null
+      },{
         "title": "OpenShift 4.3 on RHOSP 13: Installation and Integrations",
         "excerpt":"I would like to share my experience installing and integrating OpenShift with various OpenStack services, namely Cinder, Swift and Keystone (Neutron and Octavia TBD). Prerequisites This was not a disconnected environment. Note that virtual machines have to be born with proper DNS configuration for OpenShift to download proper CoreOS images...","categories": [],
         "tags": ["openstack","openshift","redhat"],
