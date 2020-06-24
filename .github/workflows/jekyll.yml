@@ -40,7 +40,7 @@ jobs:
       run: |
         #git config --local user.email "josecastillolema@gmail.com"
         #git config --local user.name "josecastillolema"
-        #git branch -D master
+        git branch -D master
         git checkout -b master
         git filter-branch --subdirectory-filter _site/ -f
         # git checkout source
