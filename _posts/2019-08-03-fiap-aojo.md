@@ -6,6 +6,7 @@ tags:
   - azure
   - classes
   - fiap
+  - pt
 toc: false
 ---
 

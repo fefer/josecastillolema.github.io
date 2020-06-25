@@ -8,6 +8,7 @@ tags:
   - fiap
   - iot
   - networks
+  - pt
 toc: false
 ---
 

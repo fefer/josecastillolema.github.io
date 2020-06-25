@@ -4,6 +4,7 @@ last_modified_at: 2017-10-28T16:00:58-04:00
 tags:
   - iac
   - openstack
+  - pt
   - redhat
 toc: true
 toc_label: "Getting Started"

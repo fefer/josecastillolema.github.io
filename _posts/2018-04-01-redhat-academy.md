@@ -6,6 +6,7 @@ tags:
   - fiap
   - openshift
   - openstack
+  - pt
   - redhat
 toc: false
 ---

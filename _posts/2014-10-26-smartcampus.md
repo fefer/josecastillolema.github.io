@@ -2,6 +2,7 @@
 title:  "Smart Campus SP"
 last_modified_at: 2014-10-26T16:00:58-04:00
 tags:
+  - en
   - fiware
   - iot
 toc: true

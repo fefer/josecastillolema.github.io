@@ -5,6 +5,7 @@ tags:
   - openstack
   - iac
   - terraform
+  - pt
   - redhat
 toc: true
 toc_label: "Getting Started"
