@@ -13,15 +13,11 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-      with:
-        ref: 'master'
-    - uses: actions/checkout@v2
     - name: Build the site in the jekyll/builder container
       run: |
         docker run \
         -v ${{ github.workspace }}:/srv/jekyll -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
         jekyll/builder:latest /bin/bash -c "chmod 777 /srv/jekyll && JEKYLL_ENV=production jekyll build --future"
-        git branch -D master
 
     #- name: action-push
     #  uses: ludeeus/action-push@0.0.1
