@@ -269,6 +269,12 @@ var store = [{
         "url": "https://josecastillolema.github.io/thesis/",
         "teaser": null
       },{
+        "title": "Kuryr on OpenStack",
+        "excerpt":"Kuryr is Kubernetes Container Network Interface (CNI) for OpenStack, supported from OpenStack side from Red Hat OpenStack 13, for OpenShift 3.11 and for OpenShift 4.2 and above. If you are interested on checking the performance impact, check the post Accelerate your OpenShift Network Performance on OpenStack with Kuryr from the...","categories": [],
+        "tags": ["en","networks","openshift","openstack","redhat"],
+        "url": "https://josecastillolema.github.io/kuryr/",
+        "teaser": null
+      },{
         "title": "FIAP MBA em Artificial Intelligence & Machine Learning (IA)",
         "excerpt":"      Princípios de Robótica e IoT   ","categories": [],
         "tags": ["classes","fiap","iot","pt"],
@@ -282,7 +288,7 @@ var store = [{
         "teaser": null
       },{
         "title": "ComputeHCISriov role for Director/TripleO",
-        "excerpt":"Hyper-converged SR-IOV role for compute nodes. Change 700887 propoged and merged upstream: https://review.opendev.org/#/c/700887/ ############################################################################### # Role: ComputeHCISriov # ############################################################################### - name: ComputeHCISriov description: | Compute Node with SR-IOV role hosting Ceph OSD too networks: - InternalApi - Tenant - Storage - StorageMgmt - Management default_route_networks: ['Management'] disable_upgrade_deployment: True RoleParametersDefault: TunedProfileName:...","categories": [],
+        "excerpt":"Hyper-converged SR-IOV role for compute nodes. Change 700887 proposed and merged upstream: https://review.opendev.org/#/c/700887/ ############################################################################### # Role: ComputeHCISriov # ############################################################################### - name: ComputeHCISriov description: | Compute Node with SR-IOV role hosting Ceph OSD too networks: - InternalApi - Tenant - Storage - StorageMgmt - Management default_route_networks: ['Management'] disable_upgrade_deployment: True RoleParametersDefault: TunedProfileName:...","categories": [],
         "tags": ["en","nfv","openstack","redhat"],
         "url": "https://josecastillolema.github.io/computehcisriov-role/",
         "teaser": null

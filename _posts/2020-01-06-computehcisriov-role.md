@@ -12,7 +12,7 @@ toc: false
 
 Hyper-converged SR-IOV role for compute nodes.
 
-Change `700887` propoged and merged upstream: [https://review.opendev.org/#/c/700887/](https://review.opendev.org/#/c/700887/)
+Change `700887` proposed and merged upstream: [https://review.opendev.org/#/c/700887/](https://review.opendev.org/#/c/700887/)
 
 ```
 ###############################################################################

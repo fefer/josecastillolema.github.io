@@ -9,29 +9,33 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>GitOps - Page 9</title>
-<meta name="description" content="Networks, SDN, NFVi, OpenStack, K8s/OpenShift. ">
+<!-- begin _includes/seo.html --><title>Kuryr on OpenStack - GitOps</title>
+<meta name="description" content="  ">
 
 
   <meta name="author" content="Jose Castillo Lema">
 
 
-<meta property="og:type" content="website">
+<meta property="og:type" content="article">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="GitOps">
-<meta property="og:title" content="GitOps">
-<meta property="og:url" content="https://josecastillolema.github.io/page9/">
+<meta property="og:title" content="Kuryr on OpenStack">
+<meta property="og:url" content="https://josecastillolema.github.io/kuryr/">
 
 
-  <meta property="og:description" content="Networks, SDN, NFVi, OpenStack, K8s/OpenShift. ">
-
-
-
+  <meta property="og:description" content="  ">
 
 
 
 
 
+
+
+  <meta property="article:published_time" content="2019-08-06T00:00:00-03:00">
+
+
+
+  <meta property="article:modified_time" content="2019-08-06T17:00:58-03:00">
 
 
 
@@ -40,13 +44,9 @@
   
 
 
-<link rel="canonical" href="https://josecastillolema.github.io/page9/">
+<link rel="canonical" href="https://josecastillolema.github.io/kuryr/">
 
 
-  <link rel="prev" href="https://josecastillolema.github.io/page8/">
-
-
-  <link rel="next" href="https://josecastillolema.github.io/page10/">
 
 
 <script type="application/ld+json">
@@ -109,7 +109,7 @@
 
   </head>
 
-  <body class="layout--home">
+  <body class="layout--single">
     <nav class="skip-links">
   <h2 class="screen-reader-text">Skip links</h2>
   <ul>
@@ -327,27 +327,153 @@
 
 
 
-  <div class="archive">
-    
-      <h1 id="page-title" class="page__title"></h1>
-    
-    
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Kuryr on OpenStack">
+    <meta itemprop="description" content="">
+    <meta itemprop="datePublished" content="2019-08-06T00:00:00-03:00">
+    <meta itemprop="dateModified" content="2019-08-06T17:00:58-03:00">
 
-<h3 class="archive__subtitle">Recent posts</h3>
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Kuryr on OpenStack
+</h1>
+          
+            <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
 
 
 
 
+  1 minute read
+
+</p>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <p><img src="/assets/images/posts/2019-08-06-kuryr.png" alt=""></p>
+
+<p><a href="https://github.com/openstack/kuryr" target="_blank" rel="noopener noreferrer">Kuryr</a> is Kubernetes Container Network Interface (CNI) for OpenStack, supported from OpenStack side from Red Hat OpenStack 13, for OpenShift 3.11 and for OpenShift 4.2 and above.</p>
+
+<p>If you are interested on checking the performance impact, check the post <a href="https://www.openshift.com/blog/accelerate-your-openshift-network-performance-on-openstack-with-kuryr" target="_blank" rel="noopener noreferrer">Accelerate your OpenShift Network Performance on OpenStack with Kuryr</a> from the <a href="https://www.openshift.com/blog" target="_blank" rel="noopener noreferrer">official openshift blog</a>.</p>
+
+<p>Kuryr code lives in Kubernetes/OpenShift space, however there are some prerequisites from OpenStack side in order to properly work:</p>
+<ul>
+  <li>
+<a href="https://wiki.openstack.org/wiki/Octavia" target="_blank" rel="noopener noreferrer">Octavia</a>, OpenStack`s load balancer as a service</li>
+  <li>Open vSwitch as Neutron firewall driver</li>
+  <li>The trunk extension to be enabled at Neutron</li>
+</ul>
+
+<p>The following TripleO/Director Heat template satisfies these prerequisites:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> resource_registry:
+    OS::TripleO::Services::OctaviaApi: /usr/share/openstack-tripleo-heat-templates/docker/services/octavia-api.yaml
+    OS::TripleO::Services::OctaviaHousekeeping: /usr/share/openstack-tripleo-heat-templates/docker/services/octavia-housekeeping.yaml
+    OS::TripleO::Services::OctaviaHealthManager: /usr/share/openstack-tripleo-heat-templates/docker/services/octavia-health-manager.yaml
+    OS::TripleO::Services::OctaviaWorker: /usr/share/openstack-tripleo-heat-templates/docker/services/octavia-worker.yaml
+    OS::TripleO::Services::OctaviaDeploymentConfig: /usr/share/openstack-tripleo-heat-templates/docker/services/octavia/octavia-deployment-config.yaml
+
+parameter_defaults:
+    # This flag enables internal generation of certificates for communication
+    # with amphorae. Use OctaviaCaCert, OctaviaCaKey, OctaviaCaKeyPassphrase
+    # and OctaviaClient cert to configure secure production environments.
+    OctaviaGenerateCerts: true
+
+    # As an Octavia Load Balancer is used to access the OpenShift API, there is a need to increase their listeners      # default timeouts for the connections. The default timeout is 50 seconds. Increase the timeout to 20 minutes 
+    OctaviaTimeoutClientData: 1200000
+    OctaviaTimeoutMemberData: 1200000
+
+    NeutronOVSFirewallDriver: 'openvswitch'
+
+    # In RHOSP 13, the trunk extension is enabled by default at Neutron, if that is not the case, make sure
+    # to add trunk the comma separated list of service plugin entrypoints defined in NeutronServicePlugins
+</code></pre></div></div>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
   
 
 
+  
+  
+  
 
-<div class="list__item">
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/tags/#en" class="page__taxonomy-item" rel="tag">en</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#networks" class="page__taxonomy-item" rel="tag">networks</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#openshift" class="page__taxonomy-item" rel="tag">openshift</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#openstack" class="page__taxonomy-item" rel="tag">openstack</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#redhat" class="page__taxonomy-item" rel="tag">redhat</a>
+    
+    </span>
+  </p>
+
+
+
+
+        
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2019-08-06">August 6, 2019</time></p>
+        
+      </footer>
+
+      
+
+      
+  <nav class="pagination">
+    
+      <a href="/thesis/" class="pagination--pager" title="A generic NFV MANO for Content-Centric Networks
+">Previous</a>
+    
+    
+      <a href="/fiap-ia/" class="pagination--pager" title="FIAP MBA em Artificial Intelligence &amp; Machine Learning (IA)
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">You may also enjoy</h4>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
   <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
     
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="/puc/" rel="permalink">PUC-SP Cursos de extensão - Internet das Coisas
+        <a href="/aodh2sensu/" rel="permalink">aodh2sensu - importing alarms from Aodh into Sensu Core
 </a>
       
     </h2>
@@ -362,21 +488,24 @@
 </p>
     
     <p class="archive__item-excerpt" itemprop="description">
+
+
+
 </p>
   </article>
 </div>
 
+        
+          
 
-  
 
 
-
-<div class="list__item">
+<div class="grid__item">
   <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
     
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="/hntd-02/" rel="permalink">HCNA-HNTD Training - 2nd edition
+        <a href="/ussuri-contributor-list/" rel="permalink">OpenStack Ussuri Contributor List
 </a>
       
     </h2>
@@ -390,22 +519,50 @@
 
 </p>
     
-    <p class="archive__item-excerpt" itemprop="description">
+    <p class="archive__item-excerpt" itemprop="description">https://www.openstack.org/software/ussuri/
 </p>
   </article>
 </div>
 
+        
+          
 
-  
 
 
-
-<div class="list__item">
+<div class="grid__item">
   <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
     
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="/fiap-corporate/" rel="permalink">FIAP Corporate
+        <a href="/osp43-on-rhosp13/" rel="permalink">OpenShift 4.3 on RHOSP 13: Installation and Integrations
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  6 minute read
+
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">I would like to share my experience installing and integrating OpenShift with various OpenStack services, namely Cinder, Swift and Keystone (Neutron and Octa...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/onf-ambassador/" rel="permalink">Open Networking Foundation Ambassador
 </a>
       
     </h2>
@@ -419,149 +576,19 @@
 
 </p>
     
-    <p class="archive__item-excerpt" itemprop="description">
+    <p class="archive__item-excerpt" itemprop="description">ONF Ambassador Program
 
 </p>
   </article>
 </div>
 
-
+        
+      </div>
+    </div>
   
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="/hntd-01/" rel="permalink">HCNA-HNTD Training - 1st edition
-</a>
-      
-    </h2>
-    
-      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
-
-
-
-
-  less than 1 minute read
-
-</p>
-    
-    <p class="archive__item-excerpt" itemprop="description">
-</p>
-  </article>
+  
 </div>
 
-
-  
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="/fiap-mba-mob/" rel="permalink">FIAP MBA em Mobile Development (MOB)
-</a>
-      
-    </h2>
-    
-      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
-
-
-
-
-  less than 1 minute read
-
-</p>
-    
-    <p class="archive__item-excerpt" itemprop="description">
-
-
-  DevOps &amp; Cloud Oriented Architecture
-  Segurança para Aplicações Móveis para Internet das Coisas e Cloud Computing
-
-</p>
-  </article>
-</div>
-
-
-
-
-<nav class="pagination">
-  
-  <ul>
-    
-    
-      
-        <li><a href="/page8/">Previous</a></li>
-      
-    
-
-    
-    
-      <li><a href="/">1</a></li>
-    
-
-    
-    
-      
-      
-      <li><a href="#" class="disabled">…</a></li>
-    
-
-    
-    
-    
-
-    
-      
-        
-        
-        
-        <li><a href="/page7/">7</a></li>
-      
-    
-      
-        
-        
-        
-        <li><a href="/page8/">8</a></li>
-      
-    
-      
-        <li><a href="/page9/" class="disabled current">9</a></li>
-      
-    
-      
-        
-        
-        
-        <li><a href="/page10/">10</a></li>
-      
-    
-
-    
-    
-
-    
-      <li><a href="/page11/">11</a></li>
-    
-
-    
-    
-      <li><a href="/page10/">Next</a></li>
-    
-  </ul>
-</nav>
-
-
-
-  </div>
-</div>
     </div>
 
     
