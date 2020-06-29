@@ -78,7 +78,7 @@ var store = [{
         "teaser": null
       },{
         "title": "APICON 2017 - IoT HandsOn Lab",
-        "excerpt":"API Connect Conference 2017      ","categories": [],
+        "excerpt":"API Connect Conference 2017          ","categories": [],
         "tags": ["events","iot","pt"],
         "url": "https://josecastillolema.github.io/apicon/",
         "teaser": null
