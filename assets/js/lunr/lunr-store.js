@@ -120,7 +120,7 @@ var store = [{
         "teaser": null
       },{
         "title": "HCNA-HNTD Training - 9th edition",
-        "excerpt":"  ","categories": [],
+        "excerpt":"     ","categories": [],
         "tags": ["classes","huawei","networks","pt"],
         "url": "https://josecastillolema.github.io/hntd-09/",
         "teaser": null
