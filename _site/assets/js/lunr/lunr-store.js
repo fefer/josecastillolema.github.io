@@ -319,7 +319,7 @@ var store = [{
       },{
         "title": "AWS Accredited Educator",
         "excerpt":"     ","categories": [],
-        "tags": ["ambassador","aws","en"],
+        "tags": ["ambassador","aws","en","fiap"],
         "url": "https://josecastillolema.github.io/aws-academy/",
         "teaser": null
       }]
