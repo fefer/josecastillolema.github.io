@@ -10,4 +10,4 @@ toc: false
 
 ## [AWS Educate](https://aws.amazon.com/pt/education/awseducate/)
 
-![](/assets/images/posts/2019-04-30-abs-ambassador.jpg)
+![](/assets/images/posts/2019-04-30-aws-ambassador.jpg)

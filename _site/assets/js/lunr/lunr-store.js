@@ -230,7 +230,7 @@ var store = [{
         "title": "AWS Educate Cloud Ambassador",
         "excerpt":"AWS Educate     ","categories": [],
         "tags": ["ambassador","aws","en"],
-        "url": "https://josecastillolema.github.io/abs-ambassador/",
+        "url": "https://josecastillolema.github.io/aws-ambassador/",
         "teaser": null
       },{
         "title": "SBRC/WPEIF 2019",
@@ -315,5 +315,11 @@ var store = [{
         "excerpt":"aodh2sensu Imports OpenStack Aodh alarms into Sensu Core Server. Install Via with requirements file $ pip3 install -r ./requirements.txt Via pipenv pipfile $ pipenv install Use Usage: aodh2sensu.py [options] Imports OpenStack Aodh alarms into Sensu Core Server. Options: -h, --help show this help message and exit --sensu-url URL if not...","categories": [],
         "tags": ["en","openstack","monitoring","redhat"],
         "url": "https://josecastillolema.github.io/aodh2sensu/",
+        "teaser": null
+      },{
+        "title": "AWS Accredited Educator",
+        "excerpt":"     ","categories": [],
+        "tags": ["ambassador","aws","en"],
+        "url": "https://josecastillolema.github.io/aws-academy/",
         "teaser": null
       }]
