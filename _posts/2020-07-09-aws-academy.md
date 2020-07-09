@@ -12,3 +12,6 @@ toc: false
 [![](/assets/images/posts/2020-07-09-aws-academy/01.png)](https://aws.amazon.com/pt/training/awsacademy/)
 
 ![](/assets/images/posts/2020-07-09-aws-academy/02.jpeg)
+![](/assets/images/posts/2020-07-09-aws-academy/03.png)
+
+![](/assets/images/posts/2020-07-09-aws-academy/04.png)
