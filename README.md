@@ -2,9 +2,7 @@
 ![Website](https://img.shields.io/website?url=https%3A%2F%2Fjosecastillolema.github.io)
 ![Uptime Robot status](https://img.shields.io/uptimerobot/status/m785297761-3cb3eb53ca3a7966274012bc)
 ![Uptime Robot ratio (30 days)](https://img.shields.io/uptimerobot/ratio/m785297761-3cb3eb53ca3a7966274012bc)
-[![Analytics](https://ga-beacon.appspot.com/UA-169326084-1/github.com/josecastillolema/josecastillolema.github.io/README.md?pixel)](https://GitHub.com/josecastillolema/josecastillolema.github.io/)
 [![Analytics](https://ga-beacon.appspot.com/UA-169326084-1/github.com/josecastillolema/josecastillolema.github.io/README.md)](https://GitHub.com/josecastillolema/josecastillolema.github.io//)
-
 ![GitHub language count](https://img.shields.io/github/languages/count/josecastillolema/josecastillolema.github.io)
 ![GitHub top language](https://img.shields.io/github/languages/top/josecastillolema/josecastillolema.github.io)
 ![gem](https://img.shields.io/badge/gem-3.1.2-blue)
