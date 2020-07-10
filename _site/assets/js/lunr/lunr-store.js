@@ -234,7 +234,7 @@ var store = [{
         "teaser": null
       },{
         "title": "AWS Educate Cloud Ambassador",
-        "excerpt":"Recursos e benefícios: Acesso ao AWS Educate Student Portal Console AWS, créditos (50$) e labs online. Cloud Career Pathways: Explore trajetórias profissionais na nuvem para saber mais sobre as principais competências de nuvem nas carreiras de tecnologia mais procuradas. Desde Cientista de machine learning até Desenvolvedor de aplicativos, cada trajetória...","categories": [],
+        "excerpt":"Recursos e benefícios: Acesso ao AWS Educate Student Portal Console AWS, créditos (50$) e labs online Cloud Career Pathways: Explore trajetórias profissionais na nuvem para saber mais sobre as principais competências de nuvem nas carreiras de tecnologia mais procuradas. Desde Cientista de machine learning até Desenvolvedor de aplicativos, cada trajetória...","categories": [],
         "tags": ["ambassador","aws","pt"],
         "url": "https://josecastillolema.github.io/aws-ambassador/",
         "teaser": null
