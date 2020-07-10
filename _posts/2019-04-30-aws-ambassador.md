@@ -10,21 +10,17 @@ toc: false
 
 ![](/assets/images/posts/2019-04-30-aws-ambassador/2019-04-30-aws-ambassador.jpg)
 
-Benefits for Students:
-- Access to the [AWS Educate Student Portal](https://aws.amazon.com/pt/education/awseducate/)
-- Free Online Labs
-- A grant of USD $50 in AWS credits
-
 Recursos e benefícios:
-- [Trajetórias profissionais na nuvem](https://aws.amazon.com/pt/education/awseducate/pathways-and-badges/): Explore trajetórias profissionais na nuvem para saber mais sobre as principais competências de nuvem nas carreiras de tecnologia mais procuradas. Desde Cientista de machine learning até Desenvolvedor de aplicativos, cada trajetória alinha-se a uma função específica e inclui mais de 25 horas de conteúdo autoguiado acompanhado de testes de conhecimento. Ganhe distintivos pelas trajetórias concluídas e compartilhe com potenciais empregadores no AWS Educate Job Board.
-- [Distintivos do AWS Educate](https://aws.amazon.com/pt/education/awseducate/pathways-and-badges/): Desbloqueie um distintivo do AWS Educate em uma das áreas de interesse de maior crescimento do setor, incluindo Alexa, jogos e Internet das Coisas (IoT). Cada distintivo apresenta 10-15 horas de conteúdo individualizado para expandir seu conjunto de habilidades na nuvem.
-- Console AWS e créditos
+- Acesso ao [AWS Educate Student Portal](https://aws.amazon.com/pt/education/awseducate/)
+- Console AWS, créditos (50$) e labs online.
+- [Cloud Career Pathways](https://aws.amazon.com/pt/education/awseducate/pathways-and-badges/): Explore trajetórias profissionais na nuvem para saber mais sobre as principais competências de nuvem nas carreiras de tecnologia mais procuradas. Desde Cientista de machine learning até Desenvolvedor de aplicativos, cada trajetória alinha-se a uma função específica e inclui mais de 25 horas de conteúdo autoguiado acompanhado de testes de conhecimento. Ganhe distintivos pelas trajetórias concluídas e compartilhe com potenciais empregadores no AWS Educate Job Board.
+- [AWS Educate Badges](https://aws.amazon.com/pt/education/awseducate/pathways-and-badges/): Desbloqueie um distintivo do AWS Educate em uma das áreas de interesse de maior crescimento do setor, incluindo Alexa, jogos e Internet das Coisas (IoT). Cada distintivo apresenta 10-15 horas de conteúdo individualizado para expandir seu conjunto de habilidades na nuvem.
 - [Salas de aula do AWS Educate](https://aws.amazon.com/pt/education/awseducate/classrooms/): Uma sala de aula virtual para os estudantes aprenderem sobre a nuvem em um ambiente prático. Cada sala de aula utiliza um conjunto distinto de serviços que são ideais para o aprendizado de vários tópicos sobre a nuvem, como Big Data ou machine learning.
 - Desenvolvimento profissional: Expanda suas competências de nuvem por meio de cursos do AWS Educate ou dde programas AWS Training and Certification. Outros recursos incluem vídeos instrutivos e laboratórios autoguiados. Descontos podem estar disponíveis para alguns treinamentos.
 - [AWS Educate Job Board](https://aws.amazon.com/pt/education/awseducate/aws-educate-job-board/): Acesse milhares de empregos e estágios na nuvem da Amazon e outras empresas no mundo inteiro no AWS Educate Job Board. Personalize seu portfólio online com credenciais de trajetórias e ganhe distintivos para atrair recrutadores ou empresas em busca de alguém.
 
 
-[Trajetórias profisionais na nuvem](https://aws.amazon.com/pt/education/awseducate/pathways-and-badges/):
+[Cloud Careed Pathways](https://aws.amazon.com/pt/education/awseducate/pathways-and-badges/):
 - Introdução à computação na nuvem
 - Machine learning
 - Cientista de dados
