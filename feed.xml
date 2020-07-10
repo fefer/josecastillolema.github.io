@@ -1,9 +1,40 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.7">Jekyll</generator><link href="https://josecastillolema.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://josecastillolema.github.io/" rel="alternate" type="text/html" /><updated>2020-07-09T20:53:00-03:00</updated><id>https://josecastillolema.github.io/feed.xml</id><title type="html">GitOps</title><subtitle>Networks, SDN, NFVi, OpenStack, K8s/OpenShift.</subtitle><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><entry><title type="html">AWS Accredited Educator</title><link href="https://josecastillolema.github.io/aws-academy/" rel="alternate" type="text/html" title="AWS Accredited Educator" /><published>2020-07-09T00:00:00-03:00</published><updated>2020-07-09T17:00:58-03:00</updated><id>https://josecastillolema.github.io/aws-academy</id><content type="html" xml:base="https://josecastillolema.github.io/aws-academy/">&lt;p&gt;&lt;a href=&quot;https://aws.amazon.com/pt/training/awsacademy/&quot;&gt;&lt;img src=&quot;/assets/images/posts/2020-07-09-aws-academy/01.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.7">Jekyll</generator><link href="https://josecastillolema.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://josecastillolema.github.io/" rel="alternate" type="text/html" /><updated>2020-07-10T13:29:20-03:00</updated><id>https://josecastillolema.github.io/feed.xml</id><title type="html">GitOps</title><subtitle>Networks, SDN, NFVi, OpenStack, K8s/OpenShift.</subtitle><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><entry><title type="html">AWS Accredited Educator</title><link href="https://josecastillolema.github.io/aws-academy/" rel="alternate" type="text/html" title="AWS Accredited Educator" /><published>2020-07-09T00:00:00-03:00</published><updated>2020-07-09T17:00:58-03:00</updated><id>https://josecastillolema.github.io/aws-academy</id><content type="html" xml:base="https://josecastillolema.github.io/aws-academy/">&lt;p&gt;&lt;a href=&quot;https://aws.amazon.com/pt/training/awsacademy/&quot;&gt;&lt;img src=&quot;/assets/images/posts/2020-07-09-aws-academy/01.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/posts/2020-07-09-aws-academy/02.jpeg&quot; alt=&quot;&quot; /&gt;
 &lt;img src=&quot;/assets/images/posts/2020-07-09-aws-academy/03.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/images/posts/2020-07-09-aws-academy/04.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</content><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><category term="ambassador" /><category term="aws" /><category term="en" /><category term="fiap" /><summary type="html"></summary></entry><entry><title type="html">aodh2sensu - importing alarms from Aodh into Sensu Core</title><link href="https://josecastillolema.github.io/aodh2sensu/" rel="alternate" type="text/html" title="aodh2sensu - importing alarms from Aodh into Sensu Core" /><published>2020-05-25T00:00:00-03:00</published><updated>2020-04-26T17:00:58-03:00</updated><id>https://josecastillolema.github.io/aodh2sensu</id><content type="html" xml:base="https://josecastillolema.github.io/aodh2sensu/">&lt;iframe src=&quot;https://ghbtns.com/github-btn.html?user=josecastillolema&amp;amp;repo=aodh2sensu&amp;amp;type=watch&amp;amp;count=true&amp;amp;size=large&amp;amp;v=2&quot; frameborder=&quot;0&quot; scrolling=&quot;0&quot; width=&quot;130&quot; height=&quot;30&quot; title=&quot;GitHub&quot;&gt;&lt;/iframe&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/posts/2020-07-09-aws-academy/04.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Benefícios do programa:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Acesso ao currículo criado pela AWS: O currículo pronto para ensino permite que as instituições membro incorporem a instrução em seu catálogo de cursos. As atualizações regulares da AWS refletem o ritmo da inovação e as melhores práticas da computação em nuvem.&lt;/li&gt;
+  &lt;li&gt;Crie habilidades alinhadas à AWS Certification: os alunos adquirem habilidades de computação na Nuvem AWS por meio de experiência prática e podem se preparar para a AWS Certification com simulados gratuitos e &lt;strong&gt;descontos de 50% para os exames completos&lt;/strong&gt;.&lt;/li&gt;
+  &lt;li&gt;Aumente a força de trabalho da Nuvem AWS: Com o currículo da AWS Academy, os alunos obtêm experiência prática trabalhando em ambientes ao vivo, o que os ajuda a ganhar a experiência do mundo real necessária para conseguir emprego no setor.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Cursos:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;AWS Academy Cloud Foundations&lt;/strong&gt;&lt;/p&gt;
+
+    &lt;p&gt;O curso é introdutório e oferece uma visão geral detalhada dos seguintes tópicos:&lt;/p&gt;
+    &lt;ul&gt;
+      &lt;li&gt;conceitos da nuvem&lt;/li&gt;
+      &lt;li&gt;principais serviços da AWS&lt;/li&gt;
+      &lt;li&gt;segurança&lt;/li&gt;
+      &lt;li&gt;arquitetura&lt;/li&gt;
+      &lt;li&gt;definição de preço&lt;/li&gt;
+      &lt;li&gt;suporte.&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;p&gt;O curso possui &lt;strong&gt;20 horas&lt;/strong&gt; de conteúdo e prepara os alunos para conseguir a &lt;a href=&quot;https://aws.amazon.com/pt/certification/certified-cloud-practitioner/&quot;&gt;&lt;strong&gt;certificação AWS Certified Cloud Practitioner&lt;/strong&gt;&lt;/a&gt;.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;AWS Academy Cloud Developing&lt;/strong&gt; (&lt;em&gt;coming soon&lt;/em&gt;)&lt;/p&gt;
+
+    &lt;p&gt;Esse curso de nível intermediário ajudará os estudantes a ganharem experiência técnica em desenvolvimento com tecnologia de nuvens. Ele também os ajudará a se preparar para o exame de &lt;a href=&quot;https://aws.amazon.com/pt/certification/certified-developer-associate/&quot;&gt;&lt;strong&gt;certificação AWS Certified Developer - Associate&lt;/strong&gt;&lt;/a&gt;. Ao completar, os alunos estarão aptos a desenvolver com AWS SDK e identificar as melhores práticas para construir e implantar aplicativos na nuvem AWS. Esse curso tem aproximadamente &lt;strong&gt;40 horas&lt;/strong&gt; de conteúdo fornecido por meio de palestras e laboratórios práticos.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><category term="ambassador" /><category term="aws" /><category term="fiap" /><category term="pt" /><summary type="html"></summary></entry><entry><title type="html">aodh2sensu - importing alarms from Aodh into Sensu Core</title><link href="https://josecastillolema.github.io/aodh2sensu/" rel="alternate" type="text/html" title="aodh2sensu - importing alarms from Aodh into Sensu Core" /><published>2020-05-25T00:00:00-03:00</published><updated>2020-04-26T17:00:58-03:00</updated><id>https://josecastillolema.github.io/aodh2sensu</id><content type="html" xml:base="https://josecastillolema.github.io/aodh2sensu/">&lt;iframe src=&quot;https://ghbtns.com/github-btn.html?user=josecastillolema&amp;amp;repo=aodh2sensu&amp;amp;type=watch&amp;amp;count=true&amp;amp;size=large&amp;amp;v=2&quot; frameborder=&quot;0&quot; scrolling=&quot;0&quot; width=&quot;130&quot; height=&quot;30&quot; title=&quot;GitHub&quot;&gt;&lt;/iframe&gt;
 &lt;iframe src=&quot;https://ghbtns.com/github-btn.html?user=josecastillolema&amp;amp;repo=aodh2sensu&amp;amp;type=star&amp;amp;count=true&amp;amp;size=large&quot; frameborder=&quot;0&quot; scrolling=&quot;0&quot; width=&quot;115&quot; height=&quot;30&quot; title=&quot;GitHub&quot;&gt;&lt;/iframe&gt;
 &lt;iframe src=&quot;https://ghbtns.com/github-btn.html?user=josecastillolema&amp;amp;repo=aodh2sensu&amp;amp;type=fork&amp;amp;count=true&amp;amp;size=large&quot; frameborder=&quot;0&quot; scrolling=&quot;0&quot; width=&quot;170&quot; height=&quot;30&quot; title=&quot;GitHub&quot;&gt;&lt;/iframe&gt;
 

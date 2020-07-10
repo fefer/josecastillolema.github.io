@@ -35,6 +35,12 @@ var store = [{
         "url": "https://josecastillolema.github.io/globecom/",
         "teaser": null
       },{
+        "title": "MSWiM 2015",
+        "excerpt":"The 18th ACM International Conference on Modeling, Analysis and Simulation of Wireless and Mobile Systems Agenda Network-Initiated Quality-oriented Mobility Management Approach for Next Generation ETArch Networks Felipe Sampaio Dantas da Silva, Federal Institute of Education, Science and Technology of Rio Grande do Norte, Brazil Augusto J. Venancio Neto, Federal University...","categories": [],
+        "tags": ["en","events","networks","sdn"],
+        "url": "https://josecastillolema.github.io/mswim/",
+        "teaser": null
+      },{
         "title": "FIAP MBA em Full Stack Developer - Microservices, Cloud e IoT (SCJ)",
         "excerpt":"      Arquitetura e Desenvolvimento Java com IoT   Arquitetura e Desenvolvimento Java de Alta Disponibilidade para Cloud Computing   Arquitetura e Infraestrutura de Cloud Computing e Internet das Coisas   Cloud Development   Desenvolvimento de aplicações usando Cloud Computing   ","categories": [],
         "tags": ["aws","azure","classes","fiap","pt"],
@@ -174,7 +180,7 @@ var store = [{
         "teaser": null
       },{
         "title": "FIAP Red Hat Academy Partnership",
-        "excerpt":"Middleware Development Red Hat Application Development I: Programming in Java EE Red Hat Application Development II: Implementing Microservice Architecture Red Hat OpenShift Container Platform Introduction to Containers, Kubernetes and Red Hat OpenShift Red Hat Enterprise Linux Red Hat System Administration I Red Hat System Administration II Red Hat System Administration...","categories": [],
+        "excerpt":"Benefícios: Aprenda as habilidades mais procuradas pelo mercado. Aproveite os descontos (voucher 50% off) nos exames para conquistar sua certificação junto à empresa líder em tecnologia open source. Escolha o estilo de aprendizado ideal para você dentre os nossos vários formatos de material didático. Adquiria uma experiência valiosa com os...","categories": [],
         "tags": ["classes","fiap","openshift","openstack","pt","redhat"],
         "url": "https://josecastillolema.github.io/redhat-academy/",
         "teaser": null
@@ -228,8 +234,8 @@ var store = [{
         "teaser": null
       },{
         "title": "AWS Educate Cloud Ambassador",
-        "excerpt":"AWS Educate     ","categories": [],
-        "tags": ["ambassador","aws","en"],
+        "excerpt":"Benefits for Students: Access to the AWS Educate Student Portal Free Online Labs A grant of USD $50 in AWS credits Recursos e benefícios: Trajetórias profissionais na nuvem: Explore trajetórias profissionais na nuvem para saber mais sobre as principais competências de nuvem nas carreiras de tecnologia mais procuradas. Desde Cientista...","categories": [],
+        "tags": ["ambassador","aws","pt"],
         "url": "https://josecastillolema.github.io/aws-ambassador/",
         "teaser": null
       },{
@@ -254,7 +260,7 @@ var store = [{
         "title": "IEEE NetSoft/S4SI 2019",
         "excerpt":"IEEE Conference on Network Softwarization / 2nd Workshop on Advances in Slicing for Softwarized Infrastructures Agenda Mininet-NFV: Evolving Mininet with OASIS TOSCA NVF profiles Towards Reproducible NFV Prototyping José Castillo Lema, Universidade de São Paulo, Brazil Augusto J. Venancio Neto, Federal University of Rio Grande do Norte, Brazil Flavio de...","categories": [],
         "tags": ["en","events","networks","nfv","sdn"],
-        "url": "https://josecastillolema.github.io/netsof/",
+        "url": "https://josecastillolema.github.io/netsoft/",
         "teaser": null
       },{
         "title": "FIAP MBA em Engenharia de Software - Online (AOJO)",
@@ -318,8 +324,8 @@ var store = [{
         "teaser": null
       },{
         "title": "AWS Accredited Educator",
-        "excerpt":"         ","categories": [],
-        "tags": ["ambassador","aws","en","fiap"],
+        "excerpt":"Benefícios do programa: Acesso ao currículo criado pela AWS: O currículo pronto para ensino permite que as instituições membro incorporem a instrução em seu catálogo de cursos. As atualizações regulares da AWS refletem o ritmo da inovação e as melhores práticas da computação em nuvem. Crie habilidades alinhadas à AWS...","categories": [],
+        "tags": ["ambassador","aws","fiap","pt"],
         "url": "https://josecastillolema.github.io/aws-academy/",
         "teaser": null
       }]
