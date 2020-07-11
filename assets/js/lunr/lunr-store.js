@@ -180,7 +180,7 @@ var store = [{
         "teaser": null
       },{
         "title": "FIAP Red Hat Academy Partnership",
-        "excerpt":"Benefícios: Aprenda as habilidades mais procuradas pelo mercado. Aproveite os descontos (voucher 50% off) nos exames para conquistar sua certificação junto à empresa líder em tecnologia open source. Escolha o estilo de aprendizado ideal para você dentre os nossos vários formatos de material didático. Adquiria uma experiência valiosa com os...","categories": [],
+        "excerpt":"Benefícios Aprenda as habilidades mais procuradas pelo mercado. Aproveite os descontos (voucher 50% off) nos exames para conquistar sua certificação junto à empresa líder em tecnologia open source. Escolha o estilo de aprendizado ideal para você dentre os nossos vários formatos de material didático. Adquiria uma experiência valiosa com os...","categories": [],
         "tags": ["classes","fiap","openshift","openstack","pt","redhat"],
         "url": "https://josecastillolema.github.io/redhat-academy/",
         "teaser": null
@@ -234,7 +234,7 @@ var store = [{
         "teaser": null
       },{
         "title": "AWS Educate Cloud Ambassador",
-        "excerpt":"Recursos e benefícios: Acesso ao AWS Educate Student Portal Console AWS, créditos (50$) e labs online Cloud Career Pathways: Explore trajetórias profissionais na nuvem para saber mais sobre as principais competências de nuvem nas carreiras de tecnologia mais procuradas. Desde Cientista de machine learning até Desenvolvedor de aplicativos, cada trajetória...","categories": [],
+        "excerpt":"Recursos e benefícios Acesso ao AWS Educate Student Portal Console AWS, créditos (50$) e labs online Cloud Career Pathways: Explore trajetórias profissionais na nuvem para saber mais sobre as principais competências de nuvem nas carreiras de tecnologia mais procuradas. Desde Cientista de machine learning até Desenvolvedor de aplicativos, cada trajetória...","categories": [],
         "tags": ["ambassador","aws","pt"],
         "url": "https://josecastillolema.github.io/aws-ambassador/",
         "teaser": null
@@ -318,13 +318,13 @@ var store = [{
         "teaser": null
       },{
         "title": "aodh2sensu - importing alarms from Aodh into Sensu Core",
-        "excerpt":"aodh2sensu Imports OpenStack Aodh alarms into Sensu Core Server. Install Via with requirements file $ pip3 install -r ./requirements.txt Via pipenv pipfile $ pipenv install Use Usage: aodh2sensu.py [options] Imports OpenStack Aodh alarms into Sensu Core Server. Options: -h, --help show this help message and exit --sensu-url URL if not...","categories": [],
+        "excerpt":"aodh2sensu Imports OpenStack Aodh alarms into Sensu Core Server. Install Via requirements file $ pip3 install -r ./requirements.txt Via pipenv pipfile $ pipenv install Use Usage: aodh2sensu.py [options] Imports OpenStack Aodh alarms into Sensu Core Server. Options: -h, --help show this help message and exit --sensu-url URL if not specified,...","categories": [],
         "tags": ["en","openstack","monitoring","redhat"],
         "url": "https://josecastillolema.github.io/aodh2sensu/",
         "teaser": null
       },{
         "title": "AWS Accredited Educator",
-        "excerpt":"Benefícios do programa: Acesso ao currículo criado pela AWS: O currículo pronto para ensino permite que as instituições membro incorporem a instrução em seu catálogo de cursos. As atualizações regulares da AWS refletem o ritmo da inovação e as melhores práticas da computação em nuvem. Crie habilidades alinhadas à AWS...","categories": [],
+        "excerpt":"Benefícios do programa Acesso ao currículo criado pela AWS: O currículo pronto para ensino permite que as instituições membro incorporem a instrução em seu catálogo de cursos. As atualizações regulares da AWS refletem o ritmo da inovação e as melhores práticas da computação em nuvem. Crie habilidades alinhadas à AWS...","categories": [],
         "tags": ["ambassador","aws","fiap","pt"],
         "url": "https://josecastillolema.github.io/aws-academy/",
         "teaser": null

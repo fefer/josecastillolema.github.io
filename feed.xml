@@ -1,18 +1,18 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.7">Jekyll</generator><link href="https://josecastillolema.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://josecastillolema.github.io/" rel="alternate" type="text/html" /><updated>2020-07-10T17:56:54-03:00</updated><id>https://josecastillolema.github.io/feed.xml</id><title type="html">GitOps</title><subtitle>Networks, SDN, NFVi, OpenStack, K8s/OpenShift.</subtitle><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><entry><title type="html">AWS Accredited Educator</title><link href="https://josecastillolema.github.io/aws-academy/" rel="alternate" type="text/html" title="AWS Accredited Educator" /><published>2020-07-09T00:00:00-03:00</published><updated>2020-07-09T17:00:58-03:00</updated><id>https://josecastillolema.github.io/aws-academy</id><content type="html" xml:base="https://josecastillolema.github.io/aws-academy/">&lt;p&gt;&lt;a href=&quot;https://aws.amazon.com/pt/training/awsacademy/&quot;&gt;&lt;img src=&quot;/assets/images/posts/2020-07-09-aws-academy/01.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.7">Jekyll</generator><link href="https://josecastillolema.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://josecastillolema.github.io/" rel="alternate" type="text/html" /><updated>2020-07-11T10:54:47-03:00</updated><id>https://josecastillolema.github.io/feed.xml</id><title type="html">GitOps</title><subtitle>Networks, SDN, NFVi, OpenStack, K8s/OpenShift.</subtitle><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><entry><title type="html">AWS Accredited Educator</title><link href="https://josecastillolema.github.io/aws-academy/" rel="alternate" type="text/html" title="AWS Accredited Educator" /><published>2020-07-09T00:00:00-03:00</published><updated>2020-07-09T17:00:58-03:00</updated><id>https://josecastillolema.github.io/aws-academy</id><content type="html" xml:base="https://josecastillolema.github.io/aws-academy/">&lt;p&gt;&lt;a href=&quot;https://aws.amazon.com/pt/training/awsacademy/&quot;&gt;&lt;img src=&quot;/assets/images/posts/2020-07-09-aws-academy/01.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/posts/2020-07-09-aws-academy/02.jpeg&quot; alt=&quot;&quot; /&gt;
 &lt;img src=&quot;/assets/images/posts/2020-07-09-aws-academy/03.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/posts/2020-07-09-aws-academy/04.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Benefícios do programa:&lt;/p&gt;
+&lt;h2 id=&quot;benefícios-do-programa&quot;&gt;Benefícios do programa&lt;/h2&gt;
 &lt;ul&gt;
   &lt;li&gt;Acesso ao currículo criado pela AWS: O currículo pronto para ensino permite que as instituições membro incorporem a instrução em seu catálogo de cursos. As atualizações regulares da AWS refletem o ritmo da inovação e as melhores práticas da computação em nuvem.&lt;/li&gt;
   &lt;li&gt;Crie habilidades alinhadas à AWS Certification: os alunos adquirem habilidades de computação na Nuvem AWS por meio de experiência prática e podem se preparar para a AWS Certification com simulados gratuitos e &lt;strong&gt;descontos de 50% para os exames completos&lt;/strong&gt;.&lt;/li&gt;
   &lt;li&gt;Aumente a força de trabalho da Nuvem AWS: Com o currículo da AWS Academy, os alunos obtêm experiência prática trabalhando em ambientes ao vivo, o que os ajuda a ganhar a experiência do mundo real necessária para conseguir emprego no setor.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Cursos:&lt;/p&gt;
+&lt;h2 id=&quot;cursos&quot;&gt;Cursos&lt;/h2&gt;
 &lt;ul&gt;
   &lt;li&gt;
     &lt;p&gt;&lt;strong&gt;AWS Academy Cloud Foundations&lt;/strong&gt;&lt;/p&gt;
@@ -55,11 +55,11 @@
 
 &lt;h2 id=&quot;install&quot;&gt;Install&lt;/h2&gt;
 
-&lt;h4 id=&quot;via-with-requirements-file&quot;&gt;Via with requirements file&lt;/h4&gt;
+&lt;h3 id=&quot;via-requirements-file&quot;&gt;Via requirements file&lt;/h3&gt;
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ pip3 install -r ./requirements.txt
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;h4 id=&quot;via-pipenv-pipfile&quot;&gt;Via pipenv pipfile&lt;/h4&gt;
+&lt;h3 id=&quot;via-pipenv-pipfile&quot;&gt;Via pipenv pipfile&lt;/h3&gt;
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ pipenv install
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
