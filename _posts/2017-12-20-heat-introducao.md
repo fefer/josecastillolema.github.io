@@ -7,7 +7,6 @@ tags:
   - pt
   - redhat
 toc: true
-toc_label: "Getting Started"
 ---
 
 *Originally published at [**Churrops on DevOps**](https://churrops.io/2017/12/20/heat-introducao/) on December 20, 2017.*

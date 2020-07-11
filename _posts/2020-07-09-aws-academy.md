@@ -6,7 +6,7 @@ tags:
   - aws
   - fiap
   - pt
-toc: false
+toc: true
 ---
 
 [![](/assets/images/posts/2020-07-09-aws-academy/01.png)](https://aws.amazon.com/pt/training/awsacademy/)
@@ -16,12 +16,12 @@ toc: false
 
 ![](/assets/images/posts/2020-07-09-aws-academy/04.png)
 
-Benefícios do programa:
+## Benefícios do programa
 - Acesso ao currículo criado pela AWS: O currículo pronto para ensino permite que as instituições membro incorporem a instrução em seu catálogo de cursos. As atualizações regulares da AWS refletem o ritmo da inovação e as melhores práticas da computação em nuvem.
 - Crie habilidades alinhadas à AWS Certification: os alunos adquirem habilidades de computação na Nuvem AWS por meio de experiência prática e podem se preparar para a AWS Certification com simulados gratuitos e **descontos de 50% para os exames completos**.
 - Aumente a força de trabalho da Nuvem AWS: Com o currículo da AWS Academy, os alunos obtêm experiência prática trabalhando em ambientes ao vivo, o que os ajuda a ganhar a experiência do mundo real necessária para conseguir emprego no setor.
 
-Cursos:
+## Cursos
 - **AWS Academy Cloud Foundations**
 
   O curso é introdutório e oferece uma visão geral detalhada dos seguintes tópicos:

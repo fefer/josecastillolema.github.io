@@ -5,12 +5,12 @@ tags:
   - ambassador
   - aws
   - pt
-toc: false
+toc: yes
 ---
 
 ![](/assets/images/posts/2019-04-30-aws-ambassador/2019-04-30-aws-ambassador.jpg)
 
-Recursos e benefícios:
+## Recursos e benefícios
 - Acesso ao [AWS Educate Student Portal](https://aws.amazon.com/pt/education/awseducate/)
 - Console AWS, créditos (50$) e labs online
 - [Cloud Career Pathways](https://aws.amazon.com/pt/education/awseducate/pathways-and-badges/): Explore trajetórias profissionais na nuvem para saber mais sobre as principais competências de nuvem nas carreiras de tecnologia mais procuradas. Desde Cientista de machine learning até Desenvolvedor de aplicativos, cada trajetória alinha-se a uma função específica e inclui mais de 25 horas de conteúdo autoguiado acompanhado de testes de conhecimento. Ganhe distintivos pelas trajetórias concluídas e compartilhe com potenciais empregadores no AWS Educate Job Board.
@@ -20,7 +20,7 @@ Recursos e benefícios:
 - [AWS Educate Job Board](https://aws.amazon.com/pt/education/awseducate/aws-educate-job-board/): Acesse milhares de empregos e estágios na nuvem da Amazon e outras empresas no mundo inteiro no AWS Educate Job Board. Personalize seu portfólio online com credenciais de trajetórias e ganhe distintivos para atrair recrutadores ou empresas em busca de alguém.
 
 
-[Cloud Careed Pathways](https://aws.amazon.com/pt/education/awseducate/pathways-and-badges/):
+## [Cloud Careed Pathways](https://aws.amazon.com/pt/education/awseducate/pathways-and-badges/)
 - Introdução à computação na nuvem
 - Machine learning
 - Cientista de dados
@@ -34,7 +34,7 @@ Recursos e benefícios:
 - Engenheiro de suporte à nuvem
 - Integração de dados
 
-[AWS Educate Badges](https://aws.amazon.com/pt/education/awseducate/pathways-and-badges/):
+## [AWS Educate Badges](https://aws.amazon.com/pt/education/awseducate/pathways-and-badges/)
 - ![](/assets/images/posts/2019-04-30-aws-ambassador/badge0.png) AWS DeepLens
 - ![](/assets/images/posts/2019-04-30-aws-ambassador/badge1.png) Jogos
 - ![](/assets/images/posts/2019-04-30-aws-ambassador/badge2.png) AWS DeepRacer

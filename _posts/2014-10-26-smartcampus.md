@@ -6,7 +6,6 @@ tags:
   - fiware
   - iot
 toc: true
-toc_label: "Getting Started"
 ---
 
 <iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&repo=smartcampus-sp&type=watch&count=true&size=large&v=2" frameborder="0" scrolling="0" width="130" height="30" title="GitHub"></iframe>

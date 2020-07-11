@@ -1,7 +1,6 @@
 ---
 permalink: /mininfv/
 toc: true
-toc_label: "Getting Started"
 ---
 
 

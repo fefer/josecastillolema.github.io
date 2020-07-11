@@ -8,7 +8,6 @@ tags:
   - pt
   - redhat
 toc: true
-toc_label: "Getting Started"
 ---
 
 *Originally published at [**Churrops on DevOps**](https://churrops.io/2017/11/26/terraform-iac-terraformando-no-openstack/) on November 26, 2017.*
