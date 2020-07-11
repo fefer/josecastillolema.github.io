@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>https://josecastillolema.github.io/globecom/</loc>
+<loc>https://josecastillolema.github.io/networks2012/</loc>
+<lastmod>2012-10-15T17:00:58-03:00</lastmod>
+</url>
+<url>
+<loc>https://josecastillolema.github.io/globecom2013/</loc>
 <lastmod>2013-12-09T18:00:58-02:00</lastmod>
 </url>
 <url>
@@ -21,7 +25,7 @@
 <lastmod>2014-10-26T18:00:58-02:00</lastmod>
 </url>
 <url>
-<loc>https://josecastillolema.github.io/globecom/</loc>
+<loc>https://josecastillolema.github.io/globecom2014/</loc>
 <lastmod>2014-12-08T18:00:58-02:00</lastmod>
 </url>
 <url>
@@ -201,7 +205,7 @@
 <lastmod>2020-01-06T17:00:58-03:00</lastmod>
 </url>
 <url>
-<loc>https://josecastillolema.github.io/onf-ambassador/</loc>
+<loc>https://josecastillolema.github.io/onf/</loc>
 <lastmod>2020-04-30T17:00:58-03:00</lastmod>
 </url>
 <url>
@@ -209,7 +213,7 @@
 <lastmod>2020-04-26T17:00:58-03:00</lastmod>
 </url>
 <url>
-<loc>https://josecastillolema.github.io/ussuri-contributor-list/</loc>
+<loc>https://josecastillolema.github.io/ussuri/</loc>
 <lastmod>2020-05-11T17:00:58-03:00</lastmod>
 </url>
 <url>
@@ -270,6 +274,9 @@
 </url>
 <url>
 <loc>https://josecastillolema.github.io/page11/</loc>
+</url>
+<url>
+<loc>https://josecastillolema.github.io/page12/</loc>
 </url>
 <url>
 <loc>https://josecastillolema.github.io/googled48a6d8a28aaa375.html</loc>

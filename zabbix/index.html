@@ -251,7 +251,7 @@
           
         
           
-            <li><a href="https://ambassadors.opennetworking.org/directory/jose-castillo-lema/" rel="noopener noreferrer" target="_blank"><i class="fab fa-fw fa-battle-net" aria-hidden="true"></i><span class="label">ONF</span></a></li>
+            <li><a href="https://www.opennetworking.org/ambassadors/jose-castillo-lema/" rel="noopener noreferrer" target="_blank"><i class="fab fa-fw fa-battle-net" aria-hidden="true"></i><span class="label">ONF</span></a></li>
           
         
       
@@ -353,6 +353,23 @@
 
       <section class="page__content" itemprop="text">
         
+          <aside class="sidebar__right ">
+            <nav class="toc">
+              <header><h4 class="nav__title">
+<i class="fas fa-file-alt"></i> On this page</h4></header>
+              <ul class="toc__menu">
+  <li>
+<a href="#zabbix-for-openstack">zabbix-for-openstack</a>
+    <ul>
+      <li><a href="#monitor-items">Monitor items</a></li>
+      <li><a href="#capacity-monitoring">Capacity monitoring</a></li>
+    </ul>
+  </li>
+</ul>
+
+            </nav>
+          </aside>
+        
         <iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&amp;repo=zabbix-for-openstack&amp;type=watch&amp;count=true&amp;size=large&amp;v=2" frameborder="0" scrolling="0" width="130" height="30" title="GitHub"></iframe>
 <iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&amp;repo=zabbix-for-openstack&amp;type=star&amp;count=true&amp;size=large" frameborder="0" scrolling="0" width="115" height="30" title="GitHub"></iframe>
 <iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&amp;repo=zabbix-for-openstack&amp;type=fork&amp;count=true&amp;size=large" frameborder="0" scrolling="0" width="170" height="30" title="GitHub"></iframe>
@@ -371,7 +388,7 @@
 
 <p>As you can see, hosts are segregated by groups (controllers, compute, ceph, external Horizon, IdM, storage, etc.), and the items we monitore in each group are different.</p>
 
-<p>Some things we do monitor:</p>
+<h2 id="monitor-items">Monitor items</h2>
 <ul>
   <li>SNMP of the servers IPMI</li>
   <li>CPU (specially load above 30), memory (above 85% because of KSM), disk and network interfaces</li>
@@ -402,7 +419,7 @@
 
 <p>Some Zabbix user parameters needed modifications in standard SELinux policies in order to properly work.</p>
 
-<p>Besides this, we have another separated Zabbix server specifically to monitor capacity of the environment. In this second server we monitor:</p>
+<h2 id="capacity-monitoring">Capacity monitoring</h2>
 <ul>
   <li>Number of virtual routers</li>
   <li>Number of namespaces in the controller nodes</li>
@@ -533,7 +550,7 @@
     
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="/aodh2sensu/" rel="permalink">aodh2sensu - importing alarms from Aodh into Sensu Core
+        <a href="/aodh2sensu/" rel="permalink">Importing alarms from OpenStack Aodh into Sensu Core
 </a>
       
     </h2>
@@ -565,7 +582,7 @@
     
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="/ussuri-contributor-list/" rel="permalink">OpenStack Ussuri Contributor List
+        <a href="/ussuri/" rel="permalink">OpenStack Ussuri Contributor List
 </a>
       
     </h2>
@@ -579,7 +596,8 @@
 
 </p>
     
-    <p class="archive__item-excerpt" itemprop="description">https://www.openstack.org/software/ussuri/
+    <p class="archive__item-excerpt" itemprop="description">
+
 </p>
   </article>
 </div>

@@ -1,8 +1,14 @@
 var store = [{
+        "title": "Telecommunications Network Strategy and Planning Symposium",
+        "excerpt":"2012 15th International Telecommunications Network Strategy and Planning Symposium (NETWORKS) Proceedings Applying over-provisioning centric resource control in context-sensitive networks J. Castillo-Lema (Computer Engineering, Universidade da Coruña, Spain) E. Cruz (Teleinformatics Engineering, Federal University of Ceará, Fortaleza, Brazil) A. Neto (Teleinformatics Engineering, Federal University of Ceará, Fortaleza, Brazil) S. Sargento (Institute...","categories": [],
+        "tags": ["en","events","networks"],
+        "url": "https://josecastillolema.github.io/networks2012/",
+        "teaser": null
+      },{
         "title": "IEEE GLOBECOM 2013",
         "excerpt":"Globecom 2013 Workshop - Management of Emerging Networks and Services Program Program Hybrid Framework for Scalable Resource Control in Multi-ingress Networks Sandino Jardim (Federal University of Goias, Brazil) Augusto Jose Venancio Neto, Ph. D. (Universidade Federal do Rio Grande do Norte, Brazil) Jose Castillo Lema (Universidade da Coruña, Spain) Evariste...","categories": [],
         "tags": ["en","events","networks"],
-        "url": "https://josecastillolema.github.io/globecom/",
+        "url": "https://josecastillolema.github.io/globecom2013/",
         "teaser": null
       },{
         "title": "ISCC 2014",
@@ -12,7 +18,7 @@ var store = [{
         "teaser": null
       },{
         "title": "Evolving Future Internet clean-slate ETArch with QoS control-plane extensions",
-        "excerpt":"Biblioteca Digital Brasileira de Teses e Dissertações   LEMA, José Castillo. Extensões orientadas a qualidade ao plano de controle da Arquitetura Entidade-Título. 2014. 62 f. Dissertação (Mestrado em Ciência da Computação) - Universidade Federal do Rio Grande do Norte, Natal, 2014.  ","categories": [],
+        "excerpt":"Biblioteca Digital Brasileira de Teses e Dissertações Cite this APA Lema, J. C. (2014). Evolving Future Internet clean-slate Entity Title Architecture with quality-oriented control-plane extensions. Chicago Lema, José Castillo. Evolving Future Internet Clean-slate Entity Title Architecture With Quality-oriented Control-plane Extensions. 2014. MLA Lema, José Castillo. Evolving Future Internet Clean-slate Entity...","categories": [],
         "tags": ["en","networks","sdn"],
         "url": "https://josecastillolema.github.io/mdthesis/",
         "teaser": null
@@ -30,9 +36,9 @@ var store = [{
         "teaser": null
       },{
         "title": "IEEE GLOBECOM 2014",
-        "excerpt":"Global Communications Conference 2014 Additions to the ETArch control plane to support multimedia QoS-guaranteed content transport over OpenFlow-enabled SDN future internet systems José Castillo - Federal University of Rio Grande do Norte (UFRN), Brazil Augusto Neto - Federal University of Rio Grande do Norte (UFRN), Brazil Flavio Silva - Federal...","categories": [],
+        "excerpt":"Global Communications Conference 2014 Proceedings Additions to the ETArch control plane to support multimedia QoS-guaranteed content transport over OpenFlow-enabled SDN future internet systems José Castillo - Federal University of Rio Grande do Norte (UFRN), Brazil Augusto Neto - Federal University of Rio Grande do Norte (UFRN), Brazil Flavio Silva -...","categories": [],
         "tags": ["en","events","networks","sdn"],
-        "url": "https://josecastillolema.github.io/globecom/",
+        "url": "https://josecastillolema.github.io/globecom2014/",
         "teaser": null
       },{
         "title": "MSWiM 2015",
@@ -48,7 +54,7 @@ var store = [{
         "teaser": null
       },{
         "title": "Computer Networks - Volume 107",
-        "excerpt":"   Volume 107, Part 2, Pages 270-291   An innovative software-defined WiNeMO architecture for advanced QoS-guaranteed mobile service transport      Felipe S. Dantas Silva   Augusto Venâncio Netob   Douglas Maciel   José Castillo-Lema   Flávio Silva   Pedro Frosi   EduardoCerqueira.  ","categories": [],
+        "excerpt":"Volume 107, Part 2, Pages 270-291 An innovative software-defined WiNeMO architecture for advanced QoS-guaranteed mobile service transport Felipe S. Dantas Silva Augusto Venâncio Netob Douglas Maciel José Castillo-Lema Flávio Silva Pedro Frosi Eduardo Cerqueira. Cite this ACM Felipe S. Dantas Silva, Augusto Venâncio Neto, Douglas Maciel, José Castillo-Lema, Flávio Silva,...","categories": [],
         "tags": ["en","networks","sdn"],
         "url": "https://josecastillolema.github.io/computer-networks/",
         "teaser": null
@@ -197,7 +203,7 @@ var store = [{
         "url": "https://josecastillolema.github.io/mandic-webinar/",
         "teaser": null
       },{
-        "title": "etsi2tosca - Converting ETSI NFV templates into TOSCA profile",
+        "title": "Converting ETSI NFV templates into TOSCA profile",
         "excerpt":"etsi2tosca Converts ETSI NFV templates into TOSCA profile. Use Usage: etsi2tosca FILE Converts ETSI NFV templates into TOSCA profile Options: -h, --help show this help message and exit Examples Example 1: $ ./etsi2tosca.py samples/opencv_transcoder_vnfd.yaml tosca_definitions_version: tosca_simple_profile_for_nfv_1_0_0 description: OpenCV Transcoder VNF metadata: template_name: opencv_transcoder_vnf topology_template: inputs: ssh-hostname: type: string default: &lt;rw_mgmt_ip&gt;...","categories": [],
         "tags": ["en","networks","nfv"],
         "url": "https://josecastillolema.github.io/etsi2tosca/",
@@ -209,7 +215,7 @@ var store = [{
         "url": "https://josecastillolema.github.io/fiap-aso/",
         "teaser": null
       },{
-        "title": "Locust CCN client compatible with ccn-lite",
+        "title": "Locust CCN client",
         "excerpt":"           locust-ccnclient   A Locust CCN client compatible with ccn-lite.   It allows the execution of load test experiments againts a CCN network.            ","categories": [],
         "tags": ["ccn","en","networks"],
         "url": "https://josecastillolema.github.io/locust-ccnclient/",
@@ -270,7 +276,7 @@ var store = [{
         "teaser": null
       },{
         "title": "A generic NFV MANO for Content-Centric Networks",
-        "excerpt":"Biblioteca Digital de Teses e Dissertações da USP ISO CASTILLO LEMA, José. A generic network function virtualization manager and orchestrator for content-centric networks [doi:10.11606/T.3.2019.tde-23102019-120559]. São Paulo : Escola Politécnica, Universidade de São Paulo, 2019. Tese de Doutorado em Sistemas Eletrônicos. [acesso 2020-06-01]. ABNT CASTILLO LEMA, José. A generic network function...","categories": [],
+        "excerpt":"Biblioteca Digital de Teses e Dissertações da USP Cite this ISO CASTILLO LEMA, José. A generic network function virtualization manager and orchestrator for content-centric networks [doi:10.11606/T.3.2019.tde-23102019-120559]. São Paulo : Escola Politécnica, Universidade de São Paulo, 2019. Tese de Doutorado em Sistemas Eletrônicos. [acesso 2020-06-01]. ABNT CASTILLO LEMA, José. A generic...","categories": [],
         "tags": ["ccn","en","networks","nfv"],
         "url": "https://josecastillolema.github.io/thesis/",
         "teaser": null
@@ -299,10 +305,10 @@ var store = [{
         "url": "https://josecastillolema.github.io/computehcisriov-role/",
         "teaser": null
       },{
-        "title": "Open Networking Foundation Ambassador",
-        "excerpt":"ONF Ambassador Program   Profile  ","categories": [],
+        "title": "Open Networking Foundation",
+        "excerpt":"Open Networking Foundation The Open Networking Foundation (ONF) is a non-profit operator led consortium driving transformation of network infrastructure and carrier business models. We are an open, collaborative, community of communities. The ONF serves as the umbrella for a number of projects building solutions by leveraging network disaggregation, white box...","categories": [],
         "tags": ["ambassador","en","networks","nfv","sdn"],
-        "url": "https://josecastillolema.github.io/onf-ambassador/",
+        "url": "https://josecastillolema.github.io/onf/",
         "teaser": null
       },{
         "title": "OpenShift 4.3 on RHOSP 13: Installation and Integrations",
@@ -312,12 +318,12 @@ var store = [{
         "teaser": null
       },{
         "title": "OpenStack Ussuri Contributor List",
-        "excerpt":"https://www.openstack.org/software/ussuri/  ","categories": [],
+        "excerpt":"   Thanks to the more than 1,000 contributors from more than 50 countries and 188 organizations that contributed to the OpenStack Ussuri release.   https://www.openstack.org/software/ussuri/     ","categories": [],
         "tags": ["en","nfv","openstack","redhat"],
-        "url": "https://josecastillolema.github.io/ussuri-contributor-list/",
+        "url": "https://josecastillolema.github.io/ussuri/",
         "teaser": null
       },{
-        "title": "aodh2sensu - importing alarms from Aodh into Sensu Core",
+        "title": "Importing alarms from OpenStack Aodh into Sensu Core",
         "excerpt":"aodh2sensu Imports OpenStack Aodh alarms into Sensu Core Server. Install Via requirements file $ pip3 install -r ./requirements.txt Via pipenv pipfile $ pipenv install Use Usage: aodh2sensu.py [options] Imports OpenStack Aodh alarms into Sensu Core Server. Options: -h, --help show this help message and exit --sensu-url URL if not specified,...","categories": [],
         "tags": ["en","openstack","monitoring","redhat"],
         "url": "https://josecastillolema.github.io/aodh2sensu/",
