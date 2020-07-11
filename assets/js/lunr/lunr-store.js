@@ -233,10 +233,10 @@ var store = [{
         "url": "https://josecastillolema.github.io/zabbix/",
         "teaser": null
       },{
-        "title": "AWS Educate Cloud Ambassador",
+        "title": "AWS Educate",
         "excerpt":"Recursos e benefícios Acesso ao AWS Educate Student Portal Console AWS, créditos (50$) e labs online Cloud Career Pathways: Explore trajetórias profissionais na nuvem para saber mais sobre as principais competências de nuvem nas carreiras de tecnologia mais procuradas. Desde Cientista de machine learning até Desenvolvedor de aplicativos, cada trajetória...","categories": [],
         "tags": ["ambassador","aws","pt"],
-        "url": "https://josecastillolema.github.io/aws-ambassador/",
+        "url": "https://josecastillolema.github.io/aws-educate/",
         "teaser": null
       },{
         "title": "SBRC/WPEIF 2019",
@@ -323,7 +323,7 @@ var store = [{
         "url": "https://josecastillolema.github.io/aodh2sensu/",
         "teaser": null
       },{
-        "title": "AWS Accredited Educator",
+        "title": "AWS Academy",
         "excerpt":"Benefícios do programa Acesso ao currículo criado pela AWS: O currículo pronto para ensino permite que as instituições membro incorporem a instrução em seu catálogo de cursos. As atualizações regulares da AWS refletem o ritmo da inovação e as melhores práticas da computação em nuvem. Crie habilidades alinhadas à AWS...","categories": [],
         "tags": ["ambassador","aws","fiap","pt"],
         "url": "https://josecastillolema.github.io/aws-academy/",
