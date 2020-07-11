@@ -1,5 +1,5 @@
 ---
-title:  "Locust CCN client compatible with ccn-lite"
+title:  "Locust CCN client"
 last_modified_at: 2019-03-10T16:00:58-04:00
 tags:
   - ccn
