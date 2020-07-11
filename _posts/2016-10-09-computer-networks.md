@@ -28,12 +28,12 @@ toc: true
 ## Cite this
 
 ### ACM
-Felipe S. Dantas Silva, Augusto Venâncio Neto, Douglas Maciel, José Castillo-Lema, Flávio Silva, Pedro Frosi, and Eduardo Cerqueira. 2016. An innovative software-defined WiNeMO architecture for advanced QoS-guaranteed mobile service transport. Comput. Netw. 107, P2 (October 2016), 270–291. DOI:https://doi.org/10.1016/j.comnet.2016.04.019
+Felipe S. Dantas Silva, Augusto Venâncio Neto, Douglas Maciel, José Castillo-Lema, Flávio Silva, Pedro Frosi, and Eduardo Cerqueira. 2016. **An innovative software-defined WiNeMO architecture for advanced QoS-guaranteed mobile service transport**. Comput. Netw. 107, P2 (October 2016), 270–291. DOI:https://doi.org/10.1016/j.comnet.2016.04.019
 
 ### BibTeX
 
 ```
-@article{10.1016/j.comnet.2016.04.019,
+@article {10.1016/j.comnet.2016.04.019,
 author = {Silva, Felipe S. Dantas and Neto, Augusto Ven\^{a}ncio and Maciel, Douglas and Castillo-Lema, Jos\'{e} and Silva, Fl\'{a}vio and Frosi, Pedro and Cerqueira, Eduardo},
 title = {An Innovative Software-Defined WiNeMO Architecture for Advanced QoS-Guaranteed Mobile Service Transport},
 year = {2016},
@@ -49,6 +49,5 @@ journal = {Comput. Netw.},
 month = oct,
 pages = {270–291},
 numpages = {22},
-keywords = {Software-defined networking, Mobility management, Load balancing, Quality of experience, Quality of service}
-}
+keywords = {Software-defined networking, Mobility management, Load balancing, Quality of experience, Quality of service}}
 ```
