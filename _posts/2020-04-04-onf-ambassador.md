@@ -10,6 +10,6 @@ tags:
 toc: false
 ---
 
-[ONF Ambassador Program](https://ambassadors.opennetworking.org/)
+[ONF Ambassador Program](https://www.opennetworking.org/ambassadors/)
 
-[Profile](https://ambassadors.opennetworking.org/directory/jose-castillo-lema/)  
+[Profile](https://www.opennetworking.org/ambassadors/jose-castillo-lema/)  
