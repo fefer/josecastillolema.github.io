@@ -1,20 +1,44 @@
 var store = [{
-        "title": "Telecommunications Network Strategy and Planning Symposium",
+        "title": "ICCCN 2012",
+        "excerpt":"2012 21st International Conference on Computer Communications and Networks (ICCCN) Proceedings Context-Driven Resource Over-Provisioning Approach for Rich Networking J. Castillo-Lema (Computer Engineering, Universidade da Coruña, Spain) E. Cruz (Teleinformatics Engineering, Federal University of Ceará, Fortaleza, Brazil) A. Neto (Teleinformatics Engineering, Federal University of Ceará, Fortaleza, Brazil) S. Sargento (Institute of...","categories": [],
+        "tags": ["en","events","networks"],
+        "url": "https://josecastillolema.github.io/icccn12/",
+        "teaser": null
+      },{
+        "title": "IEEE LATINCOM 2012",
+        "excerpt":"2012 IEEE Latin-America Conference on Communications Proceedings Applying advanced network resource provisioning in future internet systems S. Jardim (Informatics Institute, Federal University of Goiás, Goiânia, Brazil) A. Neto (Teleinformatics Engineering, Federal University of Ceará, Fortaleza, Brazil) J. Castillo-Lema (Computer Engineering, Universidade da Coruña, Spain) E. Cerqueira (Computer Engineering, Federal University...","categories": [],
+        "tags": ["en","events","networks"],
+        "url": "https://josecastillolema.github.io/latincom12/",
+        "teaser": null
+      },{
+        "title": "NETWORKS 2012",
         "excerpt":"2012 15th International Telecommunications Network Strategy and Planning Symposium (NETWORKS) Proceedings Applying over-provisioning centric resource control in context-sensitive networks J. Castillo-Lema (Computer Engineering, Universidade da Coruña, Spain) E. Cruz (Teleinformatics Engineering, Federal University of Ceará, Fortaleza, Brazil) A. Neto (Teleinformatics Engineering, Federal University of Ceará, Fortaleza, Brazil) S. Sargento (Institute...","categories": [],
         "tags": ["en","events","networks"],
-        "url": "https://josecastillolema.github.io/networks2012/",
+        "url": "https://josecastillolema.github.io/networks12/",
+        "teaser": null
+      },{
+        "title": "ICNC 2013",
+        "excerpt":"2013 International Conference on Computing, Networking and Communications (ICNC) Proceedings Advanced resource provisioning in context-sensitive converged networks Jose Castillo Lema (Universidade da Coruña, Spain) Elifanio Cruz (Federal University of Ceará, Brazil) Augusto Jose Venancio Neto (Universidade Federal do Rio Grande do Norte, Brazil) Eduardo Cerqueira (Federal University of Para, Brazil)...","categories": [],
+        "tags": ["en","events","networks"],
+        "url": "https://josecastillolema.github.io/icnc13/",
+        "teaser": null
+      },{
+        "title": "IEEE ISCC 2013",
+        "excerpt":"2013 IEEE Symposium on Computers and Communications (ISCC) Proceedings Over-provisioning centric network resource control in Future Internet systems Sandino Jardim (Federal University of Goias, Brazil) Augusto Jose Venancio Neto, Ph. D. (Universidade Federal do Rio Grande do Norte, Brazil) Jose Castillo Lema (Universidade da Coruña, Spain) Eduardo Cerqueira (Federal University...","categories": [],
+        "tags": ["en","events","networks"],
+        "url": "https://josecastillolema.github.io/iscc13/",
         "teaser": null
       },{
         "title": "IEEE GLOBECOM 2013",
         "excerpt":"Globecom 2013 Workshop - Management of Emerging Networks and Services Program Program Hybrid Framework for Scalable Resource Control in Multi-ingress Networks Sandino Jardim (Federal University of Goias, Brazil) Augusto Jose Venancio Neto, Ph. D. (Universidade Federal do Rio Grande do Norte, Brazil) Jose Castillo Lema (Universidade da Coruña, Spain) Evariste...","categories": [],
         "tags": ["en","events","networks"],
-        "url": "https://josecastillolema.github.io/globecom2013/",
+        "url": "https://josecastillolema.github.io/globecom13/",
         "teaser": null
       },{
-        "title": "ISCC 2014",
+        "title": "IEEE ISCC 2014",
         "excerpt":"The nineteenth IEEE Symposium on Computers And Communications Program Entity Title Architecture Extensions Towards Advanced Quality-oriented Mobility Control Capabilities Felipe Sampaio Dantas da Silva (Federal Institute of Education, Science and Technology of Rio Grande do Norte, Brazil) José Castillo Lema (Universidade Federal do Rio Grande do Norte, Spain) Augusto Jose...","categories": [],
         "tags": ["en","events","networks","sdn"],
-        "url": "https://josecastillolema.github.io/iscc/",
+        "url": "https://josecastillolema.github.io/iscc14/",
         "teaser": null
       },{
         "title": "Evolving Future Internet clean-slate ETArch with QoS control-plane extensions",
@@ -38,19 +62,19 @@ var store = [{
         "title": "IEEE GLOBECOM 2014",
         "excerpt":"Global Communications Conference 2014 Proceedings Additions to the ETArch control plane to support multimedia QoS-guaranteed content transport over OpenFlow-enabled SDN future internet systems José Castillo - Federal University of Rio Grande do Norte (UFRN), Brazil Augusto Neto - Federal University of Rio Grande do Norte (UFRN), Brazil Flavio Silva -...","categories": [],
         "tags": ["en","events","networks","sdn"],
-        "url": "https://josecastillolema.github.io/globecom2014/",
+        "url": "https://josecastillolema.github.io/globecom14/",
         "teaser": null
       },{
         "title": "MSWiM 2015",
         "excerpt":"The 18th ACM International Conference on Modeling, Analysis and Simulation of Wireless and Mobile Systems Agenda Network-Initiated Quality-oriented Mobility Management Approach for Next Generation ETArch Networks Felipe Sampaio Dantas da Silva, Federal Institute of Education, Science and Technology of Rio Grande do Norte, Brazil Augusto J. Venancio Neto, Federal University...","categories": [],
         "tags": ["en","events","networks","sdn"],
-        "url": "https://josecastillolema.github.io/mswim/",
+        "url": "https://josecastillolema.github.io/mswim15/",
         "teaser": null
       },{
         "title": "FIAP MBA em Full Stack Developer - Microservices, Cloud e IoT (SCJ)",
         "excerpt":"      Arquitetura e Desenvolvimento Java com IoT   Arquitetura e Desenvolvimento Java de Alta Disponibilidade para Cloud Computing   Arquitetura e Infraestrutura de Cloud Computing e Internet das Coisas   Cloud Development   Desenvolvimento de aplicações usando Cloud Computing   ","categories": [],
         "tags": ["aws","azure","classes","fiap","pt"],
-        "url": "https://josecastillolema.github.io/fiap-mba-scj/",
+        "url": "https://josecastillolema.github.io/fiap-scj/",
         "teaser": null
       },{
         "title": "Computer Networks - Volume 107",
@@ -62,7 +86,7 @@ var store = [{
         "title": "FIAP MBA em Mobile Development (MOB)",
         "excerpt":"      DevOps &amp; Cloud Oriented Architecture   Segurança para Aplicações Móveis para Internet das Coisas e Cloud Computing   ","categories": [],
         "tags": ["aws","azure","classes","fiap","pt"],
-        "url": "https://josecastillolema.github.io/fiap-mba-mob/",
+        "url": "https://josecastillolema.github.io/fiap-mob/",
         "teaser": null
       },{
         "title": "HCNA-HNTD Training - 1st edition",
@@ -140,7 +164,7 @@ var store = [{
         "title": "Futurecom 2017 - Tour IoT",
         "excerpt":"    ","categories": [],
         "tags": ["events","iot","pt"],
-        "url": "https://josecastillolema.github.io/futurecom2017/",
+        "url": "https://josecastillolema.github.io/futurecom17/",
         "teaser": null
       },{
         "title": "HCNA-HNTD Training - 10th edition",
@@ -170,7 +194,7 @@ var store = [{
         "title": "FIAP MBA em Cloud Computing (CLD)",
         "excerpt":"      BootCamp OpenStack   Implementação de Cloud   Implementação OpenStack   ","categories": [],
         "tags": ["classes","fiap","openstack","pt"],
-        "url": "https://josecastillolema.github.io/fiap-mba-cld/",
+        "url": "https://josecastillolema.github.io/fiap-cld/",
         "teaser": null
       },{
         "title": "HCNA-HNTD Training - 12th edition",
@@ -236,7 +260,7 @@ var store = [{
         "title": "Zabbix templates for OpenStack",
         "excerpt":"zabbix-for-openstack Ansible playbook for installing Zabbix and its templates for OpenStack (through Zabbix user parameters). In the following screenshot you can see the final result: As you can see, hosts are segregated by groups (controllers, compute, ceph, external Horizon, IdM, storage, etc.), and the items we monitore in each group...","categories": [],
         "tags": ["ansible","monitoring","openstack","pt","redhat"],
-        "url": "https://josecastillolema.github.io/zabbix/",
+        "url": "https://josecastillolema.github.io/zabbix-openstack/",
         "teaser": null
       },{
         "title": "AWS Educate",
@@ -266,7 +290,7 @@ var store = [{
         "title": "IEEE NetSoft/S4SI 2019",
         "excerpt":"IEEE Conference on Network Softwarization / 2nd Workshop on Advances in Slicing for Softwarized Infrastructures Agenda Mininet-NFV: Evolving Mininet with OASIS TOSCA NVF profiles Towards Reproducible NFV Prototyping José Castillo Lema, Universidade de São Paulo, Brazil Augusto J. Venancio Neto, Federal University of Rio Grande do Norte, Brazil Flavio de...","categories": [],
         "tags": ["en","events","networks","nfv","sdn"],
-        "url": "https://josecastillolema.github.io/netsoft/",
+        "url": "https://josecastillolema.github.io/netsoft19/",
         "teaser": null
       },{
         "title": "FIAP MBA em Engenharia de Software - Online (AOJO)",
