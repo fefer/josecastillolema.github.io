@@ -1,5 +1,5 @@
 ---
-title:  "AWS Accredited Educator"
+title:  "AWS Academy"
 last_modified_at: 2020-07-09T16:00:58-04:00
 tags:
   - ambassador 
@@ -10,11 +10,6 @@ toc: true
 ---
 
 [![](/assets/images/posts/2020-07-09-aws-academy/01.png)](https://aws.amazon.com/pt/training/awsacademy/)
-
-![](/assets/images/posts/2020-07-09-aws-academy/02.jpeg)
-![](/assets/images/posts/2020-07-09-aws-academy/03.png)
-
-![](/assets/images/posts/2020-07-09-aws-academy/04.png)
 
 ## Benefícios do programa
 - Acesso ao currículo criado pela AWS: O currículo pronto para ensino permite que as instituições membro incorporem a instrução em seu catálogo de cursos. As atualizações regulares da AWS refletem o ritmo da inovação e as melhores práticas da computação em nuvem.
@@ -37,3 +32,8 @@ toc: true
 - **AWS Academy Cloud Developing** (*coming soon*)
 
   Esse curso de nível intermediário ajudará os estudantes a ganharem experiência técnica em desenvolvimento com tecnologia de nuvens. Ele também os ajudará a se preparar para o exame de [**certificação AWS Certified Developer - Associate**](https://aws.amazon.com/pt/certification/certified-developer-associate/). Ao completar, os alunos estarão aptos a desenvolver com AWS SDK e identificar as melhores práticas para construir e implantar aplicativos na nuvem AWS. Esse curso tem aproximadamente **40 horas** de conteúdo fornecido por meio de palestras e laboratórios práticos.
+
+![](/assets/images/posts/2020-07-09-aws-academy/02.jpeg)
+![](/assets/images/posts/2020-07-09-aws-academy/03.png)
+
+![](/assets/images/posts/2020-07-09-aws-academy/04.png)
