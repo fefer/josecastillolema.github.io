@@ -264,8 +264,8 @@ var store = [{
         "teaser": null
       },{
         "title": "AWS Educate",
-        "excerpt":"Recursos e benefícios Acesso ao AWS Educate Student Portal Console AWS, créditos (50$) e labs online Cloud Career Pathways: Explore trajetórias profissionais na nuvem para saber mais sobre as principais competências de nuvem nas carreiras de tecnologia mais procuradas. Desde Cientista de machine learning até Desenvolvedor de aplicativos, cada trajetória...","categories": [],
-        "tags": ["ambassador","aws","pt"],
+        "excerpt":"Recursos e benefícios Acesso ao AWS Educate Student Portal. Accesso ao console AWS com 50$ de créditos e labs online. Cloud Career Pathways: Explore trajetórias profissionais na nuvem para saber mais sobre as principais competências de nuvem nas carreiras de tecnologia mais procuradas. Desde Cientista de machine learning até Desenvolvedor...","categories": [],
+        "tags": ["aws","fiap","pt"],
         "url": "https://josecastillolema.github.io/aws-educate/",
         "teaser": null
       },{
@@ -319,7 +319,7 @@ var store = [{
       },{
         "title": "FIAP MBA ON Live - 1ASO - Fase 3 - Cloud",
         "excerpt":"      ","categories": [],
-        "tags": ["fiap","live","pt"],
+        "tags": ["events","fiap","pt","webinar"],
         "url": "https://josecastillolema.github.io/fiapon-live-1aso/",
         "teaser": null
       },{
@@ -331,7 +331,7 @@ var store = [{
       },{
         "title": "Open Networking Foundation",
         "excerpt":"Open Networking Foundation The Open Networking Foundation (ONF) is a non-profit operator led consortium driving transformation of network infrastructure and carrier business models. We are an open, collaborative, community of communities. The ONF serves as the umbrella for a number of projects building solutions by leveraging network disaggregation, white box...","categories": [],
-        "tags": ["ambassador","en","networks","nfv","sdn"],
+        "tags": ["en","networks","nfv","sdn"],
         "url": "https://josecastillolema.github.io/onf/",
         "teaser": null
       },{
@@ -355,7 +355,7 @@ var store = [{
       },{
         "title": "AWS Academy",
         "excerpt":"Benefícios do programa Acesso ao currículo criado pela AWS: O currículo pronto para ensino permite que as instituições membro incorporem a instrução em seu catálogo de cursos. As atualizações regulares da AWS refletem o ritmo da inovação e as melhores práticas da computação em nuvem. Crie habilidades alinhadas à AWS...","categories": [],
-        "tags": ["ambassador","aws","fiap","pt"],
+        "tags": ["aws","fiap","pt"],
         "url": "https://josecastillolema.github.io/aws-academy/",
         "teaser": null
       }]

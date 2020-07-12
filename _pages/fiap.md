@@ -1,5 +1,15 @@
 ---
 permalink: /fiap/
+last_modified_at: 2020-07-12T16:00:58-04:00
+tags:
+  - aws
+  - azure
+  - classes
+  - fiap
+  - iot
+  - openstack
+  - pt
+  - redhat
 toc: true
 ---
 

@@ -327,7 +327,7 @@
     
     
     
-    
+    <meta itemprop="dateModified" content="2020-07-10T17:00:58-03:00">
 
     <div class="page__inner-wrap">
       
@@ -348,7 +348,12 @@
 <a href="#mini-nfv">mini-nfv</a>
     <ul>
       <li><a href="#publications">Publications</a></li>
-      <li><a href="#use-cases">Use cases</a></li>
+      <li>
+<a href="#use-cases">Use cases</a>
+        <ul>
+          <li><a href="#automation--jinja2-support">Automation / Jinja2 support</a></li>
+        </ul>
+      </li>
       <li><a href="#characteristics">Characteristics</a></li>
       <li><a href="#network-definition">Network definition</a></li>
       <li><a href="#ipmac-definition">IP/MAC definition</a></li>
@@ -407,9 +412,9 @@
   </li>
   <li>TOSCA NFV Profile:
     <ul>
-      <li>Latest spec is available here: <a href="https://www.oasis-open.org/committees/document.php?document_id=56577&amp;wg_abbrev=tosca" target="_blank" rel="noopener noreferrer">https://www.oasis-open.org/committees/document.php?document_id=56577&amp;wg_abbrev=tosca</a>
+      <li>Spec is available here: <a href="https://www.oasis-open.org/committees/document.php?document_id=56577&amp;wg_abbrev=tosca" target="_blank" rel="noopener noreferrer">https://www.oasis-open.org/committees/document.php?document_id=56577&amp;wg_abbrev=tosca</a>
 </li>
-      <li>Current latest (as of Oct 2015) is: <a href="https://www.oasis-open.org/committees/download.php/56577/tosca-nfv-v1.0-wd02-rev03.doc" target="_blank" rel="noopener noreferrer">https://www.oasis-open.org/committees/download.php/56577/tosca-nfv-v1.0-wd02-rev03.doc</a>
+      <li>Download: <a href="https://www.oasis-open.org/committees/download.php/56577/tosca-nfv-v1.0-wd02-rev03.doc" target="_blank" rel="noopener noreferrer">https://www.oasis-open.org/committees/download.php/56577/tosca-nfv-v1.0-wd02-rev03.doc</a>
 </li>
     </ul>
   </li>
@@ -431,6 +436,8 @@
 <p>In the OpenStack world, Tacker is the project implementing a generic VNFM and NFVO. At the input consumes Tosca-based templates, which are then used to spin up VMs on OpenStack. While it is true that today exist various tools that simplify the deployment of an OpenStack cloud (i.e.: devstack), deploying, configuring and managing OpenStack environments is still a time-consuming process with a considerable learning curve.</p>
 
 <p>On the other hand, Mininet has shown itself as a great tool for agile network/SDN/NFV experimentation. The goal of mini-nfv is to alleviate the developers’ tedious task of setting up a whole service chaining environment and let them focus on their own work (e.g., developing a particular VNF, prototyping, implementing an orchestration algorithm or a customized traffic steering).</p>
+
+<h3 id="automation--jinja2-support">Automation / Jinja2 support</h3>
 
 <p>On top of that, mini-nfv supports <a href="http://jinja.pocoo.org/docs/2.10/" target="_blank" rel="noopener noreferrer">Jinja2</a>, a full featured and designer-friendly template engine for Python, with an integrated sandboxed execution environment. This way, developers can easily automate the scale-out of vNF deployments and NFV orquestration graphs within the TOSCA templates. Inside the TOSCA templates, variables or expres- sions can be defined, as in for example:</p>
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ip_dst_prefix: ’{{ ip_dst }}’
@@ -467,7 +474,8 @@
 
 <p>Mini-nfv supports:</p>
 <ul>
-  <li>Jinja2 templating, to automate the scale-out of vNF deplyments and NFV orquestration graphs within the TOSCA templates</li>
+  <li>Jinja2 templating, to automate the scale-out of vNF deplyments and NFV orquestration graphs within the TOSCA templates <a href="#automation--jinja2-support">↵</a>
+</li>
   <li>network definition via VL <a href="#network-definition">↵</a>
 </li>
   <li>IP/mac definition via CP <a href="#ipmac-definition">↵</a>
@@ -481,9 +489,9 @@
 <p>Mini-nfv ignores:</p>
 <ul>
   <li>RAM and disk properties</li>
-  <li>floating ips</li>
+  <li>Floating IPs</li>
   <li>NUMA topology</li>
-  <li>SRiOV</li>
+  <li>SR-IOV</li>
 </ul>
 
 <p>Mini-nfv has not implemented (yet):</p>
@@ -951,8 +959,45 @@ NXST_FLOW reply (xid=0x4):
       <footer class="page__meta">
         
         
+  
 
 
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/tags/#en" class="page__taxonomy-item" rel="tag">en</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#iac" class="page__taxonomy-item" rel="tag">iac</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#networks" class="page__taxonomy-item" rel="tag">networks</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#nfv" class="page__taxonomy-item" rel="tag">nfv</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#sdn" class="page__taxonomy-item" rel="tag">sdn</a>
+    
+    </span>
+  </p>
+
+
+
+
+        
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2020-07-10">July 10, 2020</time></p>
         
       </footer>
 
