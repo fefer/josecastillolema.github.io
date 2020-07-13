@@ -1,43 +1,43 @@
 var store = [{
         "title": "ICCCN 2012",
         "excerpt":"2012 21st International Conference on Computer Communications and Networks (ICCCN) Proceedings Context-Driven Resource Over-Provisioning Approach for Rich Networking J. Castillo-Lema (Computer Engineering, Universidade da Coruña, Spain) E. Cruz (Teleinformatics Engineering, Federal University of Ceará, Fortaleza, Brazil) A. Neto (Teleinformatics Engineering, Federal University of Ceará, Fortaleza, Brazil) S. Sargento (Institute of...","categories": [],
-        "tags": ["en","events","networks"],
+        "tags": ["en","events","networks","papers"],
         "url": "https://josecastillolema.github.io/icccn12/",
         "teaser": null
       },{
         "title": "IEEE LATINCOM 2012",
         "excerpt":"2012 IEEE Latin-America Conference on Communications Proceedings Applying advanced network resource provisioning in future internet systems S. Jardim (Informatics Institute, Federal University of Goiás, Goiânia, Brazil) A. Neto (Teleinformatics Engineering, Federal University of Ceará, Fortaleza, Brazil) J. Castillo-Lema (Computer Engineering, Universidade da Coruña, Spain) E. Cerqueira (Computer Engineering, Federal University...","categories": [],
-        "tags": ["en","events","networks"],
+        "tags": ["en","events","networks","papers"],
         "url": "https://josecastillolema.github.io/latincom12/",
         "teaser": null
       },{
         "title": "NETWORKS 2012",
         "excerpt":"2012 15th International Telecommunications Network Strategy and Planning Symposium (NETWORKS) Proceedings Applying over-provisioning centric resource control in context-sensitive networks J. Castillo-Lema (Computer Engineering, Universidade da Coruña, Spain) E. Cruz (Teleinformatics Engineering, Federal University of Ceará, Fortaleza, Brazil) A. Neto (Teleinformatics Engineering, Federal University of Ceará, Fortaleza, Brazil) S. Sargento (Institute...","categories": [],
-        "tags": ["en","events","networks"],
+        "tags": ["en","events","networks","papers"],
         "url": "https://josecastillolema.github.io/networks12/",
         "teaser": null
       },{
         "title": "ICNC 2013",
         "excerpt":"2013 International Conference on Computing, Networking and Communications (ICNC) Proceedings Advanced resource provisioning in context-sensitive converged networks Jose Castillo Lema (Universidade da Coruña, Spain) Elifanio Cruz (Federal University of Ceará, Brazil) Augusto Jose Venancio Neto (Universidade Federal do Rio Grande do Norte, Brazil) Eduardo Cerqueira (Federal University of Para, Brazil)...","categories": [],
-        "tags": ["en","events","networks"],
+        "tags": ["en","events","networks","papers"],
         "url": "https://josecastillolema.github.io/icnc13/",
         "teaser": null
       },{
         "title": "IEEE ISCC 2013",
         "excerpt":"2013 IEEE Symposium on Computers and Communications (ISCC) Proceedings Over-provisioning centric network resource control in Future Internet systems Sandino Jardim (Federal University of Goias, Brazil) Augusto Jose Venancio Neto, Ph. D. (Universidade Federal do Rio Grande do Norte, Brazil) Jose Castillo Lema (Universidade da Coruña, Spain) Eduardo Cerqueira (Federal University...","categories": [],
-        "tags": ["en","events","networks"],
+        "tags": ["en","events","networks","papers"],
         "url": "https://josecastillolema.github.io/iscc13/",
         "teaser": null
       },{
         "title": "IEEE GLOBECOM 2013",
         "excerpt":"Globecom 2013 Workshop - Management of Emerging Networks and Services Program Program Hybrid Framework for Scalable Resource Control in Multi-ingress Networks Sandino Jardim (Federal University of Goias, Brazil) Augusto Jose Venancio Neto, Ph. D. (Universidade Federal do Rio Grande do Norte, Brazil) Jose Castillo Lema (Universidade da Coruña, Spain) Evariste...","categories": [],
-        "tags": ["en","events","networks"],
+        "tags": ["en","events","networks","papers"],
         "url": "https://josecastillolema.github.io/globecom13/",
         "teaser": null
       },{
         "title": "IEEE ISCC 2014",
         "excerpt":"The nineteenth IEEE Symposium on Computers And Communications Program Entity Title Architecture Extensions Towards Advanced Quality-oriented Mobility Control Capabilities Felipe Sampaio Dantas da Silva (Federal Institute of Education, Science and Technology of Rio Grande do Norte, Brazil) José Castillo Lema (Universidade Federal do Rio Grande do Norte, Spain) Augusto Jose...","categories": [],
-        "tags": ["en","events","networks","sdn"],
+        "tags": ["en","events","networks","papers","sdn"],
         "url": "https://josecastillolema.github.io/iscc14/",
         "teaser": null
       },{
@@ -49,8 +49,14 @@ var store = [{
       },{
         "title": "Support of Mobile Sessions with High Transport Network Resource Demand",
         "excerpt":"smart-OF-controller This project aims to design and develop a clean-slate Future Internet framework called SMART (Support of Mobile Sessions with High Transport Network Resource Demand). In this framework, Software-Defined Networking mechanisms will be applied and fitted in vital aspects of the RNP (Brazilian National Research and Education Network) infrastructure, to...","categories": [],
-        "tags": ["en","networks","sdn"],
+        "tags": ["en","networks","papers","sdn"],
         "url": "https://josecastillolema.github.io/smart/",
+        "teaser": null
+      },{
+        "title": "IEEE HealthCom 2014",
+        "excerpt":"2014 IEEE 16th International Conference on e-Health Networking, Applications and Services (Healthcom) Proceedings Software defined eHealth networking towards a truly mobile and reliable system Felipe Sampaio Dantas da Silva (Federal Institute of Education, Science and Technology of Rio Grande do Norte, Brazil) José Castillo Lema (Universidade Federal do Rio Grande...","categories": [],
+        "tags": ["en","events","networks","papers","sdn"],
+        "url": "https://josecastillolema.github.io/healthcom14/",
         "teaser": null
       },{
         "title": "Smart Campus SP",
@@ -61,13 +67,25 @@ var store = [{
       },{
         "title": "IEEE GLOBECOM 2014",
         "excerpt":"Global Communications Conference 2014 Proceedings Additions to the ETArch control plane to support multimedia QoS-guaranteed content transport over OpenFlow-enabled SDN future internet systems José Castillo - Federal University of Rio Grande do Norte (UFRN), Brazil Augusto Neto - Federal University of Rio Grande do Norte (UFRN), Brazil Flavio Silva -...","categories": [],
-        "tags": ["en","events","networks","sdn"],
+        "tags": ["en","events","networks","papers","sdn"],
         "url": "https://josecastillolema.github.io/globecom14/",
+        "teaser": null
+      },{
+        "title": "ICWN 2015",
+        "excerpt":"The 2015 World Congress in Computer Science, Computer Engineering and Applied Computing Agenda Infrastructured Mobility Management Approach for Future Internet ETArch Networks Felipe Sampaio Dantas da Silva, Federal Institute of Education, Science and Technology of Rio Grande do Norte, Brazil Augusto J. Venancio Neto, Federal University of Rio Grande do...","categories": [],
+        "tags": ["en","events","networks","papers","sdn"],
+        "url": "https://josecastillolema.github.io/icwn15/",
+        "teaser": null
+      },{
+        "title": "LANOMS 2015",
+        "excerpt":"8th Latin American Network Operations and Management Symposium Agenda SDN-based Control Plane Extensions for Mobility Management Improvement in Future Internet Networks Felipe Sampaio Dantas da Silva, Federal Institute of Education, Science and Technology of Rio Grande do Norte, Brazil Augusto J. Venancio Neto, Federal University of Rio Grande do Norte,...","categories": [],
+        "tags": ["en","events","networks","papers","sdn"],
+        "url": "https://josecastillolema.github.io/lanoms15/",
         "teaser": null
       },{
         "title": "MSWiM 2015",
         "excerpt":"The 18th ACM International Conference on Modeling, Analysis and Simulation of Wireless and Mobile Systems Agenda Network-Initiated Quality-oriented Mobility Management Approach for Next Generation ETArch Networks Felipe Sampaio Dantas da Silva, Federal Institute of Education, Science and Technology of Rio Grande do Norte, Brazil Augusto J. Venancio Neto, Federal University...","categories": [],
-        "tags": ["en","events","networks","sdn"],
+        "tags": ["en","events","networks","papers","sdn"],
         "url": "https://josecastillolema.github.io/mswim15/",
         "teaser": null
       },{
@@ -79,7 +97,7 @@ var store = [{
       },{
         "title": "Computer Networks - Volume 107",
         "excerpt":"Volume 107, Part 2, Pages 270-291 An innovative software-defined WiNeMO architecture for advanced QoS-guaranteed mobile service transport Felipe S. Dantas Silva Augusto Venâncio Netob Douglas Maciel José Castillo-Lema Flávio Silva Pedro Frosi Eduardo Cerqueira. Cite this ACM Felipe S. Dantas Silva, Augusto Venâncio Neto, Douglas Maciel, José Castillo-Lema, Flávio Silva,...","categories": [],
-        "tags": ["en","networks","sdn"],
+        "tags": ["en","networks","papers","sdn"],
         "url": "https://josecastillolema.github.io/computer-networks/",
         "teaser": null
       },{
@@ -271,7 +289,7 @@ var store = [{
       },{
         "title": "SBRC/WPEIF 2019",
         "excerpt":"XXXVII Simpósio Brasileiro de Redes de Computadores e Sistemas Distribuídos / Workshop de Pesquisa Experimental da Internet do Futuro Proceedings Network Function Virtualization in Content-Centric Networks José Castillo Lema, Universidade de São Paulo, Brazil Augusto J. Venancio Neto, Federal University of Rio Grande do Norte, Brazil Flavio de Oliveira Silva,...","categories": [],
-        "tags": ["ccn","en","events","networks","nfv"],
+        "tags": ["ccn","en","events","networks","nfv","papers"],
         "url": "https://josecastillolema.github.io/sbrc19/",
         "teaser": null
       },{
@@ -289,7 +307,7 @@ var store = [{
       },{
         "title": "IEEE NetSoft/S4SI 2019",
         "excerpt":"IEEE Conference on Network Softwarization / 2nd Workshop on Advances in Slicing for Softwarized Infrastructures Agenda Mininet-NFV: Evolving Mininet with OASIS TOSCA NVF profiles Towards Reproducible NFV Prototyping José Castillo Lema, Universidade de São Paulo, Brazil Augusto J. Venancio Neto, Federal University of Rio Grande do Norte, Brazil Flavio de...","categories": [],
-        "tags": ["en","events","networks","nfv","sdn"],
+        "tags": ["en","events","networks","nfv","papers","sdn"],
         "url": "https://josecastillolema.github.io/netsoft19/",
         "teaser": null
       },{
@@ -301,7 +319,7 @@ var store = [{
       },{
         "title": "A generic NFV MANO for Content-Centric Networks",
         "excerpt":"Biblioteca Digital de Teses e Dissertações da USP Cite this ISO CASTILLO LEMA, José. A generic network function virtualization manager and orchestrator for content-centric networks [doi:10.11606/T.3.2019.tde-23102019-120559]. São Paulo : Escola Politécnica, Universidade de São Paulo, 2019. Tese de Doutorado em Sistemas Eletrônicos. [acesso 2020-06-01]. ABNT CASTILLO LEMA, José. A generic...","categories": [],
-        "tags": ["ccn","en","networks","nfv"],
+        "tags": ["ccn","en","networks","nfv","papers"],
         "url": "https://josecastillolema.github.io/thesis/",
         "teaser": null
       },{
