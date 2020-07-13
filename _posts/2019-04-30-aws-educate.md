@@ -3,6 +3,7 @@ title:  "AWS Educate"
 last_modified_at: 2019-04-30T16:00:58-04:00
 tags:
   - aws
+  - classes
   - fiap
   - pt
 toc: yes

@@ -209,8 +209,8 @@ var store = [{
         "url": "https://josecastillolema.github.io/hntd-13/",
         "teaser": null
       },{
-        "title": "FIAP Red Hat Academy Partnership",
-        "excerpt":"Benefícios Aprenda as habilidades mais procuradas pelo mercado. Aproveite os descontos (voucher 50% off) nos exames para conquistar sua certificação junto à empresa líder em tecnologia open source. Escolha o estilo de aprendizado ideal para você dentre os nossos vários formatos de material didático. Adquiria uma experiência valiosa com os...","categories": [],
+        "title": "Red Hat Academy",
+        "excerpt":"Benefícios Aproveite os descontos (voucher 50% off) nos exames de certificação. Escolha o estilo de aprendizado ideal para você dentre os nossos vários formatos de material didático. Adquiria uma experiência valiosa com os ambientes de laboratório hands-on. Conecte-se com outros estudantes e os instrutores da Red Hat que fazem parte...","categories": [],
         "tags": ["classes","fiap","openshift","openstack","pt","redhat"],
         "url": "https://josecastillolema.github.io/redhat-academy/",
         "teaser": null
@@ -265,7 +265,7 @@ var store = [{
       },{
         "title": "AWS Educate",
         "excerpt":"Recursos e benefícios Acesso ao AWS Educate Student Portal. Accesso ao console AWS com 50$ de créditos e labs online. Cloud Career Pathways: Explore trajetórias profissionais na nuvem para saber mais sobre as principais competências de nuvem nas carreiras de tecnologia mais procuradas. Desde Cientista de machine learning até Desenvolvedor...","categories": [],
-        "tags": ["aws","fiap","pt"],
+        "tags": ["aws","classes","fiap","pt"],
         "url": "https://josecastillolema.github.io/aws-educate/",
         "teaser": null
       },{
@@ -355,7 +355,7 @@ var store = [{
       },{
         "title": "AWS Academy",
         "excerpt":"Benefícios do programa Acesso ao currículo criado pela AWS: O currículo pronto para ensino permite que as instituições membro incorporem a instrução em seu catálogo de cursos. As atualizações regulares da AWS refletem o ritmo da inovação e as melhores práticas da computação em nuvem. Crie habilidades alinhadas à AWS...","categories": [],
-        "tags": ["aws","fiap","pt"],
+        "tags": ["aws","classes","fiap","pt"],
         "url": "https://josecastillolema.github.io/aws-academy/",
         "teaser": null
       }]
