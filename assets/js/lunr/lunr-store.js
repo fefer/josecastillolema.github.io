@@ -35,15 +35,27 @@ var store = [{
         "url": "https://josecastillolema.github.io/globecom13/",
         "teaser": null
       },{
+        "title": "SBRC/WPEIF 2014",
+        "excerpt":"XXXII Simpósio Brasileiro de Redes de Computadores e Sistemas Distribuídos / V Workshop de Pesquisa Experimental da Internet do Futuro Proceedings Quality-oriented Mobility Control Architecture for ETArch Handover Optimization Felipe Sampaio Dantas da Silva (Federal Institute of Education, Science and Technology of Rio Grande do Norte, Brazil) José Castillo Lema...","categories": [],
+        "tags": ["en","events","networks","papers","sdn"],
+        "url": "https://josecastillolema.github.io/sbrc14/",
+        "teaser": null
+      },{
         "title": "IEEE ISCC 2014",
         "excerpt":"The nineteenth IEEE Symposium on Computers And Communications Program Entity Title Architecture Extensions Towards Advanced Quality-oriented Mobility Control Capabilities Felipe Sampaio Dantas da Silva (Federal Institute of Education, Science and Technology of Rio Grande do Norte, Brazil) José Castillo Lema (Universidade Federal do Rio Grande do Norte, Spain) Augusto Jose...","categories": [],
         "tags": ["en","events","networks","papers","sdn"],
         "url": "https://josecastillolema.github.io/iscc14/",
         "teaser": null
       },{
+        "title": "AITC 2014",
+        "excerpt":"The Tenth Advanced International Conference on Telecommunications Program Evolving Future Internet Clean-Slate Entity Title Architecture with Quality-Oriented Control Plane Extensions José Castillo Lema (Universidade Federal do Rio Grande do Norte, Spain) Felipe Sampaio Dantas da Silva (Federal Institute of Education, Science and Technology of Rio Grande do Norte, Brazil) Augusto...","categories": [],
+        "tags": ["en","events","networks","papers","sdn"],
+        "url": "https://josecastillolema.github.io/aict14/",
+        "teaser": null
+      },{
         "title": "Evolving Future Internet clean-slate ETArch with QoS control-plane extensions",
         "excerpt":"Biblioteca Digital Brasileira de Teses e Dissertações Cite this APA Lema, J. C. (2014). Evolving Future Internet clean-slate Entity Title Architecture with quality-oriented control-plane extensions. Chicago Lema, José Castillo. Evolving Future Internet Clean-slate Entity Title Architecture With Quality-oriented Control-plane Extensions. 2014. MLA Lema, José Castillo. Evolving Future Internet Clean-slate Entity...","categories": [],
-        "tags": ["en","networks","sdn"],
+        "tags": ["en","networks","papers","sdn"],
         "url": "https://josecastillolema.github.io/mdthesis/",
         "teaser": null
       },{
