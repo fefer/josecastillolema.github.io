@@ -22,7 +22,7 @@ toc: yes
 - [**AWS Educate Job Board**](https://aws.amazon.com/pt/education/awseducate/aws-educate-job-board/): Acesse milhares de empregos e estágios na nuvem da Amazon e outras empresas no mundo inteiro no AWS Educate Job Board. Personalize seu portfólio online com credenciais de trajetórias e ganhe distintivos para atrair recrutadores ou empresas em busca de alguém.
 
 
-## [Cloud Careed Pathways](https://aws.amazon.com/pt/education/awseducate/pathways-and-badges/)
+## [Cloud Career Pathways](https://aws.amazon.com/pt/education/awseducate/pathways-and-badges/)
 - Introdução à computação na nuvem
 - Machine learning
 - Cientista de dados
