@@ -1,4 +1,58 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.7">Jekyll</generator><link href="https://josecastillolema.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://josecastillolema.github.io/" rel="alternate" type="text/html" /><updated>2020-07-16T17:16:00-03:00</updated><id>https://josecastillolema.github.io/feed.xml</id><title type="html">GitOps</title><subtitle>Networks, SDN, NFVi, OpenStack, K8s/OpenShift.</subtitle><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><entry><title type="html">AWS Academy</title><link href="https://josecastillolema.github.io/aws-academy/" rel="alternate" type="text/html" title="AWS Academy" /><published>2020-07-09T00:00:00-03:00</published><updated>2020-07-09T17:00:58-03:00</updated><id>https://josecastillolema.github.io/aws-academy</id><content type="html" xml:base="https://josecastillolema.github.io/aws-academy/">&lt;p&gt;&lt;a href=&quot;https://aws.amazon.com/pt/training/awsacademy/&quot;&gt;&lt;img src=&quot;/assets/images/posts/2020-07-09-aws-academy/01.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.7">Jekyll</generator><link href="https://josecastillolema.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://josecastillolema.github.io/" rel="alternate" type="text/html" /><updated>2020-07-17T15:38:48-03:00</updated><id>https://josecastillolema.github.io/feed.xml</id><title type="html">GitOps</title><subtitle>Networks, SDN, NFVi, OpenStack, K8s/OpenShift.</subtitle><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><entry><title type="html">Huawei ICT Academy</title><link href="https://josecastillolema.github.io/haina/" rel="alternate" type="text/html" title="Huawei ICT Academy" /><published>2020-07-17T00:00:00-03:00</published><updated>2020-07-17T17:00:58-03:00</updated><id>https://josecastillolema.github.io/haina</id><content type="html" xml:base="https://josecastillolema.github.io/haina/">&lt;p&gt;&lt;a href=&quot;https://www.huaweiacad.com&quot;&gt;&lt;img src=&quot;/assets/images/posts/2020-07-17-haina/0.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;A Huawei ICT Academy é um programa de parceria sem fins lucrativos que autoriza universidades e faculdades a oferecer cursos de Certificação Huawei para estudantes. Este programa atua como uma ponte entre empresas e academia para construir um ecossistema de talentos para as indústrias de TIC.&lt;/p&gt;
+
+&lt;p&gt;Desde sua afiliação no programa em 2016, a Escola Politécnica da USP oferece treinamento de certificação técnica para estudantes de instituições de ensino superior, formando com sucesso mais de 100 estudantes nos cursos certificados pela HCIA.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/posts/2020-07-17-haina/1.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;/ict-competition&quot;&gt;Huawei ICT Competition Brazil 2018-2019&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/hntd-01&quot;&gt;1a edição treinamento R&amp;amp;S&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/hntd-02&quot;&gt;2a edição&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/hntd-03&quot;&gt;3a edição&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/hntd-04&quot;&gt;4a edição&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/hntd-05&quot;&gt;5a/6a edições&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/hntd-07&quot;&gt;7a edição&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/hntd-08&quot;&gt;8a edição&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/hntd-09&quot;&gt;9a edição&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/hntd-10&quot;&gt;10a edição&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/hntd-11&quot;&gt;11a edição&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/hntd-12&quot;&gt;12a edição&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/hntd-13&quot;&gt;13a edição&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;benefícios-do-programa&quot;&gt;Benefícios do programa&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Participação na Huawei ICT Competition&lt;/li&gt;
+  &lt;li&gt;Vochers para fazer os exames de certificação sem custo&lt;/li&gt;
+  &lt;li&gt;Acesso ao &lt;a href=&quot;https://www.huaweiacad.com&quot;&gt;portal da Huawei ICT Academy&lt;/a&gt;, permitindo o aprendizado a qualquer hora, em qualquer lugar&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;certificação-huawei&quot;&gt;Certificação Huawei&lt;/h2&gt;
+
+&lt;p&gt;A Huawei criou um sistema de certificação de três níveis:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Huawei Certified ICT Associate (HCIA)&lt;/li&gt;
+  &lt;li&gt;Huawei Certified ICT Professional (HCIP)&lt;/li&gt;
+  &lt;li&gt;Huawei Certified ICT Expert (HCIE)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/posts/2020-07-17-haina/2.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Cada curso inclui:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Materiais de e-Learning&lt;/li&gt;
+  &lt;li&gt;Exercícios práticos de laboratório baseados em cenários reais&lt;/li&gt;
+  &lt;li&gt;Vídeos que abrangem conhecimentos mais detalhados em áreas chave&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;plataforma-on-line&quot;&gt;Plataforma on-line&lt;/h2&gt;
+&lt;p&gt;A plataforma on-line da Huawei ICT Academy fornece um suporte digital integrado com compartilhamento de recursos, suporte ao ensino, interação com a comunidade e aprendizado móvel.&lt;/p&gt;
+
+&lt;p&gt;Os alunos podem adquirir materiais de aprendizagem, concluir tarefas, consultar resultados e interagir com professores e outros aprendizados a qualquer hora e em qualquer lugar.&lt;/p&gt;
+
+&lt;p&gt;Para se registrar na plataforma de aprendizado on-line gratuitamente e obter os materiais mais recentes: &lt;a href=&quot;https://www.huaweiacad.com&quot;&gt;https://www.huaweiacad.com&lt;/a&gt;&lt;/p&gt;</content><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><category term="classes" /><category term="huawei" /><category term="networks" /><category term="pt" /><summary type="html"></summary></entry><entry><title type="html">AWS Academy</title><link href="https://josecastillolema.github.io/aws-academy/" rel="alternate" type="text/html" title="AWS Academy" /><published>2020-07-09T00:00:00-03:00</published><updated>2020-07-09T17:00:58-03:00</updated><id>https://josecastillolema.github.io/aws-academy</id><content type="html" xml:base="https://josecastillolema.github.io/aws-academy/">&lt;p&gt;&lt;a href=&quot;https://aws.amazon.com/pt/training/awsacademy/&quot;&gt;&lt;img src=&quot;/assets/images/posts/2020-07-09-aws-academy/01.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;benefícios-do-programa&quot;&gt;Benefícios do programa&lt;/h2&gt;
 &lt;ul&gt;
@@ -542,31 +596,4 @@ parameter_defaults:
 
     # In RHOSP 13, the trunk extension is enabled by default at Neutron, if that is not the case, make sure
     # to add trunk the comma separated list of service plugin entrypoints defined in NeutronServicePlugins
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><category term="en" /><category term="networks" /><category term="openshift" /><category term="openstack" /><category term="redhat" /><summary type="html"></summary></entry><entry><title type="html">A generic NFV MANO for Content-Centric Networks</title><link href="https://josecastillolema.github.io/thesis/" rel="alternate" type="text/html" title="A generic NFV MANO for Content-Centric Networks" /><published>2019-08-05T00:00:00-03:00</published><updated>2019-08-05T17:00:58-03:00</updated><id>https://josecastillolema.github.io/thesis</id><content type="html" xml:base="https://josecastillolema.github.io/thesis/">&lt;p&gt;&lt;a href=&quot;https://teses.usp.br/teses/disponiveis/3/3142/tde-23102019-120559&quot;&gt;&lt;strong&gt;Biblioteca Digital de Teses e Dissertações da USP&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://doi.org/10.11606/T.3.2019.tde-23102019-120559&quot;&gt;&lt;img src=&quot;https://zenodo.org/badge/DOI/10.11606/T.3.2019.tde-23102019-120559.svg&quot; alt=&quot;DOI:10.11606/T.3.2019.tde-23102019-120559&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;cite-this&quot;&gt;Cite this&lt;/h2&gt;
-
-&lt;h3 id=&quot;iso&quot;&gt;ISO&lt;/h3&gt;
-
-&lt;p&gt;CASTILLO LEMA, José. &lt;strong&gt;A generic network function virtualization manager and orchestrator for content-centric networks&lt;/strong&gt; [doi:10.11606/T.3.2019.tde-23102019-120559]. São Paulo : Escola Politécnica, Universidade de São Paulo, 2019. Tese de Doutorado em Sistemas Eletrônicos. [acesso 2020-06-01].&lt;/p&gt;
-
-&lt;h3 id=&quot;abnt&quot;&gt;ABNT&lt;/h3&gt;
-
-&lt;p&gt;CASTILLO LEMA, José. &lt;strong&gt;A generic network function virtualization manager and orchestrator for content-centric networks&lt;/strong&gt;. 2019. Tese (Doutorado em Sistemas Eletrônicos) - Escola Politécnica, Universidade de São Paulo, São Paulo, 2019. doi:10.11606/T.3.2019.tde-23102019-120559. Acesso em: 2020-06-01.&lt;/p&gt;
-
-&lt;h3 id=&quot;apa&quot;&gt;APA&lt;/h3&gt;
-
-&lt;p&gt;Castillo Lema, J. (2019). &lt;strong&gt;A generic network function virtualization manager and orchestrator for content-centric networks&lt;/strong&gt;. Tese de Doutorado, Escola Politécnica, Universidade de São Paulo, São Paulo. doi:10.11606/T.3.2019.tde-23102019-120559. Recuperado em 2020-06-01, de www.teses.usp.br&lt;/p&gt;
-
-&lt;h3 id=&quot;vancouver&quot;&gt;Vancouver&lt;/h3&gt;
-
-&lt;p&gt;Castillo Lema, José. &lt;strong&gt;A generic network function virtualization manager and orchestrator for content-centric networks&lt;/strong&gt; [tese]. São Paulo: Escola Politécnica; 2019 [citado 2020-06-01]. doi:10.11606/T.3.2019.tde-23102019-120559.&lt;/p&gt;
-
-&lt;h2 id=&quot;publications&quot;&gt;Publications&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;/netsoft19&quot;&gt;J. Castillo-Lema, A. Venâncio Neto, F. de Oliveira and S. Takeo Kofuji, “&lt;strong&gt;Mininet-NFV: Evolving Mininet with OASIS TOSCA NVF profiles Towards Reproducible NFV Prototyping&lt;/strong&gt;”, &lt;em&gt;2019 IEEE Conference on Network Softwarization (NetSoft)&lt;/em&gt;, Paris, France, 2019, pp. 506-512, doi: 10.1109/NETSOFT.2019.8806686.&lt;/a&gt; &lt;a href=&quot;https://doi.org/10.1109/NETSOFT.2019.8806686&quot;&gt;&lt;img src=&quot;https://zenodo.org/badge/DOI/10.1109/NETSOFT.2019.8806686.svg&quot; alt=&quot;DOI:10.1109/NETSOFT.2019.8806686&quot; /&gt;&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;/sbrc19&quot;&gt;CASTILLO-LEMA, José ; NETO, Augusto José Venâncio; SILVA, Flavio de Oliveira; KOFUJI, Sergio Takeo. &lt;strong&gt;Network Function Virtualization in Content-Centric Networks&lt;/strong&gt;. In: WORKSHOP DE PESQUISA EXPERIMENTAL DA INTERNET DO FUTURO (WPEIF), 10. , 2019, Gramado. &lt;em&gt;Anais do X Workshop de Pesquisa Experimental da Internet do Futuro. Porto Alegre: Sociedade Brasileira de Computação&lt;/em&gt;, sep. 2019 . p. 31-37. ISSN 2595-2692.&lt;/a&gt; &lt;a href=&quot;https://doi.org/10.5753/wpeif.2019.7696&quot;&gt;&lt;img src=&quot;https://zenodo.org/badge/DOI/10.5753/wpeif.2019.7696.svg&quot; alt=&quot;DOI:10.5753/wpeif.2019.7696&quot; /&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><category term="ccn" /><category term="en" /><category term="networks" /><category term="nfv" /><category term="papers" /><summary type="html">Biblioteca Digital de Teses e Dissertações da USP</summary></entry></feed>
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><category term="en" /><category term="networks" /><category term="openshift" /><category term="openstack" /><category term="redhat" /><summary type="html"></summary></entry></feed>
