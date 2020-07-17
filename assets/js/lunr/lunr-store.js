@@ -389,6 +389,12 @@ var store = [{
         "url": "https://josecastillolema.github.io/aodh2sensu/",
         "teaser": null
       },{
+        "title": "Huawei Certificate Training Program",
+        "excerpt":"A Huawei está oferecendo treinamentos digitais gratuitos, trazendo para o Brasil o Huawei Certificate Training Program, um programa de treinamentos para realizar os cursos preparatórios das certificações nível Associate, testes de qualificação e solicitar um voucher para realizar a prova sem custo (que normalmente tem um valor de $200). São...","categories": [],
+        "tags": ["huawei","networks","pt"],
+        "url": "https://josecastillolema.github.io/haina-brazil/",
+        "teaser": null
+      },{
         "title": "AWS Academy",
         "excerpt":"Benefícios do programa Acesso ao currículo criado pela AWS: O currículo pronto para ensino permite que as instituições membro incorporem a instrução em seu catálogo de cursos. As atualizações regulares da AWS refletem o ritmo da inovação e as melhores práticas da computação em nuvem. Crie habilidades alinhadas à AWS...","categories": [],
         "tags": ["aws","classes","fiap","pt"],
