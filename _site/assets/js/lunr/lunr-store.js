@@ -257,6 +257,12 @@ var store = [{
         "url": "https://josecastillolema.github.io/mandic-webinar/",
         "teaser": null
       },{
+        "title": "Huawei ICT Competition Brazil 2018-2019",
+        "excerpt":"A Huawei University promove pela primeira vez no Brasil o ICT Competition, um campeonato mundial promovido anualmente pela companhia para estudantes de TIC – Tecnologia da Informação e Comunicação . Com a participação de mais de 50 países, o programa deve receber mais de 80 mil alunos de cerca de...","categories": [],
+        "tags": ["classes","huawei","networks","pt"],
+        "url": "https://josecastillolema.github.io/ict-competition/",
+        "teaser": null
+      },{
         "title": "Converting ETSI NFV templates into TOSCA profile",
         "excerpt":"etsi2tosca Converts ETSI NFV templates into TOSCA profile. Use Usage: etsi2tosca FILE Converts ETSI NFV templates into TOSCA profile Options: -h, --help show this help message and exit Examples Example 1: $ ./etsi2tosca.py samples/opencv_transcoder_vnfd.yaml tosca_definitions_version: tosca_simple_profile_for_nfv_1_0_0 description: OpenCV Transcoder VNF metadata: template_name: opencv_transcoder_vnf topology_template: inputs: ssh-hostname: type: string default: &lt;rw_mgmt_ip&gt;...","categories": [],
         "tags": ["en","networks","nfv"],
@@ -387,5 +393,11 @@ var store = [{
         "excerpt":"Benefícios do programa Acesso ao currículo criado pela AWS: O currículo pronto para ensino permite que as instituições membro incorporem a instrução em seu catálogo de cursos. As atualizações regulares da AWS refletem o ritmo da inovação e as melhores práticas da computação em nuvem. Crie habilidades alinhadas à AWS...","categories": [],
         "tags": ["aws","classes","fiap","pt"],
         "url": "https://josecastillolema.github.io/aws-academy/",
+        "teaser": null
+      },{
+        "title": "Huawei ICT Academy",
+        "excerpt":"A Huawei ICT Academy é um programa de parceria sem fins lucrativos que autoriza universidades e faculdades a oferecer cursos de Certificação Huawei para estudantes. Este programa atua como uma ponte entre empresas e academia para construir um ecossistema de talentos para as indústrias de TIC. Desde sua afiliação no...","categories": [],
+        "tags": ["classes","huawei","networks","pt"],
+        "url": "https://josecastillolema.github.io/haina/",
         "teaser": null
       }]
