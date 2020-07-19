@@ -114,7 +114,7 @@ var store = [{
         "teaser": null
       },{
         "title": "FIAP MBA em Mobile Development (MOB)",
-        "excerpt":"      DevOps &amp; Cloud Oriented Architecture   Segurança para Aplicações Móveis para Internet das Coisas e Cloud Computing   ","categories": [],
+        "excerpt":"      Cloud Foundation   DevOps &amp; Cloud Oriented Architecture   Segurança para Aplicações Móveis para Internet das Coisas e Cloud Computing   ","categories": [],
         "tags": ["aws","azure","classes","fiap","pt"],
         "url": "https://josecastillolema.github.io/fiap-mob/",
         "teaser": null

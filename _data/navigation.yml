@@ -12,8 +12,8 @@ main:
     url: /fiap/
   - title: "mini-nfv"
     url: /mininfv/
-  - title: "posts"
-    url: /posts/
+  #- title: "posts"
+  #  url: /posts/
   #- title: "Categories"
   #  url: /categories/
   - title: "tags"
