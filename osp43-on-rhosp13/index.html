@@ -371,15 +371,15 @@
 
 <h2 id="prerequisites">Prerequisites</h2>
 <ul>
-  <li>This was not a disconnected environment. Note that virtual machines have to be born with proper DNS configuration for OpenShift to download proper CoreOS images (<code class="highlighter-rouge">NeutronDhcpAgentDnsmasqDnsServer</code> parameter from Director).</li>
-  <li>On Ceph RGW, the account in url option must be enabled (<code class="highlighter-rouge">rgw_swift_account_in_url: true</code> parameter from Director).</li>
+  <li>This was not a disconnected environment. Note that virtual machines have to be born with proper DNS configuration for OpenShift to download proper CoreOS images (<code class="language-plaintext highlighter-rouge">NeutronDhcpAgentDnsmasqDnsServer</code> parameter from Director).</li>
+  <li>On Ceph RGW, the account in url option must be enabled (<code class="language-plaintext highlighter-rouge">rgw_swift_account_in_url: true</code> parameter from Director).</li>
 </ul>
 
 <h2 id="installation">Installation</h2>
 <p>Following official documentation: <a href="https://access.redhat.com/documentation/en-us/openshift_container_platform/4.3/html-single/installing_on_openstack/index" target="_blank" rel="noopener noreferrer">https://access.redhat.com/documentation/en-us/openshift_container_platform/4.3/html-single/installing_on_openstack/index</a></p>
 
 <p>Prepared a bastion server within the OpenShift project for convenience, downloaded into it the OpenStack credentials file and added the password into it.</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[cloud-user@bastion ~]$ ./openshift-install create install-config --dir=installationDoc
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[cloud-user@bastion ~]$ ./openshift-install create install-config --dir=installationDoc
 ? SSH Public Key /home/cloud-user/.ssh/id_rsa.pub
 ? Platform openstack
 ? Cloud openstack
@@ -435,7 +435,7 @@
 <p>As opposed to what the documentation says regarding the number of replicas (a positive integer greater than or equal to 3 for control nodes and greater to 2 for worker nodes), the installation actually works with 1 control node and 1 worker.</p>
 
 <p>Proceed with the actual installation:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[cloud-user@bastion ~]$ ./openshift-install create cluster --dir=installationDoc --log-level=debug ‍‍‍‍‍‍‍
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[cloud-user@bastion ~]$ ./openshift-install create cluster --dir=installationDoc --log-level=debug ‍‍‍‍‍‍‍
 First try we got this error:
 ...
 INFO Creating infrastructure resources...         
@@ -451,7 +451,7 @@ FATAL Bootstrap failed to complete: waiting for Kubernetes API: context deadline
 <p>It was a <a href="https://bugzilla.redhat.com/show_bug.cgi?id=1799078" target="_blank" rel="noopener noreferrer">MTU issue</a>, as our environment has jumbo frames as its default. Actually, there is no way to set MTU in IPI installations, and it was decided to wait to a future feature where you will be able to create your networking in OpenStack and then instruct the installer to use the existing networking resources while still installing with the IPI workflow (something like bring your own network).</p>
 
 <p>The (not very elegant) solution was to wait for the network creation, and manually configure the MTU, before the virtual machines are created:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[cloud-user@bastion ~]$ watch -n 10 openstack network list
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[cloud-user@bastion ~]$ watch -n 10 openstack network list
 [cloud-user@bastion ~]$ openstack network set --mtu 1400 lab01-n67mh-openshift‍‍‍‍‍‍‍‍‍‍‍‍‍‍
 </code></pre></div></div>
 
@@ -510,17 +510,17 @@ FATAL Bootstrap failed to complete: waiting for Kubernetes API: context deadline
  <span class="s">storageClassName</span><span class="pi">:</span> <span class="s">standard‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍</span>
 </code></pre></div></div>
 
-<p>As the <code class="highlighter-rouge">volumeBindingMode</code> is set to <code class="highlighter-rouge">WaitForFirstConsumer</code>, we had to actually attach the PV to a deployment in order to the Cinder volume to be created. For that, we used OpenShift GUI:
+<p>As the <code class="language-plaintext highlighter-rouge">volumeBindingMode</code> is set to <code class="language-plaintext highlighter-rouge">WaitForFirstConsumer</code>, we had to actually attach the PV to a deployment in order to the Cinder volume to be created. For that, we used OpenShift GUI:
 <img src="/assets/images/posts/2020-04-26-osp43-on-rhosp13/1.png" alt=""></p>
 
 <p>From OpenShift side:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cloud-user@bastion ~]$ oc get pv
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cloud-user@bastion ~]$ oc get pv
 NAME                                       CAPACITY   ACCESSMODES   RECLAIMPOLICY   STATUS    CLAIM                   STORAGECLASS   REASON    AGE
 pvc-691a2bbb-0d5a-4d2f-94e2-f50708085c7d   10Gi       RWO           Delete          Bound     default/vol-teste-vai   standard                 55s‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍
 </code></pre></div></div>
 
 <p>From OpenStack side, the actual Cinder volume created dynamically by OpenShift:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>(overcloudrc) [cloud-user@bastion ~]$ openstack volume list
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>(overcloudrc) [cloud-user@bastion ~]$ openstack volume list
 +--------------------------------------+--------------------------------------------------------------+-----------+------+-------------+
 | ID                                   | Name                                                         | Status    | Size | Attached to |
 +--------------------------------------+--------------------------------------------------------------+-----------+------+-------------+
@@ -532,7 +532,7 @@ pvc-691a2bbb-0d5a-4d2f-94e2-f50708085c7d   10Gi       RWO       �
 <p>Worked out of the box.</p>
 
 <p>From OpenStack side:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>(overcloud) [stack@manager ~]$ openstack container list
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>(overcloud) [stack@manager ~]$ openstack container list
 +----------------------------------------------------------------+
 | Name                                                           |
 +----------------------------------------------------------------+
@@ -540,7 +540,7 @@ pvc-691a2bbb-0d5a-4d2f-94e2-f50708085c7d   10Gi       RWO       �
 +----------------------------------------------------------------+‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍
 </code></pre></div></div>
 <p>We can see the docker registry images inside the container:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>(overcloud) [stack@manager ~]$ swift list lab01-9v54g-image-registry-phbhqxrotxhvfkunvehpebfyeyajvoiirer | grep registry
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>(overcloud) [stack@manager ~]$ swift list lab01-9v54g-image-registry-phbhqxrotxhvfkunvehpebfyeyajvoiirer | grep registry
 files/docker/registry/v2/blobs/sha256/02/02c05272c8dd4f99d68e12066db506412bef3c460dbb4a587a7cafc8af593e35/data
 files/docker/registry/v2/blobs/sha256/45/455ea8ab06218495bbbcb14b750a0d644897b24f8c5dcf9e8698e27882583412/data
 files/docker/registry/v2/blobs/sha256/46/46fc24a071a44b29a3ba49c94f75a47514a56470d539c9204f3e7688973fc93a/data

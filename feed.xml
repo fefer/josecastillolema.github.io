@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.7">Jekyll</generator><link href="https://josecastillolema.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://josecastillolema.github.io/" rel="alternate" type="text/html" /><updated>2020-07-25T17:35:37-03:00</updated><id>https://josecastillolema.github.io/feed.xml</id><title type="html">GitOps</title><subtitle>Networks, SDN, NFVi, OpenStack, K8s/OpenShift.</subtitle><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><entry><title type="html">Huawei ICT Academy</title><link href="https://josecastillolema.github.io/haina/" rel="alternate" type="text/html" title="Huawei ICT Academy" /><published>2020-07-17T00:00:00-03:00</published><updated>2020-07-17T17:00:58-03:00</updated><id>https://josecastillolema.github.io/haina</id><content type="html" xml:base="https://josecastillolema.github.io/haina/">&lt;p&gt;&lt;a href=&quot;https://www.huaweiacad.com&quot;&gt;&lt;img src=&quot;/assets/images/posts/2020-07-17-haina/0.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://josecastillolema.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://josecastillolema.github.io/" rel="alternate" type="text/html" /><updated>2020-09-08T08:48:24-03:00</updated><id>https://josecastillolema.github.io/feed.xml</id><title type="html">GitOps</title><subtitle>Networks, SDN, NFVi, OpenStack, K8s/OpenShift.</subtitle><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><entry><title type="html">Huawei ICT Academy</title><link href="https://josecastillolema.github.io/haina/" rel="alternate" type="text/html" title="Huawei ICT Academy" /><published>2020-07-17T00:00:00-03:00</published><updated>2020-07-17T17:00:58-03:00</updated><id>https://josecastillolema.github.io/haina</id><content type="html" xml:base="https://josecastillolema.github.io/haina/">&lt;p&gt;&lt;a href=&quot;https://www.huaweiacad.com&quot;&gt;&lt;img src=&quot;/assets/images/posts/2020-07-17-haina/0.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;A Huawei ICT Academy é um programa de parceria sem fins lucrativos que autoriza universidades e faculdades a oferecer cursos de Certificação Huawei para estudantes. Este programa atua como uma ponte entre empresas e academia para construir um ecossistema de talentos para as indústrias de TIC.&lt;/p&gt;
 
@@ -114,16 +114,16 @@
 &lt;h2 id=&quot;install&quot;&gt;Install&lt;/h2&gt;
 
 &lt;h3 id=&quot;via-requirements-file&quot;&gt;Via requirements file&lt;/h3&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ pip3 install -r ./requirements.txt
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ pip3 install -r ./requirements.txt
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h3 id=&quot;via-pipenv-pipfile&quot;&gt;Via pipenv pipfile&lt;/h3&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ pipenv install
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ pipenv install
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h2 id=&quot;use&quot;&gt;Use&lt;/h2&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Usage: aodh2sensu.py [options]
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Usage: aodh2sensu.py [options]
 
 Imports OpenStack Aodh alarms into Sensu Core Server.
 
@@ -134,17 +134,17 @@ Options:
 
 &lt;ul&gt;
   &lt;li&gt;
-    &lt;p&gt;Run the &lt;code class=&quot;highlighter-rouge&quot;&gt;aodh2sensu&lt;/code&gt; proxy. &lt;code class=&quot;highlighter-rouge&quot;&gt;sensu_url&lt;/code&gt; must point to the sensu server. The proxy must be run in a server reachable from OpenStack controllers and with access to the Sensu Server (for example, the Sensu Server itself).&lt;/p&gt;
+    &lt;p&gt;Run the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;aodh2sensu&lt;/code&gt; proxy. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;sensu_url&lt;/code&gt; must point to the sensu server. The proxy must be run in a server reachable from OpenStack controllers and with access to the Sensu Server (for example, the Sensu Server itself).&lt;/p&gt;
 
-    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; $ ./aodh2sensu.py
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; $ ./aodh2sensu.py
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
     &lt;p&gt;or alternatively via pipenv:&lt;/p&gt;
-    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; $ pipenv shell
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; $ pipenv shell
  $ ./aodh2sensu.py
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
   &lt;/li&gt;
-  &lt;li&gt;Create an Aodh alarm from OpenStack side. This example alarm will trigger an HTTP POST message to the &lt;code class=&quot;highlighter-rouge&quot;&gt;aodh2sensu&lt;/code&gt; proxy whenever the cpu utilization of &lt;code class=&quot;highlighter-rouge&quot;&gt;$INSTANCE_ID&lt;/code&gt; goes above 20%:
-    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; $ openstack alarm create \
+  &lt;li&gt;Create an Aodh alarm from OpenStack side. This example alarm will trigger an HTTP POST message to the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;aodh2sensu&lt;/code&gt; proxy whenever the cpu utilization of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;$INSTANCE_ID&lt;/code&gt; goes above 20%:
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; $ openstack alarm create \
  --name cpu_hi \
  --type gnocchi_resources_threshold \
  --description 'CPU High Average' \
@@ -160,10 +160,10 @@ Options:
  --ok-action 'http://x.y.z.w:50000' \
  --insufficient-data-action 'http://x.y.z.w:50000'
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-    &lt;p&gt;where &lt;code class=&quot;highlighter-rouge&quot;&gt;x.y.z.w&lt;/code&gt; is the IP address of the server running &lt;code class=&quot;highlighter-rouge&quot;&gt;aodh2sensu&lt;/code&gt; proxy.&lt;/p&gt;
+    &lt;p&gt;where &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;x.y.z.w&lt;/code&gt; is the IP address of the server running &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;aodh2sensu&lt;/code&gt; proxy.&lt;/p&gt;
   &lt;/li&gt;
-  &lt;li&gt;Confirm the alarm transitions from &lt;code class=&quot;highlighter-rouge&quot;&gt;insufficient_data&lt;/code&gt; state to &lt;code class=&quot;highlighter-rouge&quot;&gt;ok&lt;/code&gt; state:
-    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; $ openstack alarm list
+  &lt;li&gt;Confirm the alarm transitions from &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;insufficient_data&lt;/code&gt; state to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ok&lt;/code&gt; state:
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; $ openstack alarm list
  +--------------------------------------+--------------------------------------------+----------------+-------------------+----------+---------+
  | alarm_id                             | type                                       | name           | state             | severity | enabled |
  +--------------------------------------+--------------------------------------------+----------------+-------------------+----------+---------+
@@ -171,8 +171,8 @@ Options:
  +--------------------------------------+--------------------------------------------+----------------+-------------------+----------+---------+
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
   &lt;/li&gt;
-  &lt;li&gt;Generate load in the instance above the 20% threeshold, and wait for the alarm to transitition to &lt;code class=&quot;highlighter-rouge&quot;&gt;alarm&lt;/code&gt; state:
-    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; $ openstack alarm list
+  &lt;li&gt;Generate load in the instance above the 20% threeshold, and wait for the alarm to transitition to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;alarm&lt;/code&gt; state:
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; $ openstack alarm list
  +--------------------------------------+--------------------------------------------+----------------+-------------------+----------+---------+
  | alarm_id                             | type                                       | name           | state             | severity | enabled |
  +--------------------------------------+--------------------------------------------+----------------+-------------------+----------+---------+
@@ -185,8 +185,8 @@ Options:
 &lt;img src=&quot;https://raw.githubusercontent.com/josecastillolema/aodh2sensu/master/doc/img/screenshot1.png&quot; alt=&quot;Screenshot 1 of the Uchiwa dashboard&quot; /&gt;
 &lt;img src=&quot;https://raw.githubusercontent.com/josecastillolema/aodh2sensu/master/doc/img/screenshot2.png&quot; alt=&quot;Screenshoto 2 of the Uchiwa dashboard&quot; /&gt;&lt;/p&gt;
   &lt;/li&gt;
-  &lt;li&gt;Stop the load generation in the instance, wait for the alarm to transition back to &lt;code class=&quot;highlighter-rouge&quot;&gt;ok&lt;/code&gt; state:
-    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; $ openstack alarm list
+  &lt;li&gt;Stop the load generation in the instance, wait for the alarm to transition back to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ok&lt;/code&gt; state:
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; $ openstack alarm list
  +--------------------------------------+--------------------------------------------+----------------+-------------------+----------+---------+
  | alarm_id                             | type                                       | name           | state             | severity | enabled |
  +--------------------------------------+--------------------------------------------+----------------+-------------------+----------+---------+
@@ -205,26 +205,26 @@ Options:
 &lt;h2 id=&quot;docker&quot;&gt;Docker&lt;/h2&gt;
 &lt;p&gt;To build the image:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ buildah build-using-dockerfile -t aodh2sensu .
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ buildah build-using-dockerfile -t aodh2sensu .
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;To run the image:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ podman run --name aodh2sensu --add-host=&quot;localhost:10.88.0.1&quot; -d -p 50000:50000 aodh2sensu
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ podman run --name aodh2sensu --add-host=&quot;localhost:10.88.0.1&quot; -d -p 50000:50000 aodh2sensu
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Pointing to a specific Sensu Server URL:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ podman run --name aodh2sensu --add-host=&quot;localhost:10.88.0.1&quot; -d -p 50000:50000 -e SENSU_URL=x.y.z.w:p aodh2sensu
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ podman run --name aodh2sensu --add-host=&quot;localhost:10.88.0.1&quot; -d -p 50000:50000 -e SENSU_URL=x.y.z.w:p aodh2sensu
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Check logs:&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ podman logs aodh2sensu
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ podman logs aodh2sensu
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h2 id=&quot;systemd&quot;&gt;Systemd&lt;/h2&gt;
 
-&lt;p&gt;To run &lt;code class=&quot;highlighter-rouge&quot;&gt;aodh2sensu&lt;/code&gt; as a systemd service.&lt;/p&gt;
+&lt;p&gt;To run &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;aodh2sensu&lt;/code&gt; as a systemd service.&lt;/p&gt;
 
 &lt;h3 id=&quot;normal&quot;&gt;Normal&lt;/h3&gt;
 &lt;div class=&quot;language-ini highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# cat /usr/lib/systemd/system/aodh2sensu.service
@@ -267,15 +267,15 @@ Options:
 
 &lt;h2 id=&quot;prerequisites&quot;&gt;Prerequisites&lt;/h2&gt;
 &lt;ul&gt;
-  &lt;li&gt;This was not a disconnected environment. Note that virtual machines have to be born with proper DNS configuration for OpenShift to download proper CoreOS images (&lt;code class=&quot;highlighter-rouge&quot;&gt;NeutronDhcpAgentDnsmasqDnsServer&lt;/code&gt; parameter from Director).&lt;/li&gt;
-  &lt;li&gt;On Ceph RGW, the account in url option must be enabled (&lt;code class=&quot;highlighter-rouge&quot;&gt;rgw_swift_account_in_url: true&lt;/code&gt; parameter from Director).&lt;/li&gt;
+  &lt;li&gt;This was not a disconnected environment. Note that virtual machines have to be born with proper DNS configuration for OpenShift to download proper CoreOS images (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;NeutronDhcpAgentDnsmasqDnsServer&lt;/code&gt; parameter from Director).&lt;/li&gt;
+  &lt;li&gt;On Ceph RGW, the account in url option must be enabled (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;rgw_swift_account_in_url: true&lt;/code&gt; parameter from Director).&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;installation&quot;&gt;Installation&lt;/h2&gt;
 &lt;p&gt;Following official documentation: &lt;a href=&quot;https://access.redhat.com/documentation/en-us/openshift_container_platform/4.3/html-single/installing_on_openstack/index&quot;&gt;https://access.redhat.com/documentation/en-us/openshift_container_platform/4.3/html-single/installing_on_openstack/index&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Prepared a bastion server within the OpenShift project for convenience, downloaded into it the OpenStack credentials file and added the password into it.&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;[cloud-user@bastion ~]$ ./openshift-install create install-config --dir=installationDoc
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;[cloud-user@bastion ~]$ ./openshift-install create install-config --dir=installationDoc
 ? SSH Public Key /home/cloud-user/.ssh/id_rsa.pub
 ? Platform openstack
 ? Cloud openstack
@@ -331,7 +331,7 @@ Options:
 &lt;p&gt;As opposed to what the documentation says regarding the number of replicas (a positive integer greater than or equal to 3 for control nodes and greater to 2 for worker nodes), the installation actually works with 1 control node and 1 worker.&lt;/p&gt;
 
 &lt;p&gt;Proceed with the actual installation:&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;[cloud-user@bastion ~]$ ./openshift-install create cluster --dir=installationDoc --log-level=debug ‍‍‍‍‍‍‍
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;[cloud-user@bastion ~]$ ./openshift-install create cluster --dir=installationDoc --log-level=debug ‍‍‍‍‍‍‍
 First try we got this error:
 ...
 INFO Creating infrastructure resources...         
@@ -347,7 +347,7 @@ FATAL Bootstrap failed to complete: waiting for Kubernetes API: context deadline
 &lt;p&gt;It was a &lt;a href=&quot;https://bugzilla.redhat.com/show_bug.cgi?id=1799078&quot;&gt;MTU issue&lt;/a&gt;, as our environment has jumbo frames as its default. Actually, there is no way to set MTU in IPI installations, and it was decided to wait to a future feature where you will be able to create your networking in OpenStack and then instruct the installer to use the existing networking resources while still installing with the IPI workflow (something like bring your own network).&lt;/p&gt;
 
 &lt;p&gt;The (not very elegant) solution was to wait for the network creation, and manually configure the MTU, before the virtual machines are created:&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;[cloud-user@bastion ~]$ watch -n 10 openstack network list
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;[cloud-user@bastion ~]$ watch -n 10 openstack network list
 [cloud-user@bastion ~]$ openstack network set --mtu 1400 lab01-n67mh-openshift‍‍‍‍‍‍‍‍‍‍‍‍‍‍
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
@@ -406,17 +406,17 @@ FATAL Bootstrap failed to complete: waiting for Kubernetes API: context deadline
  &lt;span class=&quot;s&quot;&gt;storageClassName&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;standard‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;As the &lt;code class=&quot;highlighter-rouge&quot;&gt;volumeBindingMode&lt;/code&gt; is set to &lt;code class=&quot;highlighter-rouge&quot;&gt;WaitForFirstConsumer&lt;/code&gt;, we had to actually attach the PV to a deployment in order to the Cinder volume to be created. For that, we used OpenShift GUI:
+&lt;p&gt;As the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;volumeBindingMode&lt;/code&gt; is set to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;WaitForFirstConsumer&lt;/code&gt;, we had to actually attach the PV to a deployment in order to the Cinder volume to be created. For that, we used OpenShift GUI:
 &lt;img src=&quot;/assets/images/posts/2020-04-26-osp43-on-rhosp13/1.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;From OpenShift side:&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cloud-user@bastion ~]$ oc get pv
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cloud-user@bastion ~]$ oc get pv
 NAME                                       CAPACITY   ACCESSMODES   RECLAIMPOLICY   STATUS    CLAIM                   STORAGECLASS   REASON    AGE
 pvc-691a2bbb-0d5a-4d2f-94e2-f50708085c7d   10Gi       RWO           Delete          Bound     default/vol-teste-vai   standard                 55s‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;From OpenStack side, the actual Cinder volume created dynamically by OpenShift:&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;(overcloudrc) [cloud-user@bastion ~]$ openstack volume list
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;(overcloudrc) [cloud-user@bastion ~]$ openstack volume list
 +--------------------------------------+--------------------------------------------------------------+-----------+------+-------------+
 | ID                                   | Name                                                         | Status    | Size | Attached to |
 +--------------------------------------+--------------------------------------------------------------+-----------+------+-------------+
@@ -428,7 +428,7 @@ pvc-691a2bbb-0d5a-4d2f-94e2-f50708085c7d   10Gi       RWO       �
 &lt;p&gt;Worked out of the box.&lt;/p&gt;
 
 &lt;p&gt;From OpenStack side:&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;(overcloud) [stack@manager ~]$ openstack container list
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;(overcloud) [stack@manager ~]$ openstack container list
 +----------------------------------------------------------------+
 | Name                                                           |
 +----------------------------------------------------------------+
@@ -436,7 +436,7 @@ pvc-691a2bbb-0d5a-4d2f-94e2-f50708085c7d   10Gi       RWO       �
 +----------------------------------------------------------------+‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;p&gt;We can see the docker registry images inside the container:&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;(overcloud) [stack@manager ~]$ swift list lab01-9v54g-image-registry-phbhqxrotxhvfkunvehpebfyeyajvoiirer | grep registry
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;(overcloud) [stack@manager ~]$ swift list lab01-9v54g-image-registry-phbhqxrotxhvfkunvehpebfyeyajvoiirer | grep registry
 files/docker/registry/v2/blobs/sha256/02/02c05272c8dd4f99d68e12066db506412bef3c460dbb4a587a7cafc8af593e35/data
 files/docker/registry/v2/blobs/sha256/45/455ea8ab06218495bbbcb14b750a0d644897b24f8c5dcf9e8698e27882583412/data
 files/docker/registry/v2/blobs/sha256/46/46fc24a071a44b29a3ba49c94f75a47514a56470d539c9204f3e7688973fc93a/data
@@ -492,9 +492,9 @@ files/docker/registry/v2/repositories/openshift/python/_manifests/revisions/sha2
 &lt;h2 id=&quot;profile&quot;&gt;&lt;a href=&quot;https://www.opennetworking.org/ambassadors/jose-castillo-lema/&quot;&gt;Profile&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&quot;https://www.opennetworking.org/ambassadors/jose-castillo-lema/&quot;&gt;&lt;img src=&quot;/assets/images/posts/2020-04-30-onf/3.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;</content><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><category term="en" /><category term="networks" /><category term="nfv" /><category term="sdn" /><summary type="html">Open Networking Foundation</summary></entry><entry><title type="html">ComputeHCISriov role for Director/TripleO</title><link href="https://josecastillolema.github.io/computehcisriov-role/" rel="alternate" type="text/html" title="ComputeHCISriov role for Director/TripleO" /><published>2020-01-06T00:00:00-03:00</published><updated>2020-01-06T17:00:58-03:00</updated><id>https://josecastillolema.github.io/computehcisriov-role</id><content type="html" xml:base="https://josecastillolema.github.io/computehcisriov-role/">&lt;p&gt;Hyper-converged SR-IOV role for compute nodes.&lt;/p&gt;
 
-&lt;p&gt;Change &lt;code class=&quot;highlighter-rouge&quot;&gt;700887&lt;/code&gt; proposed and merged upstream: &lt;a href=&quot;https://review.opendev.org/#/c/700887/&quot;&gt;https://review.opendev.org/#/c/700887/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Change &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;700887&lt;/code&gt; proposed and merged upstream: &lt;a href=&quot;https://review.opendev.org/#/c/700887/&quot;&gt;https://review.opendev.org/#/c/700887/&lt;/a&gt;&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;###############################################################################
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;###############################################################################
 # Role: ComputeHCISriov #
 ###############################################################################
 - name: ComputeHCISriov

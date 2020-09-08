@@ -373,14 +373,14 @@
 
 <p>OpenStack é um <em>software</em> de código aberto para a instalação, configuração e gerenciamento de nuvens, tanto públicas como privadas. Rackspace e Dreamhost são alguns exemplos de nuvens públicas que funcionam sobre OpenStack, e PayPal e eBay são exemplos de empresas que usam OpenStack nas suas nuvens privadas.</p>
 
-<p>OpenStack apresenta seus serviços através de APIs compatíveis com os serviços EC2, S3 e CloudFormation da Amazon AWS e, portanto, aplicações escritas para estes serviços do AWS podem ser usados com OpenStack também. Além disso, podemos interagir com  OpenStack via CLI, usando o comando <code class="highlighter-rouge">openstack</code>, ou pelo <em>dashboard</em> da plataforma, o Horizon.</p>
+<p>OpenStack apresenta seus serviços através de APIs compatíveis com os serviços EC2, S3 e CloudFormation da Amazon AWS e, portanto, aplicações escritas para estes serviços do AWS podem ser usados com OpenStack também. Além disso, podemos interagir com  OpenStack via CLI, usando o comando <code class="language-plaintext highlighter-rouge">openstack</code>, ou pelo <em>dashboard</em> da plataforma, o Horizon.</p>
 
 <p>Sem mais, vamos la!</p>
 
 <h2 id="pré-requisitos">Pré requisitos</h2>
 <ul>
-  <li>Ter o <code class="highlighter-rouge">git</code> instalado</li>
-  <li>Uma conta em alguma nuvem OpenStack, não necessariamente <code class="highlighter-rouge">admin</code>
+  <li>Ter o <code class="language-plaintext highlighter-rouge">git</code> instalado</li>
+  <li>Uma conta em alguma nuvem OpenStack, não necessariamente <code class="language-plaintext highlighter-rouge">admin</code>
 </li>
   <li>Quota suficiente na nossa conta para instanciar os recursos solicitados</li>
   <li>Ter o Terraform instalado (ver <a href="https://churrops.io/2017/08/01/terraform-iac-infra-como-codigo-conhecendo/" target="_blank" rel="noopener noreferrer">[Terraform] – IaC – Infra como Código – Conhecendo</a>)</li>
@@ -388,7 +388,7 @@
 
 <h2 id="clonando-o-repósitorio">Clonando o repósitorio</h2>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ git clone https://github.com/josecastillolema/churrops.git
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ git clone https://github.com/josecastillolema/churrops.git
 </code></pre></div></div>
 
 <p>Segue uma breve descrição dos arquivos:</p>
@@ -397,7 +397,7 @@
   <li>
 <strong>live.tf</strong>
 Arquivo principal, é um <em>template</em> com as informações do <em>provider</em> (neste caso OpenStack) e a topologia dos recursos que vão ser criados. No primeiro bloco definimos as credencias de acesso a nossa nuvem OpenStack:
-    <div class="highlighter-rouge">
+    <div class="language-plaintext highlighter-rouge">
 <div class="highlight"><pre class="highlight"><code>provider "openstack" {
    user_name   = "jose.castillo"
    tenant_name = "churrops"
@@ -406,11 +406,11 @@ Arquivo principal, é um <em>template</em> com as informações do <em>provider<
    auth_url    = "https://keystone.openstack.com.br:5000/v2.0"
 }
 </code></pre></div>    </div>
-    <p>Para conseguir o <code class="highlighter-rouge">tenant_id</code> do projeto churrops (o <em>id</em> do nosso projeto) basta executar <code class="highlighter-rouge">openstack project show churrops</code> ou <code class="highlighter-rouge">openstack project list | grep churrops</code> (ou pegar os dados via o <em>dashboard</em> de OpenStack, Horizon).</p>
+    <p>Para conseguir o <code class="language-plaintext highlighter-rouge">tenant_id</code> do projeto churrops (o <em>id</em> do nosso projeto) basta executar <code class="language-plaintext highlighter-rouge">openstack project show churrops</code> ou <code class="language-plaintext highlighter-rouge">openstack project list | grep churrops</code> (ou pegar os dados via o <em>dashboard</em> de OpenStack, Horizon).</p>
 
     <p>No segundo bloco definimos alguns valores que vamos usar no projeto, como a imagem (neste caso Ubuntu), a chave (caso precisemos acessar por ssh a instância), o <em>flavor</em>, as redes, etc. Este bloco não é obrigatório, mas pode facilitar a nossa vida quando trabalhemos com um número maior de instâncias. Neste exemplo estamos usando o <em>security group</em> padrão do OpenStack (a porta 80 precisa estar aberta), mas de forma muito direta poderíamos criar um recurso de tipo <em>security group</em> personalizado para o nosso servidor web. O <a href="https://www.terraform.io/docs/providers/openstack/" target="_blank" rel="noopener noreferrer">site da Terraform</a> mostra todos os recursos que temos disponíveis para OpenStack.</p>
 
-    <div class="highlighter-rouge">
+    <div class="language-plaintext highlighter-rouge">
 <div class="highlight"><pre class="highlight"><code>variable "defaults" {
    description = "Variaveis do projeto"
    type = "map"
@@ -427,8 +427,8 @@ Arquivo principal, é um <em>template</em> com as informações do <em>provider<
 }
 </code></pre></div>    </div>
 
-    <p>No terceiro bloco definimos o nosso servidor web. Na variável <code class="highlighter-rouge">user_data</code> apontamos para outro arquivo do exemplo, que vai ser executado via <strong>cloud-init</strong> no primeiro <em>boot</em> para configurar o servidor web.</p>
-    <div class="highlighter-rouge">
+    <p>No terceiro bloco definimos o nosso servidor web. Na variável <code class="language-plaintext highlighter-rouge">user_data</code> apontamos para outro arquivo do exemplo, que vai ser executado via <strong>cloud-init</strong> no primeiro <em>boot</em> para configurar o servidor web.</p>
+    <div class="language-plaintext highlighter-rouge">
 <div class="highlight"><pre class="highlight"><code>resource "openstack_compute_instance_v2" "web" {
    name = "web"
    image_name = "${var.defaults["image_name"]}"
@@ -447,7 +447,7 @@ Arquivo principal, é um <em>template</em> com as informações do <em>provider<
 </code></pre></div>    </div>
 
     <p>Por último, os restantes blocos associam uma IP pública ao nosso servidor web:</p>
-    <div class="highlighter-rouge">
+    <div class="language-plaintext highlighter-rouge">
 <div class="highlight"><pre class="highlight"><code>resource "openstack_networking_floatingip_v2" "ip-publica" {
    pool = "rede-publica"
 }
@@ -470,14 +470,14 @@ Retorna o IP público da instância do nosso servidor web.</p>
 <h2 id="fazendo-o-deploy">Fazendo o <em>deploy</em>
 </h2>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ terraform init
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ terraform init
 </code></pre></div></div>
 
 <p><img src="/assets/images/posts/2017-11-26-terraformando-openstack/01.png" alt=""></p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ terraform plan
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ terraform plan
 </code></pre></div></div>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ terraform apply
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ terraform apply
 </code></pre></div></div>
 <p><img src="/assets/images/posts/2017-11-26-terraformando-openstack/02.png" alt=""></p>
 
@@ -490,7 +490,7 @@ Retorna o IP público da instância do nosso servidor web.</p>
 <p><img src="/assets/images/posts/2017-11-26-terraformando-openstack/04.jpeg" alt=""></p>
 
 <h2 id="outros-comandos">Outros comandos</h2>
-<p>O resto dos comandos que foram explicados <a href="https://churrops.io/2017/08/03/terraform-iac-terraformando-na-aws/" target="_blank" rel="noopener noreferrer">no caso da AWS</a>, <code class="highlighter-rouge">terraform graph</code>, <code class="highlighter-rouge">terraform show</code> e <code class="highlighter-rouge">terraform destroy</code> funcionam de forma idêntica em OpenStack.</p>
+<p>O resto dos comandos que foram explicados <a href="https://churrops.io/2017/08/03/terraform-iac-terraformando-na-aws/" target="_blank" rel="noopener noreferrer">no caso da AWS</a>, <code class="language-plaintext highlighter-rouge">terraform graph</code>, <code class="language-plaintext highlighter-rouge">terraform show</code> e <code class="language-plaintext highlighter-rouge">terraform destroy</code> funcionam de forma idêntica em OpenStack.</p>
 
 <h2 id="conclusão">Conclusão</h2>
 <p>Terraform se integra muito bem com vários provedores de nuvem, incluíndo OpenStack! Neste artigo vimos como é simples integrar OpenStack com a ferramenta, e como a mesma funciona de forma coerente entre várias nuvens.</p>
