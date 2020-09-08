@@ -1,6 +1,6 @@
 ---
 title:  "AWS Educate"
-last_modified_at: 2019-04-30T16:00:58-04:00
+last_modified_at: 2020-04-06T16:00:58-04:00
 tags:
   - aws
   - classes
@@ -47,4 +47,5 @@ toc: yes
 - ![](/assets/images/posts/2019-04-30-aws-educate/badge7.png) Alexa
 - ![](/assets/images/posts/2019-04-30-aws-educate/badge8.png) Startups da AWS
 
-![](/assets/images/posts/2019-04-30-aws-educate/2019-04-30-aws-ambassador.jpg)
+![](/assets/images/posts/2019-04-30-aws-educate/cert2019.jpg)
+![](/assets/images/posts/2019-04-30-aws-educate/cert2020.jpg)

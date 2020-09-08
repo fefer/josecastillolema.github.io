@@ -376,11 +376,11 @@
 
 <p>Olá pessoal, vamos começar uma série de artigos sobre Heat, o “terraform” nativo do OpenStack, ou para quem vem do mundo da AWS, o CloudFormation do OpenStack (inclusive parcialmente compatível). Neste primeiro artigo introdutório vamos aprender a criar as nossas próprias pilhas (ou <em>stacks</em>) e recriar a instância do servidor web que criamos no <a href="/terraformando-openstack">post passado</a> usando o Terraform.</p>
 
-<p>O objetivo principal de Heat é criar um serviço para gerenciar todo o ciclo de vida de infra e aplicativos dentro do OpenStack. Ele implementa um mecanismo de orquestração com base em <em>templates</em> na forma de arquivos de texto (em formato <code class="highlighter-rouge">.yaml</code>) que podem ser tratados como código. O formato dos <code class="highlighter-rouge">templates</code> está evoluindo a cada versão do OpenStack, mas o Heat se esforça para fornecer compatibilidade com o formato do modelo AWS CloudFormation, de modo que muitos modelos CloudFormation existentes podem ser iniciados no OpenStack (inclusive permitindo, por exemplo, escalar do OpenStack para dentro da AWS). Para quem tiver interesse, existe também um esforço da comunidade para suportar templates TOSCA, chamado <a href="https://wiki.openstack.org/wiki/Heat-Translator" target="_blank" rel="noopener noreferrer">Heat Translator</a>.</p>
+<p>O objetivo principal de Heat é criar um serviço para gerenciar todo o ciclo de vida de infra e aplicativos dentro do OpenStack. Ele implementa um mecanismo de orquestração com base em <em>templates</em> na forma de arquivos de texto (em formato <code class="language-plaintext highlighter-rouge">.yaml</code>) que podem ser tratados como código. O formato dos <code class="language-plaintext highlighter-rouge">templates</code> está evoluindo a cada versão do OpenStack, mas o Heat se esforça para fornecer compatibilidade com o formato do modelo AWS CloudFormation, de modo que muitos modelos CloudFormation existentes podem ser iniciados no OpenStack (inclusive permitindo, por exemplo, escalar do OpenStack para dentro da AWS). Para quem tiver interesse, existe também um esforço da comunidade para suportar templates TOSCA, chamado <a href="https://wiki.openstack.org/wiki/Heat-Translator" target="_blank" rel="noopener noreferrer">Heat Translator</a>.</p>
 
-<p>O Heat fornece uma API REST nativa do OpenStack e uma API de consulta compatível com o CloudFormation, além de interface gráfica via Horizon (o <em>dashboard</em> de OpenStack) e um cliente para a linha de comandos (antigamente <code class="highlighter-rouge">heat</code>, nas versões mais novas de OpenStack foi integrado no próprio comando <code class="highlighter-rouge">openstack</code>).</p>
+<p>O Heat fornece uma API REST nativa do OpenStack e uma API de consulta compatível com o CloudFormation, além de interface gráfica via Horizon (o <em>dashboard</em> de OpenStack) e um cliente para a linha de comandos (antigamente <code class="language-plaintext highlighter-rouge">heat</code>, nas versões mais novas de OpenStack foi integrado no próprio comando <code class="language-plaintext highlighter-rouge">openstack</code>).</p>
 
-<p>Uma característica importante do Heat é que ele gerencia todo o ciclo de vida do aplicativo, e não só a criação. Quando precisar alterar a infra, simplesmente modifique o modelo e use o Heat para atualizar sua pilha existente. Heat sabe como fazer as mudanças necessárias. Ele irá excluir todos os recursos quando você terminar o aplicativo também (tipo <code class="highlighter-rouge">terraform destroy</code>).</p>
+<p>Uma característica importante do Heat é que ele gerencia todo o ciclo de vida do aplicativo, e não só a criação. Quando precisar alterar a infra, simplesmente modifique o modelo e use o Heat para atualizar sua pilha existente. Heat sabe como fazer as mudanças necessárias. Ele irá excluir todos os recursos quando você terminar o aplicativo também (tipo <code class="language-plaintext highlighter-rouge">terraform destroy</code>).</p>
 
 <p>Os recursos de infra que podem ser descritos incluem: instâncias, IPs públicos, volumes, grupos de segurança, usuários, roteadores, etc. Os modelos também podem especificar as relações entre recursos (por exemplo, este volume está conectado a este servidor). Isso permite que o Heat invoque as APIs do OpenStack para criar toda sua infra virtual na ordem correta para iniciar completamente sua aplicação.</p>
 
@@ -398,7 +398,7 @@
 <h2 id="pré-requisitos">Pré requisitos</h2>
 
 <ul>
-  <li>Uma conta em alguma nuvem OpenStack, não necessariamente <code class="highlighter-rouge">admin</code>
+  <li>Uma conta em alguma nuvem OpenStack, não necessariamente <code class="language-plaintext highlighter-rouge">admin</code>
 </li>
   <li>Quota suficiente na nossa conta para instanciar os recursos solicitados</li>
 </ul>
@@ -412,7 +412,7 @@
 <span class="na">description</span><span class="pi">:</span> <span class="s">Servidor web para churrops!</span>
 </code></pre></div></div>
 
-<p>A seguir, o primeiro bloco do <em>template</em>, <code class="highlighter-rouge">parameters</code>, define uma série de parâmetros que serão usados durante o <em>deployment</em> da infra (de forma análoga ao bloco <code class="highlighter-rouge">variable</code> no caso do Terraform). Podemos definir neste bloco imagem, <em>flavor</em>, redes, chaves para acessar aos nossos servidores, etc. Para cada parâmetro definido podemos adicionar uma descrição e um valor padrão.</p>
+<p>A seguir, o primeiro bloco do <em>template</em>, <code class="language-plaintext highlighter-rouge">parameters</code>, define uma série de parâmetros que serão usados durante o <em>deployment</em> da infra (de forma análoga ao bloco <code class="language-plaintext highlighter-rouge">variable</code> no caso do Terraform). Podemos definir neste bloco imagem, <em>flavor</em>, redes, chaves para acessar aos nossos servidores, etc. Para cada parâmetro definido podemos adicionar uma descrição e um valor padrão.</p>
 <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">parameters</span><span class="pi">:</span>
   <span class="na">flavor</span><span class="pi">:</span>
     <span class="na">type</span><span class="pi">:</span> <span class="s">string</span>
@@ -452,7 +452,7 @@
     <span class="na">description</span><span class="pi">:</span> <span class="s">Texto exibido no site</span>
     <span class="na">default</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Churrops</span><span class="nv"> </span><span class="s">rules"</span>
 </code></pre></div></div>
-<p>No segundo bloco, <code class="highlighter-rouge">resources</code>, é a onde vamos definir os recursos da nossa infra. Neste caso vamos definir o nosso servidor web. Podem consultar uma lista de todos os recursos disponíveis <a href="https://docs.openstack.org/heat/pike/template_guide/openstack.html" target="_blank" rel="noopener noreferrer">aqui</a>. O servidor web é configurado via <strong>cloud-init</strong> no primeiro <em>boot</em>. Vejam que é possível passar parâmetros para os recursos, como neste caso o parâmetro <code class="highlighter-rouge">TEXTO</code>.</p>
+<p>No segundo bloco, <code class="language-plaintext highlighter-rouge">resources</code>, é a onde vamos definir os recursos da nossa infra. Neste caso vamos definir o nosso servidor web. Podem consultar uma lista de todos os recursos disponíveis <a href="https://docs.openstack.org/heat/pike/template_guide/openstack.html" target="_blank" rel="noopener noreferrer">aqui</a>. O servidor web é configurado via <strong>cloud-init</strong> no primeiro <em>boot</em>. Vejam que é possível passar parâmetros para os recursos, como neste caso o parâmetro <code class="language-plaintext highlighter-rouge">TEXTO</code>.</p>
 <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">resources</span><span class="pi">:</span>
   <span class="na">sec_group</span><span class="pi">:</span>
     <span class="na">type</span><span class="pi">:</span> <span class="s">OS::Neutron::SecurityGroup</span>
@@ -505,7 +505,7 @@
       <span class="na">floating_network</span><span class="pi">:</span> <span class="pi">{</span> <span class="nv">get_param</span><span class="pi">:</span> <span class="nv">public_network</span> <span class="pi">}</span>
       <span class="na">port_id</span><span class="pi">:</span> <span class="pi">{</span> <span class="nv">get_resource</span><span class="pi">:</span> <span class="nv">serverweb_port</span> <span class="pi">}</span>
 </code></pre></div></div>
-<p>O terceiro e ultimo bloco, <code class="highlighter-rouge">outputs</code>, tem uma função análoga ao arquivo <code class="highlighter-rouge">output.tf</code> do Terraform. Ele define uma saída que será mostrada ao usuário ao terminar a criação da infra.</p>
+<p>O terceiro e ultimo bloco, <code class="language-plaintext highlighter-rouge">outputs</code>, tem uma função análoga ao arquivo <code class="language-plaintext highlighter-rouge">output.tf</code> do Terraform. Ele define uma saída que será mostrada ao usuário ao terminar a criação da infra.</p>
 <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">outputs</span><span class="pi">:</span>
   <span class="na">lburl</span><span class="pi">:</span>
     <span class="na">description</span><span class="pi">:</span> <span class="s">URL do servidor web</span>
@@ -522,7 +522,7 @@
 </h2>
 
 <h3 id="via-horizon">Via Horizon</h3>
-<p>Primeiro, na aba <code class="highlighter-rouge">Orquestration - Stacks</code> criamos o nosso <em>stack</em> e setamos os parâmetros opcionais que foram definidos no template.
+<p>Primeiro, na aba <code class="language-plaintext highlighter-rouge">Orquestration - Stacks</code> criamos o nosso <em>stack</em> e setamos os parâmetros opcionais que foram definidos no template.
 <img src="/assets/images/posts/2017-12-20-heat-introducao/01.png" alt=""></p>
 
 <p>A continuação podemos ver a topologia diversos recursos sendo criados (os recursos em verde já estão disponíveis).
@@ -540,13 +540,13 @@
 <h3 id="via-cli">Via CLI</h3>
 <ul>
   <li>Criação:
-    <div class="highlighter-rouge">
+    <div class="language-plaintext highlighter-rouge">
 <div class="highlight"><pre class="highlight"><code>openstack stack create churrops-stack -t heat.yaml
 openstack stack create churrops-stack -t heat.yaml
 </code></pre></div>    </div>
   </li>
   <li>Para acompanhar a criação:
-    <div class="highlighter-rouge">
+    <div class="language-plaintext highlighter-rouge">
 <div class="highlight"><pre class="highlight"><code>watch openstack stack event list churrops-stack
 
 </code></pre></div>    </div>
@@ -560,7 +560,7 @@ openstack stack create churrops-stack -t heat.yaml
 
 <h2 id="resultado-da-execução">Resultado da execução</h2>
 
-<p>Independentemente do método escolhido (Horizon, CLI ou API REST), uma vez que o <em>stack</em> transicione ao estado <code class="highlighter-rouge">created</code> (não deveria demorar muito mais de 2 minutos) poderemos ver a infra instanciada.
+<p>Independentemente do método escolhido (Horizon, CLI ou API REST), uma vez que o <em>stack</em> transicione ao estado <code class="language-plaintext highlighter-rouge">created</code> (não deveria demorar muito mais de 2 minutos) poderemos ver a infra instanciada.
 <img src="/assets/images/posts/2017-12-20-heat-introducao/07.png" alt=""></p>
 
 <p>Em alguns minutos (enquanto <strong>cloud-init</strong> instala e configura o servidor web Apache), poderemos acessar ao nosso servidor pela IP pública.
@@ -569,7 +569,7 @@ openstack stack create churrops-stack -t heat.yaml
 <h2 id="conclusão">Conclusão</h2>
 <p>Neste artigo introduzimos o Heat, o orquestrador do OpenStack. Vimos como mantém todas as funcionalidades de outros IaCs, como Terraform, mas é integrado de uma forma mais nativa no OpenStack e podemos accesá-lo via <em>dashboard</em>	, linha de comandos ou API REST (compatível com a AWS CloudFormation).</p>
 
-<p>Nos próximos artigos veremos como criar via Heat um balanceador de carga em alta disponibilidade usando <code class="highlighter-rouge">haproxy</code> e VRRP.</p>
+<p>Nos próximos artigos veremos como criar via Heat um balanceador de carga em alta disponibilidade usando <code class="language-plaintext highlighter-rouge">haproxy</code> e VRRP.</p>
 
 <p>Um abraço!</p>
 

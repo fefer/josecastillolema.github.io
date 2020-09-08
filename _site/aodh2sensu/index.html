@@ -403,16 +403,16 @@
 <h2 id="install">Install</h2>
 
 <h3 id="via-requirements-file">Via requirements file</h3>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ pip3 install -r ./requirements.txt
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ pip3 install -r ./requirements.txt
 </code></pre></div></div>
 
 <h3 id="via-pipenv-pipfile">Via pipenv pipfile</h3>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ pipenv install
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ pipenv install
 </code></pre></div></div>
 
 <h2 id="use">Use</h2>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Usage: aodh2sensu.py [options]
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Usage: aodh2sensu.py [options]
 
 Imports OpenStack Aodh alarms into Sensu Core Server.
 
@@ -423,19 +423,19 @@ Options:
 
 <ul>
   <li>
-    <p>Run the <code class="highlighter-rouge">aodh2sensu</code> proxy. <code class="highlighter-rouge">sensu_url</code> must point to the sensu server. The proxy must be run in a server reachable from OpenStack controllers and with access to the Sensu Server (for example, the Sensu Server itself).</p>
+    <p>Run the <code class="language-plaintext highlighter-rouge">aodh2sensu</code> proxy. <code class="language-plaintext highlighter-rouge">sensu_url</code> must point to the sensu server. The proxy must be run in a server reachable from OpenStack controllers and with access to the Sensu Server (for example, the Sensu Server itself).</p>
 
-    <div class="highlighter-rouge">
+    <div class="language-plaintext highlighter-rouge">
 <div class="highlight"><pre class="highlight"><code> $ ./aodh2sensu.py
 </code></pre></div>    </div>
     <p>or alternatively via pipenv:</p>
-    <div class="highlighter-rouge">
+    <div class="language-plaintext highlighter-rouge">
 <div class="highlight"><pre class="highlight"><code> $ pipenv shell
  $ ./aodh2sensu.py
 </code></pre></div>    </div>
   </li>
-  <li>Create an Aodh alarm from OpenStack side. This example alarm will trigger an HTTP POST message to the <code class="highlighter-rouge">aodh2sensu</code> proxy whenever the cpu utilization of <code class="highlighter-rouge">$INSTANCE_ID</code> goes above 20%:
-    <div class="highlighter-rouge">
+  <li>Create an Aodh alarm from OpenStack side. This example alarm will trigger an HTTP POST message to the <code class="language-plaintext highlighter-rouge">aodh2sensu</code> proxy whenever the cpu utilization of <code class="language-plaintext highlighter-rouge">$INSTANCE_ID</code> goes above 20%:
+    <div class="language-plaintext highlighter-rouge">
 <div class="highlight"><pre class="highlight"><code> $ openstack alarm create \
  --name cpu_hi \
  --type gnocchi_resources_threshold \
@@ -452,10 +452,10 @@ Options:
  --ok-action 'http://x.y.z.w:50000' \
  --insufficient-data-action 'http://x.y.z.w:50000'
 </code></pre></div>    </div>
-    <p>where <code class="highlighter-rouge">x.y.z.w</code> is the IP address of the server running <code class="highlighter-rouge">aodh2sensu</code> proxy.</p>
+    <p>where <code class="language-plaintext highlighter-rouge">x.y.z.w</code> is the IP address of the server running <code class="language-plaintext highlighter-rouge">aodh2sensu</code> proxy.</p>
   </li>
-  <li>Confirm the alarm transitions from <code class="highlighter-rouge">insufficient_data</code> state to <code class="highlighter-rouge">ok</code> state:
-    <div class="highlighter-rouge">
+  <li>Confirm the alarm transitions from <code class="language-plaintext highlighter-rouge">insufficient_data</code> state to <code class="language-plaintext highlighter-rouge">ok</code> state:
+    <div class="language-plaintext highlighter-rouge">
 <div class="highlight"><pre class="highlight"><code> $ openstack alarm list
  +--------------------------------------+--------------------------------------------+----------------+-------------------+----------+---------+
  | alarm_id                             | type                                       | name           | state             | severity | enabled |
@@ -464,8 +464,8 @@ Options:
  +--------------------------------------+--------------------------------------------+----------------+-------------------+----------+---------+
 </code></pre></div>    </div>
   </li>
-  <li>Generate load in the instance above the 20% threeshold, and wait for the alarm to transitition to <code class="highlighter-rouge">alarm</code> state:
-    <div class="highlighter-rouge">
+  <li>Generate load in the instance above the 20% threeshold, and wait for the alarm to transitition to <code class="language-plaintext highlighter-rouge">alarm</code> state:
+    <div class="language-plaintext highlighter-rouge">
 <div class="highlight"><pre class="highlight"><code> $ openstack alarm list
  +--------------------------------------+--------------------------------------------+----------------+-------------------+----------+---------+
  | alarm_id                             | type                                       | name           | state             | severity | enabled |
@@ -479,8 +479,8 @@ Options:
 <img src="https://raw.githubusercontent.com/josecastillolema/aodh2sensu/master/doc/img/screenshot1.png" alt="Screenshot 1 of the Uchiwa dashboard">
 <img src="https://raw.githubusercontent.com/josecastillolema/aodh2sensu/master/doc/img/screenshot2.png" alt="Screenshoto 2 of the Uchiwa dashboard"></p>
   </li>
-  <li>Stop the load generation in the instance, wait for the alarm to transition back to <code class="highlighter-rouge">ok</code> state:
-    <div class="highlighter-rouge">
+  <li>Stop the load generation in the instance, wait for the alarm to transition back to <code class="language-plaintext highlighter-rouge">ok</code> state:
+    <div class="language-plaintext highlighter-rouge">
 <div class="highlight"><pre class="highlight"><code> $ openstack alarm list
  +--------------------------------------+--------------------------------------------+----------------+-------------------+----------+---------+
  | alarm_id                             | type                                       | name           | state             | severity | enabled |
@@ -501,26 +501,26 @@ Options:
 <h2 id="docker">Docker</h2>
 <p>To build the image:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ buildah build-using-dockerfile -t aodh2sensu .
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ buildah build-using-dockerfile -t aodh2sensu .
 </code></pre></div></div>
 
 <p>To run the image:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ podman run --name aodh2sensu --add-host="localhost:10.88.0.1" -d -p 50000:50000 aodh2sensu
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ podman run --name aodh2sensu --add-host="localhost:10.88.0.1" -d -p 50000:50000 aodh2sensu
 </code></pre></div></div>
 
 <p>Pointing to a specific Sensu Server URL:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ podman run --name aodh2sensu --add-host="localhost:10.88.0.1" -d -p 50000:50000 -e SENSU_URL=x.y.z.w:p aodh2sensu
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ podman run --name aodh2sensu --add-host="localhost:10.88.0.1" -d -p 50000:50000 -e SENSU_URL=x.y.z.w:p aodh2sensu
 </code></pre></div></div>
 
 <p>Check logs:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ podman logs aodh2sensu
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ podman logs aodh2sensu
 </code></pre></div></div>
 
 <h2 id="systemd">Systemd</h2>
 
-<p>To run <code class="highlighter-rouge">aodh2sensu</code> as a systemd service.</p>
+<p>To run <code class="language-plaintext highlighter-rouge">aodh2sensu</code> as a systemd service.</p>
 
 <h3 id="normal">Normal</h3>
 <div class="language-ini highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># cat /usr/lib/systemd/system/aodh2sensu.service
