@@ -1,4 +1,90 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://josecastillolema.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://josecastillolema.github.io/" rel="alternate" type="text/html" /><updated>2020-09-08T08:48:24-03:00</updated><id>https://josecastillolema.github.io/feed.xml</id><title type="html">GitOps</title><subtitle>Networks, SDN, NFVi, OpenStack, K8s/OpenShift.</subtitle><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><entry><title type="html">Huawei ICT Academy</title><link href="https://josecastillolema.github.io/haina/" rel="alternate" type="text/html" title="Huawei ICT Academy" /><published>2020-07-17T00:00:00-03:00</published><updated>2020-07-17T17:00:58-03:00</updated><id>https://josecastillolema.github.io/haina</id><content type="html" xml:base="https://josecastillolema.github.io/haina/">&lt;p&gt;&lt;a href=&quot;https://www.huaweiacad.com&quot;&gt;&lt;img src=&quot;/assets/images/posts/2020-07-17-haina/0.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://josecastillolema.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://josecastillolema.github.io/" rel="alternate" type="text/html" /><updated>2020-09-28T22:18:17-03:00</updated><id>https://josecastillolema.github.io/feed.xml</id><title type="html">GitOps</title><subtitle>Networks, SDN, NFVi, OpenStack, K8s/OpenShift.</subtitle><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><entry><title type="html">FIAP SHIFT: Multicloud Architecture</title><link href="https://josecastillolema.github.io/shift-multicloud/" rel="alternate" type="text/html" title="FIAP SHIFT: Multicloud Architecture" /><published>2020-09-05T00:00:00-03:00</published><updated>2020-09-05T17:00:58-03:00</updated><id>https://josecastillolema.github.io/shift-multicloud</id><content type="html" xml:base="https://josecastillolema.github.io/shift-multicloud/">&lt;p&gt;&lt;a href=&quot;https://www.fiap.com.br/shift/curso/tecnologia/multicloud-architecture-development-solutions-service-online&quot;&gt;&lt;img src=&quot;/assets/images/posts/2020-09-05-shift-multicloud.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;A Computação em Nuvem está transformando a forma como as organizações investem no mundo digital. Nesse cenário, adotar Cloud Computing no ambiente corporativo é seguir o fluxo tecnológico natural. E se manter sempre à frente quanto à e-science e opções de serviços.&lt;/p&gt;
+
+&lt;p&gt;Além de ser uma solução inovadora, a Cloud também é um modelo de negócio relativamente novo, aplicável a qualquer tipo de empresa. Nosso foco é formar o profissional para dominar modelos de serviços de Computação em Nuvem (SaaS, PaaS, IaaS), modelos de implantação em Nuvem (privado, público, híbrido e multicloud) e economia em Nuvem. Tudo isso por meio de atividades hands-on na Amazon Web Services (AWS).&lt;/p&gt;
+
+&lt;p&gt;A jornada é desafiadora. E a transformação, o único caminho.&lt;/p&gt;
+
+&lt;h2 id=&quot;para-quem&quot;&gt;Para quem?&lt;/h2&gt;
+&lt;p&gt;Profissionais de TI (analistas, especialistas e gestores) que atuam nas áreas de Cloud, Virtualização e/ou DevOps.&lt;/p&gt;
+
+&lt;h2 id=&quot;pré-requisito&quot;&gt;Pré-requisito&lt;/h2&gt;
+&lt;p&gt;Recomendamos ter conhecimentos técnicos gerais de TI e de negócios.&lt;/p&gt;
+
+&lt;h2 id=&quot;benefício-amazon&quot;&gt;Benefício Amazon&lt;/h2&gt;
+
+&lt;p&gt;Cada aluno vai receber US$ 50 em créditos para usar em laboratórios no ambiente Amazon, durante e após o curso.&lt;/p&gt;
+
+&lt;h2 id=&quot;shift-remoto&quot;&gt;Shift remoto&lt;/h2&gt;
+&lt;p&gt;Aulas ao vivo com conteúdo e metodologia especialmente pensados para o aprendizado remoto. Os vídeos dos encontros também ficam disponíveis por 7 dias após a última aula. O conteúdo complementar pode ser acessado durante 1 ano. E você ainda tem acesso ao ecossistema FIAP e aos nossos coworkings.&lt;/p&gt;
+
+&lt;h2 id=&quot;conteúdo&quot;&gt;Conteúdo&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Módulo 1: Visão geral dos conceitos de nuvem
+    &lt;ul&gt;
+      &lt;li&gt;Virtualização&lt;/li&gt;
+      &lt;li&gt;Modelos de serviço&lt;/li&gt;
+      &lt;li&gt;Segurança em nuvem / Modelo de responsabilidade compartilhada&lt;/li&gt;
+      &lt;li&gt;Modelos de implementação&lt;/li&gt;
+      &lt;li&gt;Multicloud&lt;/li&gt;
+      &lt;li&gt;Economia e faturamento da nuvem&lt;/li&gt;
+      &lt;li&gt;Arquitetura de nuvem / Desenvolvimento de aplicações para a nuvem&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Módulo 2: Infraestrutura como serviço  (IaaS)
+    &lt;ul&gt;
+      &lt;li&gt;Instanciação de máquinas virtuais&lt;/li&gt;
+      &lt;li&gt;Autoscaling&lt;/li&gt;
+      &lt;li&gt;Infraestrutura de armazenamento: block/object/file storage&lt;/li&gt;
+      &lt;li&gt;Containers&lt;/li&gt;
+      &lt;li&gt;Orquestração de containers&lt;/li&gt;
+      &lt;li&gt;Arquitetura de microserviços&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Módulo 3: Plataforma como serviço (PaaS)
+    &lt;ul&gt;
+      &lt;li&gt;Automação e entrega contínua (CI/CD)&lt;/li&gt;
+      &lt;li&gt;Pipeline DevOps&lt;/li&gt;
+      &lt;li&gt;DBaaS SQL/NoSQL&lt;/li&gt;
+      &lt;li&gt;Function as a Service&lt;/li&gt;
+      &lt;li&gt;Arquiteturas serverless&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><category term="aws" /><category term="classes" /><category term="fiap" /><category term="pt" /><summary type="html"></summary></entry><entry><title type="html">FIAP SHIFT: AWS Academy Cloud Foundations</title><link href="https://josecastillolema.github.io/shift-aws-foundations/" rel="alternate" type="text/html" title="FIAP SHIFT: AWS Academy Cloud Foundations" /><published>2020-08-30T00:00:00-03:00</published><updated>2020-08-30T17:00:58-03:00</updated><id>https://josecastillolema.github.io/shift-aws-foundations</id><content type="html" xml:base="https://josecastillolema.github.io/shift-aws-foundations/">&lt;p&gt;&lt;a href=&quot;https://www.fiap.com.br/shift/curso/tecnologia/aws-academy-cloud-foundations-online&quot;&gt;&lt;img src=&quot;/assets/images/posts/2020-08-30-shift-aws-foundations.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;O &lt;strong&gt;AWS Academy Cloud Foundations&lt;/strong&gt; (Fundamentos de nuvem da AWS Academy) é destinado a profissionais interessados em aperfeiçoar seus conhecimentos sobre computação em nuvem e AWS, e àqueles que gostariam de obter a certificação da Amazon – &lt;strong&gt;AWS Certified Cloud Practitioner&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;O curso oferece uma visão geral detalhada dos conceitos de nuvem, dos serviços essenciais, da segurança, da arquitetura, da definição de preço e do suporte da AWS. A certificação AWS Certified Cloud Practitioner é uma etapa recomendada para a obtenção da certificação Specialty ou em nível Associate.&lt;/p&gt;
+
+&lt;h2 id=&quot;para-quem&quot;&gt;Para quem?&lt;/h2&gt;
+&lt;p&gt;Profissionais DevOps e Arquitetos de Plataformas/Soluções que querem ter certificação e experiência hands-on na AWS.&lt;/p&gt;
+
+&lt;h2 id=&quot;pré-requisito&quot;&gt;Pré-requisito&lt;/h2&gt;
+&lt;p&gt;Recomendamos ter conhecimentos técnicos gerais de TI e de negócios.&lt;/p&gt;
+
+&lt;h2 id=&quot;como-funciona&quot;&gt;Como funciona?&lt;/h2&gt;
+
+&lt;p&gt;Você vai ter acesso à plataforma AWS Academy, com videoaulas em inglês (tradução e legendas em português), laboratórios para cada módulo, leituras complementares e testes após cada etapa para acompanhar a evolução com vista ao exame de certificação. Mais 30 dias de acesso às aulas, com dois momentos de interação ao vivo com José Castillo, Accredited Educator da Amazon e professor da FIAP.&lt;/p&gt;
+
+&lt;h2 id=&quot;digital--live&quot;&gt;Digital + Live&lt;/h2&gt;
+&lt;p&gt;Serão 20 horas de curso, com duração de quatro semanas, seis laboratórios práticos e mais duas lives com o professor, visando à preparação para a prova, nos dias 15/10 e 19/11, das 19h às 20h. No fim, você receberá um certificado oficial de conclusão de curso da AWS Academy e poderá aproveitar 50% OFF para fazer a prova de Certificação AWS Cloud Foundations.&lt;/p&gt;
+
+&lt;h2 id=&quot;conteúdo&quot;&gt;Conteúdo&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Módulo 1: Visão geral dos conceitos de nuvem&lt;/li&gt;
+  &lt;li&gt;Módulo 2: Economia e faturamento da nuvem&lt;/li&gt;
+  &lt;li&gt;Módulo 3: Visão geral da infraestrutura global da AWS&lt;/li&gt;
+  &lt;li&gt;Módulo 4: Segurança na nuvem AWS&lt;/li&gt;
+  &lt;li&gt;Módulo 5: Redes e entrega de conteúdo&lt;/li&gt;
+  &lt;li&gt;Módulo 6: Computação&lt;/li&gt;
+  &lt;li&gt;Módulo 7: Armazenamento&lt;/li&gt;
+  &lt;li&gt;Módulo 8: Bancos de dados&lt;/li&gt;
+  &lt;li&gt;Módulo 9: Arquitetura de nuvem&lt;/li&gt;
+  &lt;li&gt;Módulo 10: Auto scaling e monitoramento&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><category term="aws" /><category term="classes" /><category term="fiap" /><category term="pt" /><summary type="html"></summary></entry><entry><title type="html">Huawei ICT Academy</title><link href="https://josecastillolema.github.io/haina/" rel="alternate" type="text/html" title="Huawei ICT Academy" /><published>2020-07-17T00:00:00-03:00</published><updated>2020-07-17T17:00:58-03:00</updated><id>https://josecastillolema.github.io/haina</id><content type="html" xml:base="https://josecastillolema.github.io/haina/">&lt;p&gt;&lt;a href=&quot;https://www.huaweiacad.com&quot;&gt;&lt;img src=&quot;/assets/images/posts/2020-07-17-haina/0.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;A Huawei ICT Academy é um programa de parceria sem fins lucrativos que autoriza universidades e faculdades a oferecer cursos de Certificação Huawei para estudantes. Este programa atua como uma ponte entre empresas e academia para construir um ecossistema de talentos para as indústrias de TIC.&lt;/p&gt;
 
@@ -561,12 +647,4 @@ files/docker/registry/v2/repositories/openshift/python/_manifests/revisions/sha2
  - OS::TripleO::Services::OVNController
  - OS::TripleO::Services::OVNMetadataAgent
  - OS::TripleO::Services::Ptp
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><category term="en" /><category term="nfv" /><category term="openstack" /><category term="redhat" /><summary type="html">Hyper-converged SR-IOV role for compute nodes.</summary></entry><entry><title type="html">FIAP MBA ON Live - 1ASO - Fase 3 - Cloud</title><link href="https://josecastillolema.github.io/fiapon-live-1aso/" rel="alternate" type="text/html" title="FIAP MBA ON Live - 1ASO - Fase 3 - Cloud" /><published>2019-10-10T00:00:00-03:00</published><updated>2019-10-10T17:00:58-03:00</updated><id>https://josecastillolema.github.io/fiapon-live-1aso</id><content type="html" xml:base="https://josecastillolema.github.io/fiapon-live-1aso/">&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/iYChd1SVEzc&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://img.shields.io/youtube/views/iYChd1SVEzc?style=social&quot; alt=&quot;YouTube Video Views&quot; /&gt;
-&lt;img src=&quot;https://img.shields.io/youtube/likes/iYChd1SVEzc?style=social&quot; alt=&quot;YouTube Video Likes&quot; /&gt;
-&lt;img src=&quot;https://img.shields.io/youtube/likes/iYChd1SVEzc?style=social&amp;amp;withDislikes&quot; alt=&quot;YouTube Video Votes&quot; /&gt;&lt;/p&gt;</content><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><category term="events" /><category term="fiap" /><category term="pt" /><category term="webinar" /><summary type="html"></summary></entry><entry><title type="html">FIAP MBA em Artificial Intelligence &amp;amp; Machine Learning (IA)</title><link href="https://josecastillolema.github.io/fiap-ia/" rel="alternate" type="text/html" title="FIAP MBA em Artificial Intelligence &amp; Machine Learning (IA)" /><published>2019-09-03T00:00:00-03:00</published><updated>2019-09-03T17:00:58-03:00</updated><id>https://josecastillolema.github.io/fiap-ia</id><content type="html" xml:base="https://josecastillolema.github.io/fiap-ia/">&lt;p&gt;&lt;a href=&quot;https://www.fiap.com.br/mba/mba-em-artificial-intelligence-e-machine-learning/&quot;&gt;&lt;img src=&quot;https://raw.githubusercontent.com/josecastillolema/fiap/master/img/ia.png&quot; alt=&quot;FIAP MBA&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/josecastillolema/fiap/tree/master/ia/iot&quot;&gt;Princípios de Robótica e IoT&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><category term="classes" /><category term="fiap" /><category term="iot" /><category term="pt" /><summary type="html">Princípios de Robótica e IoT</summary></entry></feed>
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><category term="en" /><category term="nfv" /><category term="openstack" /><category term="redhat" /><summary type="html">Hyper-converged SR-IOV role for compute nodes.</summary></entry></feed>

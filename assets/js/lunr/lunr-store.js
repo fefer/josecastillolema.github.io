@@ -406,4 +406,16 @@ var store = [{
         "tags": ["classes","huawei","networks","pt"],
         "url": "https://josecastillolema.github.io/haina/",
         "teaser": null
+      },{
+        "title": "FIAP SHIFT: AWS Academy Cloud Foundations",
+        "excerpt":"O AWS Academy Cloud Foundations (Fundamentos de nuvem da AWS Academy) é destinado a profissionais interessados em aperfeiçoar seus conhecimentos sobre computação em nuvem e AWS, e àqueles que gostariam de obter a certificação da Amazon – AWS Certified Cloud Practitioner. O curso oferece uma visão geral detalhada dos conceitos...","categories": [],
+        "tags": ["aws","classes","fiap","pt"],
+        "url": "https://josecastillolema.github.io/shift-aws-foundations/",
+        "teaser": null
+      },{
+        "title": "FIAP SHIFT: Multicloud Architecture",
+        "excerpt":"A Computação em Nuvem está transformando a forma como as organizações investem no mundo digital. Nesse cenário, adotar Cloud Computing no ambiente corporativo é seguir o fluxo tecnológico natural. E se manter sempre à frente quanto à e-science e opções de serviços. Além de ser uma solução inovadora, a Cloud...","categories": [],
+        "tags": ["aws","classes","fiap","pt"],
+        "url": "https://josecastillolema.github.io/shift-multicloud/",
+        "teaser": null
       }]
